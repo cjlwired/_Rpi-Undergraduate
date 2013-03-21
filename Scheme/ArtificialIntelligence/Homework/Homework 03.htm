@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW3</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<style>
+td.game, tr.game {
+  background-color:#dddddd;
+}
+th.game {
+  background-color:white;
+}
+table.game {
+
+}
+</style>
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW3</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+<a class="menu" href="#grading">Grading</a>
+</td></tr>
+</table>
+
+<div class="page">
+
+<center>
+<table><tr><td>
+
+<h3 align=center>Connect-4 Tournament</h3>
+
+<h4 align=center>Due Date: Thursday, 10/26 by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW3
+</h4>
+
+</td><td width=100>&nbsp;</td><td>
+
+  <table class=game bgcolor=black>
+  <tr class=game> 
+       <td class=game> &nbsp </td> <td class=game> &nbsp </td> <td class=game> &nbsp </td>
+       <td class=game> &nbsp </td> <td class=game> &nbsp </td> <td class=game> &nbsp </td>
+       <td class=game> <img src=rball.gif> </td> 
+
+  </tr>
+  <tr class=game> 
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> <td class=game> &nbsp </TD>
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> <td class=game> &nbsp </TD>
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+  </TR>
+  <tr class=game> 
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> <td class=game> &nbsp </TD>
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> <td class=game> &nbsp </TD>
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+  </TR>
+  <tr class=game> 
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> 
+       <td class=game> &nbsp </TD> <td class=game> &nbsp </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD>
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+
+
+  </TR>
+  <tr class=game> 
+       <td class=game> &nbsp </TD>
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD>
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+       <td class=game> <IMG SRC=yball.gif> </TD>
+  </TR>
+  <tr class=game> 
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+       <td class=game> <IMG SRC=yball.gif> </TD>
+       <td class=game> <IMG SRC=yball.gif> </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD> 
+       <td class=game> <IMG SRC=rball.gif> </TD>
+       <td class=game> <IMG SRC=yball.gif> </TD>
+</tr></table>
+
+</td></tr></table>
+</center>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+<p>The objectives of this assignment are:</p>
+<ol>
+  <li>Adversarial Search (Minimax).</li>
+  <li>Developing a static evaluation function (for Connect-4)</li>
+</ol>
+
+<p>Connect-Four is played on a rectangular grid like the one shown
+above. Each turn involves dropping a marble (coin, disk, whatever)
+above any column in the grid (that is not already full) - the marble
+will drop straight down and end up in the column at the lowest point
+possible (the lowest row that does not already contain a marble in
+that column). Each player tries to get four of their marbles in a row
+(horizontally, vertically or diagonally). If you are not familiar with
+the game, you should check out some of the many web versions of this
+game,
+as well as the description on Wikipedia:</p>
+
+<ul>
+ <li> <a href='http://en.wikipedia.org/wiki/Connect_Four'>Wikipedia Connect Four Page</a></li>
+<li><a href='http://www.cwi.nl/~tromp/c4/c4.html'>Online (java) <em>perfect</em>game</a></li>
+<li><a href='http://www.farfarfar.com/games/connect_four/'>Another online game</a></li>
+</ul>
+
+<p style='margin-left:.3in; margin-right:.3in;'><b>NOTE:</b> The standard game is played on a grid with
+6 rows and 7 columns - for our tournament the size of the grid will
+vary (your code must not make any assumptions about the size of the
+grid!). The strategy for winning (playing a perfect game) on a
+standard board size is known, but you cannot assume your agent will be
+playing on a standard size board!</p>
+
+
+<p>Your assignment is to create a scheme procedure (function) that
+will determine the best move to be made given the current state of the
+game and the player whose turn it is. The return value must be a
+single integer indicating a column number. The number of rows and
+columns in the current game can be derived from the size of the state
+representation given your function, you cannot make any assumptions
+about the size of the game grid.</p>
+
+<p>Your procedure will participate in a tournament to determine the
+best ConnectFour procedure in the class. The winner will receive a
+great grade, a sprinkling of fame, and perhaps a cookie. Tournament
+results will be available on the WWW and will be updated daily. The
+semifinals and finals will be played out in front of a live audience
+(that is, during class). </p>
+
+<hr>
+
+<p>
+<h3 align=center style='color:red'>IMPORTANT<br/>
+All Your Procedures must start with your RCS user name<br/>
+The Procedure that will be called (by the tournament software) is 
+<code>&lt;rcsid&gt;-getmove</code>.
+</h3>
+
+
+<p>Since your code will be participating in
+an automated tournament, both your code and your opponents will be running
+in the same scheme environment. We need to make sure that you don't have
+a top level procedure that is the same name as a procedure your opponent
+has written. Here are the rules:</p>
+
+<ul>
+<li><p>All your top-level procedures and global
+variables must be prefixed by your RCS user name. For example, my procedures
+would have names like <code>hollid3-getmove</code> and <code>hollid3-checkcolumn</code>.
+</p></li>
+
+<li><p>The only scheme procedure that will
+be called by the tournament system is the procedure described above. This
+procedure must be named <code>&lt;rcsid&gt;-getmove</code> and has the
+following prototype (I use my RCS id as an example):</p>
+
+<pre>(hollid2-getmove board player)</pre>
+
+<p><code>board</code> is the representation of the current
+state of the game as described below, and player is 1 for the player
+who got to go first and 2 for the other player. Your procedure must be
+capable of determining the best move for either player (since in some
+games you will be 1 and in others you will be 2).</p>
+
+<p>Board data structure: The board will be represented by a scheme
+ list of the columns, the first element represents the leftmost column
+ in the game board.  Each column is represented by a list of
+ board squares, the first element represents the top position (highest
+ square in the column).<p>
+
+<p>Each game board square is either a 0, 1 or 2:</p>
+
+<ul>
+<li>    0 : square is available (empty)</li>
+<li>    1 : player 1 has a marble on the square</li>
+<li>    2 : player 2 has a marble on the square</li>
+</ul>
+
+<p>For example, the following scheme list  
+represents the state of the this game board (on a grid of 6 rows and 7
+columns, and red was the first player):</p>
+
+<table><tr><td>
+<pre><b>
+'( (0 0 0 2 2 1) (0 0 0 2 1 2)
+   (0 0 0 0 2 1) (0 0 0 0 1 2) 
+   (0 0 0 1 2 1) (0 0 0 2 1 1)
+   (1 2 1 1 2 2) )
+</b></pre>
+</td>
+
+<td> &nbsp &nbsp &nbsp</td>
+
+<td>
+  
+  <table width=100%>
+  <tr> 
+      <th class=game>0</th>
+      <th class=game>1</th>
+      <th class=game>2</th>
+      <th class=game>3</th>
+      <th class=game>4</th>
+      <th class=game>5</th>
+      <th class=game>6</th>
+  </tr>
+  </table>  
+  <table class=game bgcolor=black>
+
+  <tr>
+       <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+       <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+       <td class=game> <IMG SRC=rball.gif> </td> 
+
+  </tr>
+  <tr> 
+       <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+       <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+	   <td class=game> &nbsp </td>
+       <td class=game> <img src=yball.gif> </td> 
+  </tr>
+  <tr> 
+       <td class=game> &nbsp </td> <td class=game> &nbsp </td> <td class=game> &nbsp </td>
+       <td class=game> &nbsp </td> <td class=game> &nbsp </td> <td class=game> &nbsp </td>
+       <td class=game> <IMG SRC=rball.gif> </td> 
+  </tr>
+  <tr> 
+       <td class=game>  <IMG SRC=yball.gif> </td> <td class=game>  <IMG SRC=yball.gif> </td> 
+       <td class=game> &nbsp </td> <td class=game> &nbsp </td> 
+       <td class=game> <IMG SRC=rball.gif> </td>
+       <td class=game> <IMG SRC=yball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td> 
+
+
+  </TR>
+  <TR> 
+       <td class=game> <IMG SRC=yball.gif> </td>
+       <td class=game> <IMG SRC=rball.gif> </td> 
+       <td class=game> <IMG SRC=yball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td>
+       <td class=game> <IMG SRC=yball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td> 
+       <td class=game> <IMG SRC=yball.gif> </td>
+  </tr>
+  <tr> 
+       <td class=game> <IMG SRC=rball.gif> </td> 
+       <td class=game> <IMG SRC=yball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td>
+       <td class=game> <IMG SRC=yball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td> 
+       <td class=game> <IMG SRC=rball.gif> </td>
+       <td class=game> <IMG SRC=yball.gif> </td>
+  </tr>
+  </table>
+</td></tr></table>
+
+
+
+<p>Assuming the variable <I><CODE>board</CODE> </I>holds
+the list value show above, a call to hollid2-getmove would look like this:</FONT></P>
+
+
+<PRE>(hollid2-getmove board 1)
+;; Value: 5
+</PRE>
+
+
+<P>The return value is the move that my program
+is making and indicates a red marble should be dropped in column 5.</P>
+</li>
+
+<li><p>Your procedure cannot take more than 30 seconds to decide on a
+move (when run on a Thinkpad T43p).</p></li>
+
+<li><p>Your procedure cannot attempt to redefine any of the tournament
+code or opponent code. Your procedure cannot make use of any
+tournament code or opponent code (you need to provide everything
+your procedure needs in your submission).</p></li>
+
+<li><p>In the tournament, ties will go to the <em>smaller</em> code.
+Size is determined by reducing all procedure and variable names to a
+single character and removing all whitespace).</p></li>
+
+</ul>
+
+
+<P><B>Sample Code (MIT Scheme)</B> <BR>
+Some sample code is <A HREF=c4.scm>here</A>. This code includes:
+
+<ul>
+<li> the definition of a procedure named play-connect4 that will
+pit two getmove procedures against each other.</li>
+<li>A bunch of possibly useful support routines</li>
+<li> A sample getmove procedure that returns a random move.</li>
+<li> A sample getmove procedure that allows a human to play (prompts
+for moves).</li>
+<li> More documentation on game board representation and some other 
+useful tidbits.</li>
+</ul>
+
+<p style='margin-left:.3in;margin-right:.3in'><b>Note:</b> You should
+not make any assumptions about the tournament environment, if could 
+involve completely different code than is provided in the sample code.
+If you want to use some of the procedures defined in the sample code, 
+you must include them (and they need to be named with your rcsid).</p>
+
+</div>
+<a name=grading>
+<p class=section onClick="toggleContent('grading_content','grading_flag');">
+<span class="toggle" id="grading_flag">-</span>
+Grading
+</a>
+<div class=page id="grading_content">
+
+<p>Your grade depends on the following formula:</p>
+
+<ul>
+  <li>Correct implementation of Minimax: 60%</li>
+  <li>Useful static evaluation function: 30%</li>
+  <li>Performance in the tournament: 10%</li>
+</ul>
+
+<p>Note that how well your code does depends on two factors:
+<ul>
+ <li>How good your static evaluation function is</li>
+ <li>The depth of search possible within the time constraints.
+     If you use alpha,beta pruning this will mean you can
+	 search deeper!</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

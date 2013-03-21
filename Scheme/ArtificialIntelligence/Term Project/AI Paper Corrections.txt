@@ -1,0 +1,26 @@
+>>> Pg 6 <<<
+
+	-- For example, "*T*he girl eats the apple..." (capitalize)
+	-- and "*T*he girl eats the apple..." (capitalize)
+	-- "The girl eats hot dogs with relish" *-* the word... (punctuation)
+
+>>> Pg 7 <<<
+
+	-- In the text "John took his car to the store" *-* it could ... (punctuation)
+	-- In the questions "Who ... Mning?" *-* the second ... (punctuation)
+	-- Early approaches to morphology... in the *X* 1960's (delete early)
+
+>>> Pg 8 <<<
+
+	-- A simple example of a lexeme is *'car' vs. 'cars'* (punctuation)
+	-- ... where these two words are in.. but *differ* simply... (modify different)
+	-- .. These paradigms can be... into their own tables *X* utilizing (delte ,)
+
+>>> Pg 9 <<<
+
+	-- Morphosyntax *primarily concentrates on* the bond between... (delete 'concerns itself with respect to the')
+
+>>> Pg 10 <<<
+
+	-- Because of this parallelism... only two states, the *start* and end.
+	

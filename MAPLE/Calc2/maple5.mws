@@ -1,0 +1,87 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 23 "**** MAPLE FILE #5 ****" }}{PARA 0 "" 0 "" {TEXT 
+-1 59 " This file explains the basics of vector analysis in MAPLE." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 79 "Most of t
+he commands used to define and manipulate vectors in MAPLE reside in a
+" }}{PARA 0 "" 0 "" {TEXT -1 67 "package called \"linalg\". Thus, we m
+ust  always include the command:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "with(linalg):" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 53 "To define
+ a vector in MAPLE, use the vector command: " }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "veca := vector([2
+,1,5]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%vecaG-%'vectorG6#7%\"\"#
+\"\"\"\"\"&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 41 "To access a single
+ component of a vector:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "veca[1];" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "veca
+[2];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"\"" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 8 "veca[3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"
+\"&" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 "To compute the magnitude o
+f a vector, we use a command called norm:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "mag_a :
+= norm(veca,2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&mag_aG*$\"#I#\"
+\"\"\"\"#" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 103 "(The 2 as a second \+
+argument refers to the \"2-norm\", i.e. the usual Euclidean norm we us
+e to find vector" }}{PARA 0 "" 0 "" {TEXT -1 74 "magnitudes, as oppose
+d to other strange norms that graduate students use.)" }}{PARA 0 "" 0 
+"" {TEXT -1 2 "  " }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 104 "We also need a way of computing scalar multiples of vectors. U
+nfortunately, it doesn't work to just say:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "newvec \+
+:= 3*veca;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'newvecG,$*&\"\"$\"\"
+\"%%vecaGF(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 "There is a comma
+nd called scalarmul, specifically for this purpose:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "newv
+ec := scalarmul(veca,3);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'newvecG
+-%'vectorG6#7%\"\"'\"\"$\"#:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 1 " \+
+" }}{PARA 0 "" 0 "" {TEXT -1 75 "Suppose we wanted to compute the line
+ar combination 3*[2,4,5] - 6*[2,5,-1]." }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "v1 := vector([2,
+4,5]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#v1G-%'vectorG6#7%\"\"#\"
+\"%\"\"&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "v2 := vector([2
+,5,-1]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#v2G-%'vectorG6#7%\"\"#
+\"\"&!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 41 "The command evalm c
+an be used as follows:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "v3 := evalm(3*v1 -6*v2);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#v3G-%'vectorG6#7%!\"'!#=\"#@" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 79 "...so \"evalm\" must always be inc
+luded when computing such a linear combination." }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 85 "The linalg pa
+ckage also contains commands to compute dot products and cross product
+s:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "dp := dotprod(v1,v2);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%#dpG\"#>" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "cp := c
+rossprod(v1,v2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#cpG-%'vectorG6#
+7%!#H\"#7\"\"#" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 71 "The command \"a
+ngle\" returns the angle (in radians) between two vectors:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+22 "theta := angle(v1,v2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&theta
+G-%'arccosG6#,$**\"#>\"\"\"\"%]8!\"\"\"#X#F+\"\"#\"#IF/F+" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 58 "...which we can evalf to get an actual nu
+mber, if desired:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "evalf(%);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"+j+KF5!\"*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 95 "F
+inally, we know how to compute cross products using matrices and deter
+minants. MAPLE has many " }}{PARA 0 "" 0 "" {TEXT -1 91 "commands (som
+e of which are the same commands used with vectors) for manipulating m
+atrices." }}{PARA 0 "" 0 "" {TEXT -1 19 "To define a matrix:" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "A := matrix(3,3,[1,2,3,4,6,6
+,7,8,9]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"AG-%'matrixG6#7%7%\"
+\"\"\"\"#\"\"$7%\"\"%\"\"'F/7%\"\"(\"\")\"\"*" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 107 "...where the first two numbers are the dimensions (nu
+mber of rows, number of columns), and the rest are the" }}{PARA 0 "" 
+0 "" {TEXT -1 69 "entries of the matrix. We can compute the determinan
+t of this matrix:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "det(A);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#!#7" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "35 0 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

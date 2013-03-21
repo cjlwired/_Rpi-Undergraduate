@@ -1,0 +1,15 @@
+
+Average Displacement: 6758947 
+Standard Deviation: 173642717.054
+In bounds: 215/252
+New Displacement Average: 1122044
+
+Average Displacement: 6314161 
+Standard Deviation: 173771989.781
+In bounds: 215/252
+New Displacement Average: 615436
+
+Average Displacement: 6327815 
+Standard Deviation: 173767881.073
+In bounds: 215/252
+New Displacement Average: 630982

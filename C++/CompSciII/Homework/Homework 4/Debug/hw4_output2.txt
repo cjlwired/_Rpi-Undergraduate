@@ -1,0 +1,56 @@
+123342 zombie 3
+234119 always 2
+239444 sing_forever 2
+653829 ironic 2
+876233 someday 2
+123932 for_the_beauty_of_the_earth 1
+128739 nightingale 1
+201928 don't_know_why 1
+231293 the_end_of_the_world 1
+233222 sunrise 1
+234776 song_of_joy 1
+234888 now_or_never 1
+238422 seven_years 1
+273387 i_have_a_dream 1
+766349 prayer_94 1
+873225 living_on_a_prayer 1
+982121 keep_the_faith 1
+983445 love_is_all_around 1
+987653 hero 1
+
+terminator $4
+234888 7
+234776 7
+233222 5
+653829 5
+
+john $2.5
+239444 4
+273387 1
+234119 1
+983445 2
+123342 1
+
+butter $2.5
+123342 2
+128739 1
+238422 1
+653829 1
+201928 1
+
+peter $3
+123342 1
+766349 1
+873225 1
+234119 1
+982121 1
+239444 2
+
+hubert $1.5
+987653 1
+876233 1
+123932 1
+
+david $1
+876233 1
+231293 1

@@ -1,0 +1,7 @@
+abacus
+calculator
+compass
+computer
+diskette
+slide_rule
+

@@ -1,0 +1,13 @@
+strings2.txt is NOT empty.
+empty.txt IS empty.
+
+Therefore, the merged files would simply be that of strings2.txt:
+
+abacus
+calculator
+compass
+computer
+diskette
+slide_rule
+
+

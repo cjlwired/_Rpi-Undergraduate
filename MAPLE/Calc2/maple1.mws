@@ -1,0 +1,123 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "****  MAPLE FILE #1 ****" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 84 
+"This file discusses some MAPLE commands that allow us to experiment w
+ith some of the" }}{PARA 0 "" 0 "" {TEXT -1 87 "methods of integration
+ we're discussing in class. The commands discussed are located in" }}
+{PARA 0 "" 0 "" {TEXT -1 63 "the MAPLE \"student\" package, so be sure
+ to include the command:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "with(student):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 23 "METH
+OD OF SUBSTITUTION:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 79 "The MAPLE command \"changevar\" (standing for \"change \+
+of variables\", another term" }}{PARA 0 "" 0 "" {TEXT -1 95 "for subst
+itution) allows us to explore the effects of different u-substitutions
+ on an integral." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 33 "Consider the indefinite integral:" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#-%$IntG6$*&)%\"xG\"\"#\"\"\"),&F*F**$)F(\"\"$F*F*\"
+\"&F*F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 67 "First, we must define \+
+the entire indefinite integral as a function:" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "f := x^2*(1
++x^3)^5;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG*&)%\"xG\"\"#\"\"\")
+,&F)F)*$)F'\"\"$F)F)\"\"&F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+14 "F := Int(f,x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"FG-%$IntG6$*
+&)%\"xG\"\"#\"\"\"),&F,F,*$)F*\"\"$F,F,\"\"&F,F*" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 62 "So, f is the integrand and F is the indefinite int
+egral of f. " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 78 "NOTE: The I in the Int command above must be capitalized, other
+wise MAPLE will" }}{PARA 0 "" 0 "" {TEXT -1 41 "try to evaluate the in
+tegral immediately." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 87 "Suppose we want to try the substitution u = x^4. The sy
+ntax of changevar is as follows:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "changevar(u=x^4,F,u);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$IntG6$,$*(\"\"%!\"\"%\"uG#F)F(,&\"
+\"\"F-*$)F*#\"\"$F(F-F-\"\"&F-F*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+89 "So the changevar command has three arguments: u=u(x), where u(x) i
+s whatever substitution" }}{PARA 0 "" 0 "" {TEXT -1 93 "we are trying;
+ F, the function we defined to be the original indefinite integral; an
+d u, the " }}{PARA 0 "" 0 "" {TEXT -1 92 "variable of the new integral
+. It returns the transformed integral, saving us all the work of" }}
+{PARA 0 "" 0 "" {TEXT -1 38 "carrying out the substitution by hand." }
+}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 93 "Apparent
+ly, this choice of u was poor, since the new integral appears very dif
+ficult. We know" }}{PARA 0 "" 0 "" {TEXT -1 37 "that a better choice w
+ould have been:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 28 "G := changevar(u=1+x^3,F,u);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%\"GG-%$IntG6$,$*&\"\"$!\"\"%\"uG\"\"&\"\"\"F," }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 91 "Once we've decided on a substitution that works well, we \+
+can finish evaluating the integral" }}{PARA 0 "" 0 "" {TEXT -1 11 "as \+
+follows:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "ans1 := value(G);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%%ans1G,$*&\"#=!\"\"%\"uG\"\"'\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 92 "(Since the function G already contains the integration, t
+he value command just performs it.)" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "finalanswer := subs(u=1+x^
+3,ans1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%,finalanswerG,$*&\"#=!\"
+\",&\"\"\"F**$)%\"xG\"\"$F*F*\"\"'F*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 82 "The subs command lets us put our final answer in terms of the o
+riginal variable x." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 73 "Of course, we could have produced this an
+swer through the single command:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "waytwo := int(f,x);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'waytwoG,.*&#\"\"\"\"#=F(*$)%\"xGF)F
+(F(F(*&#F(\"\"$F(*$)F,\"#:F(F(F(*&#\"\"&\"\"'F(*$)F,\"#7F(F(F(*&#\"#5
+\"\"*F(*$)F,F=F(F(F(*&F4F(*$)F,F6F(F(F(*&F.F(*$)F,F/F(F(F(" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 81 "(This answer looks different, but differs
+ from finalanswer only by a constant...)" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "simplify(waytwo-fina
+lanswer);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##!\"\"\"#=" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 82 "...so the point of changevar is not to ge
+t the answer, but to experiment with the " }}{PARA 0 "" 0 "" {TEXT -1 
+23 "method of substitution." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 21 "INTEGRATION BY PARTS
+:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 76 "The \+
+MAPLE command \"intparts\" allows us to perform integration by parts u
+nder" }}{PARA 0 "" 0 "" {TEXT -1 30 "different choices of u and dv." }
+}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 33 "Consider
+ the indefinite integral:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$IntG6$*&)%\"xG\"\"%\"\"\"%$lnxGF*F(
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 48 "The initial set-up is the sam
+e as for changevar:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 " " }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "f := x^4*ln(x);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"fG*&)%\"xG\"\"%\"\"\"-%#lnG6#F'F)" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "F := Int(f,x);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"FG-%$IntG6$*&)%\"xG\"\"%\"\"\"-%#lnG6#F*F,F*
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 89 "Suppose we want to try integr
+ation by parts with u= x^2 and dv = x^2 ln(x) dx. The syntax" }}{PARA 
+0 "" 0 "" {TEXT -1 26 "of intparts is as follows:" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "intparts(F,
+x^2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&*&)%\"xG\"\"#\"\"\",&*&#F(
+\"\"$F(*&)F&F,F(-%#lnG6#F&F(F(F(*&\"\"*!\"\"F&F,F4F(F(-%$IntG6$,$*(F'F
+(F&F(F)F(F(F&F4" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 92 "So, the first \+
+argument is F, the function we defined to be the original indefinite i
+ntegral," }}{PARA 0 "" 0 "" {TEXT -1 89 "and the second argument is ou
+r choice of u (note that it's redundant to specify dv, which" }}{PARA 
+0 "" 0 "" {TEXT -1 29 "is uniquely determined by u)." }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 87 "The resu
+lt of intparts is the right hand side of the parts formula. We can loo
+k at the " }}{PARA 0 "" 0 "" {TEXT -1 86 "new integral and decide of i
+t's easier or harder than the original. Here it appears to" }}{PARA 0 
+"" 0 "" {TEXT -1 43 "be harder, so our choice of u was not wise." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 40 "We know a
+ better choice would have been:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "G := intparts(F,ln(x));" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"GG,&*&#\"\"\"\"\"&F(*&-%#lnG6#%\"x
+GF()F.F)F(F(F(-%$IntG6$,$*&F)!\"\"F.\"\"%F(F.F5" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 65 "Having decided on a good choice of u, we can finish \+
+up as before:" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "ans := value(G);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%$ansG,&*&#\"\"\"\"\"&F(*&-%#lnG6#%\"xGF()F
+.F)F(F(F(*&\"#D!\"\"F.F)F2" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 75 "NOT
+E: MAPLE never includes the \"+C\" in indefinite integrals, but you al
+ways" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "should
+ when doing them by hand." }{MPLTEXT 1 0 0 "" }}}}{MARK "39" 0 }
+{VIEWOPTS 1 1 0 3 2 1804 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

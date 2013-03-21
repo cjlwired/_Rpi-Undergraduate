@@ -1,0 +1,31 @@
+;;Carlos Lazo
+;;9-15-04
+;;Problem Solving in Computer Science
+;; Homework #2 - Graphic 2
+;;
+;; Function definition -> (drawShape position length choice color color)
+;;
+;; Use: This function will read in a position, a length, an integer, and two colors.
+;;      Utilizing that one position, it will then proceed to draw one shape
+;;      that is dependant on the integer that is sent. This function will be recursive,
+;;      drawing in inscribed circle and a rectangle every other time with a shrinking length
+;;      every time the function is called
+;;
+;; Sample Usage:
+;;    (drawShape (make-posn 150 150) 100 0 'yellow 'black)
+;;    (drawShape (make-posn 100 300) 100 0 'red 'green)
+;;
+;; Please make sure that you are aware that to use this function, you will
+;; need to add the teachpack draw.ss; also, make sure that the start function
+;; has been called before calling the function
+
+(define (drawShape point length choice color1 color2))
+ (cond
+   [(= x 0)
+    (and
+     {draw-solid-line
+      (make-posn (- (x-pos point) length)(- (y-pos point) length)) (make-posn (+ (x-pos point) length) (- (y-pos point) length)) color1}
+     (draw-solid-line
+      (make-posn (+ (x-pos point) length) (- (y-pos point) length)) (make-posn (+ (x-pos point) length) (+ (y-pos point) length)) color1)
+     (draw-solid-line
+      (make-posn

@@ -1,0 +1,9 @@
+
+Lincoln called < file2.txt
+>Washington, but washington was not there <file1.txt >.   
+< file7.txt >
+<file8.txt><file9.txt>
+lincoln lincoln lincoln 
+washington
+lincoln appears in this file 8 times
+lincoln (that was 6)  lincoln LINCOLN (that was 8)

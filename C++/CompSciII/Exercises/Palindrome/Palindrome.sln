@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Palindrome", "Palindrome.vcproj", "{FD48ADA5-11C0-4FC7-B249-CA6F79604A41}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FD48ADA5-11C0-4FC7-B249-CA6F79604A41}.Debug.ActiveCfg = Debug|Win32
+		{FD48ADA5-11C0-4FC7-B249-CA6F79604A41}.Debug.Build.0 = Debug|Win32
+		{FD48ADA5-11C0-4FC7-B249-CA6F79604A41}.Release.ActiveCfg = Release|Win32
+		{FD48ADA5-11C0-4FC7-B249-CA6F79604A41}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

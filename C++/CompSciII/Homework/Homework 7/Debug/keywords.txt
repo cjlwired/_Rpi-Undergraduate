@@ -1,0 +1,4 @@
+lincoln
+washington 
+jefferson
+adams

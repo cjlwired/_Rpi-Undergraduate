@@ -1,0 +1,42 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "**** MAPLE FILE # 2 ****" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 75 "This fi
+le briefly discusses improper integrals and how MAPLE can be used to" 
+}}{PARA 0 "" 0 "" {TEXT -1 13 "analyze them." }}{PARA 0 "" 0 "" {TEXT 
+-1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 78 "Improper integrals can be evalu
+ated with the int command using the same syntax" }}{PARA 0 "" 0 "" 
+{TEXT -1 84 "as a regular definite integral. If the integral is improp
+er due to one of the limits" }}{PARA 0 "" 0 "" {TEXT -1 59 "being infi
+nite, indicate this by using the word \"infinity\"." }}{PARA 0 "" 0 "
+" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "int(exp(-
+x),x=0..infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"\"" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 79 "This means that the area beneath t
+he graph of exp(-x) over the entire x-axis is" }}{PARA 0 "" 0 "" 
+{TEXT -1 62 "finite, so the improper integral converges and its value \+
+is 1." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 88 "If th
+e improper integral diverges because its limiting value is infinite, M
+APLE responds" }}{PARA 0 "" 0 "" {TEXT -1 11 "as follows:" }}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "int(
+1/x,x=1..infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%)infinityG" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "int(1/x^2,x=0..1);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%)infinityG" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 74 "If the integral diverges in a different way, MAPLE may \+
+respond as follows:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "int(1/x,x=-1..1);" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#%*undefinedG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 16 "Another example:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "int(sin(x),x=0..in
+finity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%*undefinedG" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 76 "At least MAPLE recognizes the difference \+
+between improper integrals that are" }}{PARA 0 "" 0 "" {TEXT -1 76 "in
+finite and those that diverge for a different reason, like the ones ab
+ove." }{MPLTEXT 1 0 0 "" }}}}{MARK "9 1 0" 16 }{VIEWOPTS 1 1 0 3 2 
+1804 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

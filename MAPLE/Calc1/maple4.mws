@@ -1,0 +1,402 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Text Output" -1 2 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 0 
+-1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 "
+" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }
+{PSTYLE "Maple Output" 0 11 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 
+13 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 0 0 -1 -1 
+-1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 28 " ****  MAPLE FILE  # 4  **
+**" }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "
+" 0 "" {TEXT -1 85 "This file shows how to use MAPLE for implicit diff
+erentiation and higher derivatives." }}{PARA 0 "" 0 "" {TEXT -1 1 " " 
+}{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 35 "****  Implic
+it Differentiation ****" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 
+0 "" {TEXT -1 86 "Suppose we want to use implicit differentiation to c
+ompute the derivative dy/dx where " }}{PARA 0 "" 0 "" {TEXT -1 65 "y i
+s defined implicitly as a function of x through the equation\n " }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 68 "                                  \+
+                     x^2 + y^2 = 1" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "eqn := x^2 + y^2 = 1;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%$eqnG/,&*$)%\"xG\"\"#\"\"\"F+*$)%\"yGF*F+F+F+
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 88 "Notice that I've defined the \+
+variable \"eqn\" to be the entire implicit equation, not just" }}
+{PARA 0 "" 0 "" {TEXT -1 19 "the left hand side." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 84 "Conveniently, we \+
+can carry out the entire implicit differentiation process using the" }
+}{PARA 0 "" 0 "" {TEXT -1 23 "\"implicitdiff\" command:" }}{PARA 0 "" 
+0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "dy_dx \+
+:= implicitdiff(eqn,y,x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&dy_dxG
+,$*&%\"xG\"\"\"%\"yG!\"\"F*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 85 "No
+te the syntax: the first argument is the implicit equation (given by t
+he name eqn)." }}{PARA 0 "" 0 "" {TEXT -1 80 "the last two arguments t
+ell MAPLE that I am considering x to be the independent " }}{PARA 0 "
+" 0 "" {TEXT -1 71 "variable and y to be dependent on x. Thus MAPLE kn
+ows to compute dy/dx." }{MPLTEXT 1 0 1 " " }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 1 " " }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+75 "Now if we wanted to construct the tangent line to this circle at t
+he point " }}{PARA 0 "" 0 "" {TEXT -1 59 "                            \+
+         (1/sqrt(2), 1/sqrt(2))" }}{PARA 0 "" 0 "" {TEXT -1 27 "we can
+ proceed as follows:\n" }}{PARA 0 "" 0 "" {TEXT -1 85 "1. Find the slo
+pe of the tangent line by evaluating  dy/dx at the point in question:
+\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "x0 := 1/sqrt(2); y0 :
+= 1/sqrt(2);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#x0G,$*&\"\"#!
+\"\"F'#\"\"\"F'F*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#y0G,$*&\"\"#!
+\"\"F'#\"\"\"F'F*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "m := s
+ubs(\{x=x0,y=y0\},dy_dx);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"mG!\"
+\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 75 "Now we have calulated the s
+lope of the tangent line we seek by plugging the" }}{PARA 0 "" 0 "" 
+{TEXT -1 52 "point of tangency into our expression for dy/dx....\n" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "ytan :=
+ y0 + m* (x-x0);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%ytanG,&*$\"\"##
+\"\"\"F'F)%\"xG!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 221 "Now we w
+ant to plot our original curve on the same set of axes with the tangen
+t\nline we just found. The regular plot command can't handle \nplottin
+g an implicit equation like x^2 + y^2 = 1. Instead we must use the com
+mand " }}{PARA 0 "" 0 "" {TEXT -1 83 "\"implicitplot.\" This is from a
+ special set of plotting tools that you can access by" }}{PARA 0 "" 0 
+"" {TEXT -1 21 "issuing the command:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}{PARA 7 "" 1 "" 
+{TEXT -1 50 "Warning, the name changecoords has been redefined\n" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 76 "You MUST include the plots package anytime you want to use the \+
+implicitplot " }}{PARA 0 "" 0 "" {TEXT -1 46 "command, otherwise MAPLE
+ won't understand it. " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 
+0 "" {TEXT -1 62 "Finally, we can plot the circle and the tangent line
+ we found:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "implicitplot(\{eqn
+,y=ytan\},x=-2..2,y=-2..2);" }}{PARA 13 "" 1 "" {GLPLOT2D 426 426 426 
+{PLOTDATA 2 "6%-%'CURVESG6D7$7$$!3'Q++++++g&!#=$\"3U&4tBc8U(>!#<7$$!3)
+=/piPky&eF*$\"37**************>F-7$7$$!35/++++++SF*$\"3]&4tBc8U\"=F-7$
+$!3oU!piPkyD%F*$\"3T************R=F-7$F9F'7$7$$!3_.++++++CF*$\"3O&4tBc
+8Ul\"F-7$$!3[V!piPkyl#F*$\"3[************z;F-7$FE7$$!3c.++++++SF*$\"3G
+&4tBc8U\"=F-7$7$$!3)[.++++++)!#>$\"3m&4tBc8U\\\"F-7$$!3FW!piPky0\"F*$
+\"3d************>:F-7$FWF@7$7$$\"3[l************zFT$\"3_&4tBc8UL\"F-7$
+$\"3=\\&4tBc8U&FT$\"3()************f8F-7$7$$\"3\\[&4tBc8U&FT$\"3l*****
+*******f8F-7$FR$\"3W&4tBc8U\\\"F-7$7$$\"3e'************R#F*$\"3f&4tBc8
+U<\"F-7$$\"37a4tBc8U@F*$\"3s*************>\"F-7$FapFhn7$7$$\"3)o******
+*******RF*$\"3Y&4tBc8U,\"F-7$$\"3K`4tBc8UPF*$\"3\")************R5F-7$F
+]qF\\p7$7$$\"3?(************f&F*$\"3Ob4tBc8U&)F*7$$\"3j`4tBc8U`F*$\"3#
+*)************z)F*7$7$Fjq$\"3!y************z)F*Fhp7$7$$\"3_(**********
+**>(F*$\"3%R&4tBc8UpF*7$FfrFdr7$Fhr7$Feq$\"3Ca4tBc8U&)F*7$7$F\\rFjq7$F
+gqFeq7$7$F[sFeqFcr7$7$F`qF^q7$F[qFip7$Fds7$F`rFjq7$7$Fdp$\"3&\\&4tBc8U
+@F*7$F_pF]p7$F[tFcs7$7$Ffo$\"3))\\&4tBc8U&FT7$F[oFin7$FatFhs7$7$FZ$!3b
+W!piPky0\"F*7$FioFR7$Fgt7$FfoF^o7$7$FH$!3#H/piPkyl#F*7$$\"3e&4tBc8Ul\"
+F-FA7$7$F_u$!3C.++++++CF*7$FZ$!3pW!piPky0\"F*7$7$F<$!3BV!piPkyD%F*7$F7
+F57$7$FNFL7$$\"3E************z;F-$!3PU!piPkyl#F*7$7$$\"3M*************
+*>F-$!3*H/piPky&eF*7$F+F(7$FjvFiu-%'COLOURG6&%$RGBG\"\"\"\"\"!Faw-F$6_
+p7$7$$!3O.++++++))F*$!3-ELLLLL$o%F*7$$!3gkmmmmmT\"*F*$!3+.++++++SF*7$7
+$$!3slmmmmmT\"*F*FL7$$!3*o*********\\7$*F*$!3D7++++]([$F*7$7$$!3:*****
+******\\n*F*FAFcx7$7$Fjx$!3!Q++++++S#F*7$$!3w)***********\\)*F*$!3_4++
++++]8F*7$7$$!3VmmmmmmT**F*FRF`y7$Ffy7$Fgy$\"3*QemmmmmT$FT7$7$FgyFinFjy
+7$F^z7$$!3!)H9dG9dy(*F*$\"3I@9dG9dy<F*7$7$$!3P,+++++v'*F*F]pF`z7$Ffz7$
+$!3g,++++Dc%*F*$\"3p$********\\i0$F*7$7$$!3%zmmmmm;9*F*FipFjz7$F`[l7$$
+!3B\"yxxxxx-*F*$\"3_sxxxxxFUF*7$7$Ffw$\"3\"\\KLLLLLo%F*Fd[l7$7$$!3=/++
+++++sF*$!3w%*********\\7pF*7$$!3L(***********\\#)F*F(7$Fc\\lFew7$7$$!3
+[/++++++))F*F[\\l7$$!3$H++++]iX)F*$\"3k&********\\iD&F*7$7$$!3n++++++]
+#)F*FeqF[]l7$Fa]l7$$!3aOLLLLL$y(F*$\"3cHLLLLL$='F*7$7$F_\\l$\"3w%*****
+****\\7pF*Fe]l7$7$F(Fd\\l7$Fa\\lF_\\l7$7$Fa\\l$!3G0++++++sF*7$Fc^lFa\\
+l7$F[^l7$$!3!G++++]i0(F*$\"38'********\\i0(F*7$7$$!3U,++++]7pF*FdrFg^l
+7$F]_l7$$!3AOLLLLL$='F*$\"3)4LLLLLLy(F*7$7$F($\"3L(***********\\#)F*Fa
+_l7$7$F]xF[x7$FhwFfw7$F\\`lF_^l7$Fg_l7$$!3T.++++Dc_F*$\"3[)********\\i
+X)F*7$7$$!38PLLLLL$o%F*F`rF_`l7$Fe`l7$$!3S\"yxxxxxA%F*$\"3ovxxxxxF!*F*
+7$7$FL$\"3slmmmmmT\"*F*Fi`l7$7$FLFax7$FfxFdx7$7$FAFjxFdal7$7$FL$\"3gkm
+mmmmT\"*F*7$$!3o.++++DcIF*$\"3;(********\\iX*F*7$7$FA$\"3E++++++v'*F*F
+[bl7$7$F^yFjx7$FcyFay7$7$FRFgyFfbl7$7$FcuFbbl7$$!3CL9dG9dy<F*$\"3eF9dG
+9dy(*F*7$7$FR$\"3VmmmmmmT**F*F[cl7$Fhbl7$F[zFgy7$7$FinFgyFecl7$Facl7$$
+!3f?nmmmm;MFTFbcl7$7$FinFbclFicl7$Fgcl7$FczFaz7$7$F]pFgzF_dl7$F]dl7$$
+\"3)R***********\\8F*$\"3()************\\)*F*7$7$$\"3'o************R#F
+*$\"3P,+++++v'*F*Fcdl7$Fadl7$$\"3C%********\\i0$F*F[[l7$7$FipFa[lF_el7
+$7$F]pFbbl7$$\"3#G*********\\([$F*$\"3W-++++]7$*F*7$7$Fip$\"3$ommmmm;9
+*F*Ffel7$Fcel7$Fg[l$!37!yxxxxx-*F*7$7$F[\\lFfwF`fl7$7$F[\\lFi\\l7$F^]l
+F\\]l7$7$FeqFb]lFgfl7$7$Feq$\"3y,+++++]#)F*7$$\"3-OLLLLL$o%F*F\\r7$F^g
+lF\\fl7$Fifl7$Fh]lFf]l7$7$F\\^lF_\\lFcgl7$Fegl7$$\"3C(********\\i0(F*F
+h^l7$7$FdrF^_lFggl7$7$Fdr$\"3k.++++]7pF*7$F^hlFdr7$F`hlF[gl7$F[hl7$Fd_
+lFb_l7$7$Fh_lF(Fchl7$Fehl7$$\"3P(********\\iX)F*F``l7$7$F`rFf`lFghl7$7
+$F\\rF_gl7$F\\glFeq7$F^ilF]hl7$F[il7$F\\alFj`l7$7$F`alFLFail7$7$FialFL
+7$$\"3F)********\\iX*F*F\\bl7$7$FbblFAFfil7$7$FbblFcu7$F^clF\\cl7$7$Fb
+clFRF]jl7$F_jl7$Fbcl$!3G@nmmmm;MFT7$7$FbclFinFajl7$Fejl7$$\"3w)*******
+****\\)*F*Fddl7$7$F\\elFjdlFgjl7$7$FbblF]p7$$\"3L,++++]7$*F*$\"3F#****
+*****\\([$F*7$7$F]flFipF^[m7$Fd[mF]ilF\\w-%+AXESLABELSG6$%\"xG%\"yG" 
+1 2 0 1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Cur
+ve 2" }}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 73 "Notice that unlike the u
+sual plot command, implicitplot accepts equations" }}{PARA 0 "" 0 "" 
+{TEXT -1 122 "to be plotted rather than just expressions. That's why w
+e referred to the tangent line\nas \"y = ytan\" instead of just ytan.
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 90 "ALSO:
+ if the plot resulting from implicitplot looks choppy, you can improve
+ its appearance" }}{PARA 0 "" 0 "" {TEXT -1 88 "by specifying that MAP
+LE use a larger number of points in its sketch (its default is 625" }}
+{PARA 0 "" 0 "" {TEXT -1 30 "points). Do this by adding the" }}{PARA 
+0 "" 0 "" {TEXT -1 9 "argument:" }}{PARA 0 "" 0 "" {TEXT -1 45 "      \+
+                        numpoints=5000 " }}{PARA 0 "" 0 "" {TEXT -1 0 
+"" }}{PARA 0 "" 0 "" {TEXT -1 91 "(or any number larger than 625 but n
+ot so large that it takes MAPLE forever to generate the" }}{PARA 0 "" 
+0 "" {TEXT -1 6 "plot)." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 
+0 "" {TEXT -1 13 "For example:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 50 "implicitplot((x^2+y^2)^2 = 4*x*y,x=-3..3,
+y=-3..3);" }}{PARA 13 "" 1 "" {GLPLOT2D 434 434 434 {PLOTDATA 2 "6$-%'
+CURVESG6eo7$7$$!3=************z5!#<$!3#y=2Fr\"\\J()!#=7$$!3AMvlCMv(4\"
+F*$!3#>************R)F-7$F.7$$!3n54!\\b#p,6F*$!3;y3*4XuI=)F-7$7$$!3@g
+\\&z^V:7\"F*$!3+#*************fF-F47$F:7$$!3*e>(ycmr86F*$!3.E!G@VLGm&F
+-7$7$F($!3m\"=T))=KDP%F-F@7$7$F1$!3WMvlCMv(4\"F*7$$!3/!>2Fr\"\\J()F-F(
+7$FM7$F($!3%*)=2Fr\"\\J()F-7$FF7$$!3qz*GN8'G]5F*$!3)o=5ZmQr*QF-7$7$$!3
+TuQauU3L5F*$!33#************f$F-FU7$Fen7$$!3(*>KpE$=aG*F-$!3qlnIt;e9FF
+-7$7$F1$!3W>bSSvyS;F-F[o7$7$F1F/7$$!30x3*4XuI=)F-F57$7$F=F;Ffo7$Fao7$$
+!350Z4N;7E!)F-$!3**y_!\\OyQd\"F-7$7$$!3P$*35GP%)[tF-$!3=#************>
+\"F-F\\p7$Fbp7$$!3_@h@twuJjF-$!3hE'QyEBDo)!#>7$7$F=$!3Ot*******R1%eF]q
+Fhp7$Fjo7$$!3#\\-G@VLGm&F-FA7$7$FGF(Fcq7$Fgq7$FXFV7$7$FhnFfnFiq7$7$F=$
+!3Wv*******R1%eF]q7$$!3S&G&4v2(*GUF-$!3d%)p/\\AH5dF]q7$7$Fhn$!3!**)***
+*******R9F]qF`r7$F[r7$$!39lnIt;e9FF-$!3')=KpE$=aG*F-7$7$FboF1Fjr7$F`s7
+$F_pF]p7$7$FepFcpFbs7$7$Fhn$!3o#***********R9F]q7$$!3'=?2p*)HVu\"F-$!3
+pBy#4.,nb'F]q7$7$Fep$!3V$**********zs\"!#?Fis7$Fds7$F[qFip7$7$F`qF=Fdt
+7$7$F^rF=7$$!3l')p/\\AH5dF]qFar7$7$FgrFhnFit7$7$FgsFhn7$F\\tFjs7$7$F`t
+FepF`u7$7$$!3P++++++G<FbtFep7$FepFeu7$7$$\"3s2++++++7F-$\"3J2+++++G<Fb
+t7$F\\vFju7$7$$\"37G+++++G<FbtFju7$$\"3*e%y#4.,nb'F]q$\"3+Js!p*)HVu\"F
+-7$7$$\"3K4+++++S9F]q$\"3i2++++++OF-Fcv7$7$$\"3-5+++++S9F]qF\\w7$$\"3;
+Uq/\\AH5dF]q$\"3]6`4v2(*GUF-7$7$$\"3qC++++kSeF]q$\"3a2++++++gF-Fbw7$Fh
+w7$$\"3`E(QyEBDo)F]q$\"3iUh@twuJjF-7$7$Fju$\"3zF45GP%)[tF-F^x7$7$FjuFa
+v7$Ffv$\"3^Wy#4.,nb'F]q7$7$F\\wFjvFix7$7$Fju$\"3!*G45GP%)[tF-7$$\"3V)G
+0\\OyQd\"F-$\"3JFZ4N;7E!)F-7$7$$\"3VHbSSvyS;F-$\"3Y2++++++%)F-Fby7$7$$
+\"3;HbSSvyS;F-F[z7$$\"3o!y1Ln\"e9FF-$\"3_NKpE$=aG*F-7$7$F\\w$\"3IvQauU
+3L5F*Faz7$7$F\\wF`w7$$\"3%4J&4v2(*GUF-$\"3jXq/\\AH5dF]q7$7$F[xFiwF\\[l
+7$Fgz7$$\"3)z?5ZmQr*QF-$\"3f!)*GN8'G]5F*7$7$$\"3'*>7%))=KDP%F-$\"3t+++
++++!3\"F*Fd[l7$Fj[l7$$\"3M\\!G@VLGm&F-$\"3c'>(ycmr86F*7$7$F[x$\"3mg\\&
+z^V:7\"F*F`\\l7$Fb[l7$Fax$\"3vB(QyEBDo)F]q7$7$FexFjuFj\\l7$7$F`yFju7$$
+\"3?EZ4N;7E!)F-$\"3r)G0\\OyQd\"F-7$7$F[zFiyFa]l7$Ff\\l7$$\"3C44*4XuI=)
+F-$\"3X54!\\b#p,6F*7$7$F[z$\"3AMvlCMv(4\"F*Fi]l7$7$F[zF_z7$$\"3TMKpE$=
+aG*F-$\"38!y1Ln\"e9FF-7$7$FhzF\\wFd^l7$Fj^l7$Fg[lFe[l7$7$F]\\lF[\\lF\\
+_l7$7$F]\\l$\"3hvrq7<\\J()F-7$Fa_lF]\\l7$Fc_lF_^l7$F^_l7$Fc\\lFa\\l7$7
+$Fg\\lF[xFf_l7$Fh_l7$F\\^l$\"3N54*4XuI=)F-7$7$F`^lF[zFj_l7$F^`lF`_l-%'
+COLOURG6&%$RGBG\"\"\"\"\"!Fe`l-%+AXESLABELSG6$%\"xG%\"yG" 1 2 0 1 10 
+0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 65 "implicitplot((x^2+y^2)^2 = 4*x*y,x=-3..3,y=-3..3,nump
+oints=8000);" }}{PARA 13 "" 1 "" {GLPLOT2D 434 434 434 {PLOTDATA 2 "6$
+-%'CURVESG6iz7$7$$!3D'zh0bfB6\"!#<$!3$RI<)=:Zp\")!#=7$$!3E<w/kDlC6F*$!
+3zKSw))*3Gv(F-7$F.7$$!3]GK6'4@u7\"F*$!3f7(\\K`$>-wF-7$7$$!3)4v$R_jdN6F
+*$!3%oC$R&o^'yqF-F47$F:7$$!3%4!e!)3OuO6F*$!3;-K&H56[$oF-7$7$$!3')4qXPk
+nP6F*$!3\"4YA?Q%\\/kF-F@7$FF7$$!3]-3z67tN6F*$!3W)RK(pxxqhF-7$7$$!3d%z
+\"[6g5J6F*$!3'\\n^'yqLIdF-FL7$FR7$$!3%y[d#ok)y7\"F*$!3=gZp,z1vbF-7$7$$
+!3SrspYiN;6F*$!3-*)3Gv(zh0&F-FX7$7$$!3=rspYiN;6F*F[o7$$!39df!3k\"Q:6F*
+$!36!GRG()ef-&F-7$7$F($!35/v&4%H'Q$\\F-Fao7$7$$!3m<ZA?Q%\\/\"F*$!3z?uq
+M-<a%*F-7$$!3f*eK[o5&o5F*$!3o/c]&fB65*F-7$F`p7$$!3Kf(HnCwT4\"F*$!3'o=b
+/L*z3')F-7$7$$!3tx0MmB@.6F*$!3u=[8#HmpU)F-Ffp7$7$F]q$!3%)>[8#HmpU)F-F'
+7$Fgo7$$!3Ey'4v(*ei4\"F*$!3!=GJC?GIa%F-7$7$$!3NM^/,$*f*3\"F*$!3^-,\">Z
+A?Q%F-Ffq7$F\\r7$$!3]\"[e,D&4u5F*$!3YjCds\"304%F-7$7$$!3zx$Q!)\\JU0\"F
+*$!3-;$R&o^'yq$F-Fbr7$Fhr7$$!3lUy)\\xB10\"F*$!33m!34il5l$F-7$7$F\\p$!3
+9d53&4Fub$F-F^s7$7$$!3i!Rw))*3Gv(*F-$!3\"HKy.f'**=5F*7$$!3oA$y.f'**=5F
+*Fis7$7$F^t$!3t\"Rw))*3Gv(*F-F[p7$7$F\\p$!3ec53&4Fub$F-7$$!3+cM^P)f<-
+\"F*$!3]X6G#pZbE$F-7$7$$!3&z#fOvnU/5F*$!33I&o^'yqLIF-Fht7$7$F_u$!3_H&o
+^'yqLIF-7$$!3Fs!48JKz\"**F-$!3U[et_k0\"*GF-7$7$Fis$!3^8m,iDo;FF-Fgu7$7
+$Fcp$!3\")*eK[o5&o5F*7$$!3!>U2ZBqTX*F-F\\p7$FdvFhs7$F]v7$$!3yLZgG5m'e*
+F-$!3')*Rp?Vq\"[DF-7$7$$!3C<e$\\yHcR*F-$!3.Vxzh0bfBF-Fiv7$F_w7$$!3t#)4
+FBzKO#*F-$!3OmB.MiMCAF-7$7$Fcp$!396+]PFS&4#F-Few7$Fav7$FipFgp7$7$F_q$!
+3&zdSjO7K5\"F*F_x7$F[x7$$!3lQI))4Nja))F-$!3QB&\\SM$)=$>F-7$7$$!3T=t!=4
+rP`)F-$!3DcpUeKR&o\"F-Fex7$7$F\\y$!3`cpUeKR&o\"F-7$$!3[N$3.&fop%)F-$!3
+]RMD+OnU;F-7$7$F_q$!3#Hem\"[>F4;F-Fdy7$7$F1F/7$$!3r,t\")=:Zp\")F-F(7$7
+$$!3#GI<)=:Zp\")F-F(7$F_qF]q7$Fjy7$$!35%4@,+RF.)F-$!3B&*)pqCjaS\"F-7$7
+$F1$!3=l(eNC#QG7F-Fhz7$F^z7$F7$!3FGK6'4@u7\"F*7$7$F=F;Fb[l7$F^[l7$$!3%
+))R)Gbe=&f(F-$!3q.=`)3f)o6F-7$7$$!3DncpPQ?wsF-$!3*)ph0bfB65F-Fh[l7$7$F
+_\\l$!3.qh0bfB65F-7$$!3yN!>lznz8(F-$!3(y\"QIR%)>>&*!#>7$7$F=$!3b=?ARJL
+)=*F\\]lFg\\l7$Ff[l7$FC$!3s+e!)3OuO6F*7$7$FIFGFb]l7$F^]l7$$!32e.m%G5mj
+'F-$!3oGF=C0?\"z(F\\]l7$7$FI$!3X4t81c&=v'F\\]lFh]l7$Ff]l7$FOFM7$7$FUFS
+Fb^l7$F^^l7$$!3Z^E%p_l_7'F-$!3.Q>ln]2jhF\\]l7$7$FU$!3/4Gh\"HKEz%F\\]lF
+f^l7$Fd^l7$FenFY7$7$F[oFinF`_l7$F\\_l7$$!3\\g(=)f&>Dg&F-$!3p&)H=0<'*[Y
+F\\]l7$7$$!37>eZ>O3,^F-$!3MNQ&o^'yqLF\\]lFd_l7$Fj_l7$$!36ZP[2))=k]F-$!
+3Wa_#[>'p!H$F\\]l7$7$F[o$!3PK?2uNJgKF\\]lF``l7$Fb_l7$FdoFbo7$7$FhoF(Fj
+`l7$F\\al7$$!3p!GJC?GIa%F-Fgq7$7$F_rF]rF^al7$7$F[o$!3oJ?2uNJgKF\\]l7$$
+!3Noe^En=wWF-$!31xhzqR9HCF\\]l7$7$$!3'>55>ZA?Q%F-$!353Z$=]r&G@F\\]lFga
+l7$Fbal7$$!3-kCds\"304%F-Fcr7$7$$!3e;$R&o^'yq$F-FirFcbl7$F]bl7$$!3r\"e
+T$4o-rQF-$!3Sy6$)3,<R<F\\]l7$7$F[s$!3E*))R3apbH\"F\\]lF[cl7$7$F[sFir7$
+$!3jm!34il5l$F-F_s7$7$FesF\\pFfcl7$Fjcl7$$!30Y6G#pZbE$F-Fit7$7$FeuF_uF
+\\dl7$7$F[s$!3%**))R3apbH\"F\\]l7$$!3$\\C`p<wyC$F-$!3i!o1!*R.\"H7F\\]l
+7$7$Feu$!3px5pSg]`r!#?Fedl7$F`dl7$Fju$!3;r!48JKz\"**F-7$7$F^vFisF`el7$
+Fdel7$F\\w$!3*[t/'G5m'e*F-7$7$FbwF`wFfel7$7$$!3(*G&o^'yqLIF-$!3Vz5pSg]
+`rF^el7$$!3wb&zw4&31EF-$!3pwqN!e6W0*F^el7$7$Fbw$!3Fr52`Kg>MF^elFafl7$F
+jel7$$!34mB.MiMCAF-$!3i\")4FBzKO#*F-7$7$F\\xFcpF[gl7$Fagl7$$!3mB&\\SM$
+)=$>F-$!3aPI))4Nja))F-7$7$$!3!o&pUeKR&o\"F-F\\yFcgl7$7$Fbw$!3ap52`Kg>M
+F^el7$$!30@4F2ZKW>F-$!3T.>9%G?Z\"yF^el7$7$Fby$!3#[d#[2]_%H\"F^elF`hl7$
+7$Fby$!3I<t!=4rP`)F-7$$!3ARMD+OnU;F-$!3fO$3.&fop%)F-7$7$F[zF_qF]il7$Fc
+il7$$!3&\\*)pqCjaS\"F-Fiz7$7$$!3!\\weNC#QG7F-F1Feil7$Fiil7$$!3U.=`)3f)
+o6F-$!3%**R)Gbe=&f(F-7$7$Fe\\l$!3OocpPQ?wsF-F]jl7$7$Fby$!3w\"e#[2]_%H
+\"F^el7$$!3qb\"[GQKmD\"F-$!39u(R$*QA#o\"*F^el7$7$Fe\\l$!3emi'GqH;>$!#@
+Fjjl7$Fcjl7$Fj\\lFh\\l7$7$F_]lF=Fe[m7$Fg[m7$$!3IFF=C0?\"z(F\\]lFi]l7$7
+$F_^lFIFi[m7$F]\\m7$Fi^lFg^l7$7$F]_lFUF_\\m7$Fa\\m7$Fg_lFe_l7$7$F]`lF[
+`lFc\\m7$7$Fe\\l$!3G,j'GqH;>$Fc[m7$$!3Bxb(oplG/&F\\]l$!3#Q4KoL2()p\"F
+\\]l7$7$F]`l$!3=9(RMkb*HQ!#AFj\\m7$Fe\\m7$$!3u`_#[>'p!H$F\\]lFa`l7$7$F
+g`lF[oFe]m7$7$FealF[o7$$!3vxhzqR9HCF\\]lFhal7$7$F`blF^blF\\^m7$F`^m7$F
+^clF\\cl7$7$FbclF[sFb^m7$7$$!3y*))R3apbH\"F\\]lF[s7$FhdlFfdl7$7$F\\elF
+euFi^m7$7$F_flF]fl7$$!3\\rqN!e6W0*F^elFbfl7$7$FhflFbwF^_m7$7$F^hlFbw7$
+FchlFahl7$7$FghlFbyFe_m7$7$FhjlFby7$F][mF[[m7$7$Fa[mFe\\lFj_m7$7$Fh\\m
+Fe\\l7$$!3[$4KoL2()p\"F\\]lF[]m7$7$Fa]mF]`lF_`m7$Fc`mF`]m7$7$$\"3jHS&o
+^'yqLF\\]l$\"3Bn$RMkb*HQFc]m7$Fi`mFg`m7$7$$\"313/WVc&*HQFc]mFg`m7$$\"3
+!f4KoL2()p\"F\\]l$\"3/jf(oplG/&F\\]l7$7$$\"3W4l'GqH;>$Fc[m$\"3Y*=c]&fB
+65F-F`am7$7$$\"31Sk'GqH;>$Fc[mFiam7$$\"3t[)R$*QA#o\"*F^el$\"3+%>[GQKmD
+\"F-7$7$$\"3Y;E[2]_%H\"F^el$\"3'f(pUeKR&o\"F-F_bm7$Febm7$$\"31c?9%G?Z
+\"yF^el$\"3_e4F2ZKW>F-7$7$$\"3!G:rID.'>MF^el$\"3Yixzh0bfBF-F[cm7$7$$\"
+3gZ62`Kg>MF^elFdcm7$$\"3VLtN!e6W0*F^el$\"3%=fzw4&31EF-7$7$$\"3TB7pSg]`
+rF^el$\"3&*[&o^'yqLIF-Fjcm7$7$$\"39D7pSg]`rF^elFcdm7$$\"3<?n+*R.\"H7F
+\\]l$\"3!*zK&p<wyC$F-7$7$$\"3g5*R3apbH\"F\\]l$\"3!\\LR&o^'yq$F-Fidm7$7
+$$\"3U5*R3apbH\"F\\]lFbem7$$\"3$=BJ)3,<R<F\\]l$\"3-:;M4o-rQF-7$7$$\"3%
+ztM=]r&G@F\\]l$\"3%>75>ZA?Q%F-Fhem7$7$$\"3jQZ$=]r&G@F\\]lFafm7$$\"3rWi
+zqR9HCF\\]l$\"3b+f^En=wWF-7$7$$\"3is?2uNJgKF\\]l$\"3+44Gv(zh0&F-Fgfm7$
+7$$\"3#>2sSd8.E$F\\]lF`gm7$$\"3qP`#[>'p!H$F\\]l$\"3>yP[2))=k]F-7$7$Fg`
+m$\"3G,fZ>O3,^F-Ffgm7$7$Fg`mF^am7$$\"3Ukf(oplG/&F\\]l$\"3?&4KoL2()p\"F
+\\]l7$7$FiamFgamFahm7$F\\hm7$$\"3_\\I=0<'*[YF\\]l$\"3o#z=)f&>Dg&F-7$7$
+$\"3KeGh\"HKEz%F\\]l$\"3%\\p^'yqLIdF-Fihm7$F_im7$$\"3wC?ln]2jhF\\]l$\"
+3W\"oUp_l_7'F-7$7$$\"3out81c&=v'F\\]l$\"3*3[A?Q%\\/kF-Feim7$F[jm7$$\"3
+wKG=C0?\"z(F\\]l$\"3%pQgYG5mj'F-7$7$$\"3#=5A#RJL)=*F\\]l$\"3#oE$R&o^'y
+qF-Fajm7$Fgjm7$$\"3+SRIR%)>>&*F\\]l$\"3Wi!>lznz8(F-7$7$Fiam$\"3a5dpPQ?
+wsF-F][n7$7$FiamF]bm7$FbbmF`bm7$7$FhbmFfbmFh[n7$Fc[n7$$\"3\"f\"=`)3f)o
+6F-$\"3gE%)Gbe=&f(F-7$7$$\"3=v(eNC#QG7F-$\"3x_Sw))*3Gv(F-F\\\\n7$Fb\\n
+7$$\"3m4*pqCjaS\"F-$\"3j>67+!RF.)F-7$7$$\"3p&fm\"[>F4;F-$\"3sQ[8#HmpU)
+F-Fh\\n7$7$$\"3T&fm\"[>F4;F-Fa]n7$$\"3KbMD+OnU;F-$\"3\"*f$3.&fop%)F-7$
+7$Fhbm$\"3GZt!=4rP`)F-Fg]n7$Fj[n7$F^cm$\"3!y0UTG?Z\"yF^el7$7$FdcmFbcmF
+a^n7$F]^n7$$\"3/S&\\SM$)=$>F-$\"3'31$))4Nja))F-7$7$$\"3_F+]PFS&4#F-$\"
+3mCc]&fB65*F-Fg^n7$F]_n7$$\"3o%QKSBYVA#F-$\"3g,5FBzKO#*F-7$7$Fdcm$\"3A
+Pe$\\yHcR*F-Fc_n7$7$FdcmFhcm7$$\"3S#fzw4&31EF-$\"3qJtN!e6W0*F^el7$7$Fc
+dmFadmF^`n7$Fi_n7$$\"3%)>%p?Vq\"[DF-$\"3l_ZgG5m'e*F-7$7$$\"3;Nm,iDo;FF
+-$\"3g5k())*3Gv(*F-Ff`n7$F\\an7$$\"3_pet_k0\"*GF-$\"3.!448JKz\"**F-7$7
+$Fcdm$\"3sHfOvnU/5F*Fban7$7$FcdmFgdm7$F\\emFjdm7$7$FbemF`emF]bn7$Fhan7
+$$\"3qn6G#pZbE$F-$\"3ydM^P)f<-\"F*7$7$$\"3c'3\"3&4Fub$F-$\"3l>ZA?Q%\\/
+\"F*Fabn7$Fgbn7$$\"3]!434il5l$F-$\"3?Wy)\\xB10\"F*7$7$$\"3XN$R&o^'yq$F
+-$\"3!*y$Q!)\\JU0\"F*F]cn7$7$FbemFfem7$F[fm$\"3_K7$)3,<R<F\\]l7$7$Fafm
+F_fmFjcn7$7$Fdcn$\"37z$Q!)\\JU0\"F*7$$\"35!\\sD<304%F-$\"3$G[e,D&4u5F*
+7$7$Fafm$\"3CN^/,$*f*3\"F*Fcdn7$7$FafmFefm7$$\"3****e^En=wWF-$\"31Xizq
+R9HCF\\]l7$7$F`gmF^gmF^en7$Fidn7$$\"3c48V-#GIa%F-$\"3gz'4v(*ei4\"F*7$7
+$$\"3%=cd4%H'Q$\\F-$\"3D)zh0bfB6\"F*Ffen7$F\\fn7$$\"335$RG()ef-&F-$\"3
+Def!3k\"Q:6F*7$7$F`gm$\"32sspYiN;6F*Fbfn7$7$F`gmFdgm7$Figm$\"3-P`#[>'p
+!H$F\\]l7$7$F]hmFg`mF]gn7$Fagn7$F\\imFjhm7$7$FbimF`imFcgn7$Fhfn7$$\"3Q
+#z%p,z1vbF-$\"3])[d#ok)y7\"F*7$7$Fbim$\"3-&z\"[6g5J6F*Fggn7$Fegn7$$\"3
+c#oUp_l_7'F-$\"32C?ln]2jhF\\]l7$7$F^jmF\\jmFahn7$F]hn7$$\"33NCtpxxqhF-
+$\"3s-3z67tN6F*7$7$F^jm$\"3')4qXPknP6F*Fihn7$Fghn7$Fdjm$\"3;MG=C0?\"z(
+F\\]l7$7$FjjmFhjmFcin7$F_in7$$\"3MWK&H56[$oF-$\"3]+e!)3OuO6F*7$7$Fjjm$
+\"3w]PR_jdN6F*Fiin7$Fgin7$F`[nF^[n7$7$Fd[nFiamFcjn7$Fejn7$F_\\nF]\\n7$
+7$Fe\\nFc\\nFgjn7$F_jn7$$\"3Lg(\\K`$>-wF-$\"3gFK6'4@u7\"F*7$7$Fe\\n$\"
+3#ohZSc_Y7\"F*F[[o7$Fijn7$$\"3_=67+!RF.)F-$\"3Q4*pqCjaS\"F-7$7$Fa]nF_]
+nFe[o7$7$Fa]n$\"3iw0MmB@.6F*7$$\"3UQs\")=:Zp\")F-F_fn7$F`\\o7$$\"3m^Sw
+))*3Gv(F-Fb[o7$7$Fa]nFe]n7$$\"3!)e$3.&fop%)F-$\"3/bMD+OnU;F-7$7$F^^nFh
+bmFi\\o7$F_]o7$Fj^nFh^n7$7$F`_nF^_nFa]o7$F]\\o7$$\"38q_XI$*z3')F-$\"35
+b(HnCwT4\"F*7$7$F`_n$\"3[)eK[o5&o5F*Fe]o7$Fc]o7$Ff_nFd_n7$7$Fj_nFdcmF_
+^o7$Fa^o7$$\"3w`ZgG5m'e*F-Fg`n7$7$F_an$\"3sNm,iDo;FF-Fc^o7$7$F_an$\"3p
+?$y.f'**=5F*7$$\"3#3R2ZBqTX*F-Fjbn7$F^_oF[^o7$Fg^o7$FeanFcan7$7$FianFc
+dmFc_o7$Fe_o7$Fdbn$\"3\")o6G#pZbE$F-7$7$Fjbn$\"36(3\"3&4Fub$F-Fg_o7$7$
+Fjbn$\"3$>R2ZBqTX*F-7$$\"3\"4Ky.f'**=5F*F_an7$Fb`oF[_o7$F[`o7$F`cnF^cn
+7$7$FfcnFdcnFg`o7$7$FadnFdcn7$FfdnFddn7$7$FjdnFafmF\\ao7$F^ao7$$\"3Qz'
+4v(*ei4\"F*Fgen7$7$F_fn$\"31kv&4%H'Q$\\F-F`ao7$7$$\"3-)zh0bfB6\"F*$\"3
+`Rs\")=:Zp\")F-7$F^\\oFa]n7$F]bo7$Fh]oFf]o7$7$F\\^oF`_nF_bo7$Fabo7$Fjb
+n$\"3/$R2ZBqTX*F-7$7$F_fn$\"3ikv&4%H'Q$\\F-7$FefnFcfn7$7$FifnF`gmFjbo7
+$F\\co7$FjgnFhgn7$7$F^hnFbimF^co7$F`co7$F\\in$\"3>OCtpxxqhF-7$7$F`inF^
+jmFbco7$Ffco7$F\\jnFjin7$7$F`jnFjjmFhco7$Fjco7$F^[oF\\[o7$7$Fb[oFe\\nF
+\\do7$F^do7$F_fnF[bo-%'COLOURG6&%$RGBG\"\"\"\"\"!Ffdo-%+AXESLABELSG6$%
+\"xG%\"yG" 1 2 0 1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Cu
+rve 1" }}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 56 " **** Higher Derivatives in MAPLE and usage of \+
+'$'  ****" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 48 "Suppose I a
+m investigating the following limit:\n" }{MPLTEXT 1 0 1 " " }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 71 "                                         \+
+             lim      (2^h -1)" }}{PARA 0 "" 0 "" {TEXT -1 67 "       \+
+                                             h -> 0   ------" }}{PARA 
+0 "" 0 "" {TEXT -1 119 "                                              \+
+                         h                                            \+
+   " }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 88 "I could
+ use a \"do loop\" (see MAPLE file 3)  to evaluate the expression for \+
+successively " }}{PARA 0 "" 0 "" {TEXT -1 20 "smaller values of h:" }
+{TEXT -1 1 " " }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 20 "for n from 1 to 6 do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "   h := 1/n;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "  \+
+ evalf((2^h - 1)/h)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od;" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%\"hG\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#$\"\"\"\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"hG#\"\"\"\"
+\"#" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"*CrUG)!\"*" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#>%\"hG#\"\"\"\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#$\"*]Jwz(!\"*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"hG#\"\"\"\"\"%
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"*g%Gov!\"*" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"hG#\"\"\"\"\"&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$
+\"*v<\\V(!\"*" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"hG#\"\"\"\"\"'" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"*)GsZt!\"*" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 2 "  " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 82 " The
+ same result can be accomplished using the repetition operator '$' as \+
+follows:" }{MPLTEXT 1 0 1 " " }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "n := 'n';
+h := 1/n;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"nGF$" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"hG*&\"\"\"F&%\"nG!\"\"" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 30 "evalf((2^h - 1)/h) $ n = 1..6;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6($\"\"\"\"\"!$\"*CrUG)!\"*$\"*]Jwz(F($\"*g%GovF($\"
+*v<\\V(F($\"*)GsZtF(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 81 "The $ tel
+ls MAPLE to execute the previous command for each integer n from 1 to \+
+6," }}{PARA 0 "" 0 "" {TEXT -1 42 "producing the same result as a \"do
+ loop.\"\n" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 59 "By the way, \+
+the value of this limit, we now know, is ln(2):" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "h := 'h';" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"hGF$" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 23 "limit((2^h - 1)/h,h=0);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#-%#lnG6#\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 9 "evalf(%);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+1=ZJp!#5" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 82 "The $ operator can also be used to find higher derivative
+s. Suppose we've defined:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }{MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "f := sin(x);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fG-%$sinG6#%\"xG" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 20 "fprime := diff(f,x);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%'fprimeG-%$cosG6#%\"xG" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 55 " If we want to compute the 2nd derivative of f, we say:" 
+}{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 1 " " }{MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "f2prime := diff(f,x$2);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%(f2primeG,$-%$sinG6#%\"xG!\"\"" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 74 "MAPLE also allows us to compile
+ lists using the $ operator. As an example," }}{PARA 0 "" 0 "" {TEXT 
+-1 80 "we can define a list containing the first 10 derivatives of sin
+(x) as follows:\n " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "deriv
+s := diff(f,x$n) $ n = 1..10;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%'de
+rivsG6,-%$cosG6#%\"xG,$-%$sinGF(!\"\",$F&F-F+F&F*F.F+F&F*" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 72 "A particular element of a list can be ref
+erred to using square brackets:" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "derivs[
+3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,$-%$cosG6#%\"xG!\"\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "plot(derivs[4],x=-4..4);" }}
+{PARA 13 "" 1 "" {GLPLOT2D 426 426 426 {PLOTDATA 2 "6%-%'CURVESG6$7gn7
+$$!\"%\"\"!$\"3-#GzI&\\-ov!#=7$$!3ommmmFiDQ!#<$\"3JYub^h@>jF-7$$!34LLL
+o!)*Qn$F1$\"3)>dc9C6_2&F-7$$!3nmmmwxE.NF1$\"35tgh1[TQNF-7$$!3YmmmOk]JL
+F1$\"3A$G5*)GUx)=F-7$$!3_LLL[9cgJF1$\"35xT1Adw'*=!#>7$$!3smmmhN2-IF1$!
+3!H;fl&*o1R\"F-7$$!3!******\\`oz$GF1$!37r?)460)*)HF-7$$!3zmmm\")3DoEF1
+$!3x&Q*=*oJ'eXF-7$$!3?+++:v2*\\#F1$!3#pdQKK4@*fF-7$$!3BLLL8>1DBF1$!3HC
+Of>ju(G(F-7$$!3jmmmw))yr@F1$!3R2JXExuZ#)F-7$$!3;+++S(R#**>F1$!35_O/Qa8
+'4*F-7$$!35+++?4h7>F1$!3pdZA.(z9U*F-7$$!30++++@)f#=F1$!3id'Hb=khn*F-7$
+$!3/+++!=*\\U<F1$!3\\HD*QX_H&)*F-7$$!3-+++gi,f;F1$!3[X=U[96h**F-7$$!3N
+LL$3x0Ke\"F1$!3YpTPQ+B****F-7$$!3qmmm\"G&R2:F1$!3T;7&*o#3*z**F-7$$!32+
++]x#\\sT\"F1$!3f*o4\\%zM#))*F-7$$!3WLLLtK5F8F1$!3hGH\"[/NXq*F-7$$!3_LL
+L$yP2D\"F1$!3KhUS1+<#\\*F-7$$!3eLLL$HsV<\"F1$!3&48A&*[wWA*F-7$$!3+-++]
+&)4n**F-$!3w7i/1w)oR)F-7$$!37PLLL\\[%R)F-$!3S:9Yl*[FW(F-7$$!3F)*****\\
+&y!pmF-$!3?zm?>Lf&='F-7$$!3Y******\\O3E]F-$!3U%HkugHr\"[F-7$$!3NKLLL3z
+6LF-$!3b1$zkl#e^KF-7$$!3sLLL$)[`P<F-$!3nsSG&H0)G<F-7$$!3gSnmmmr[R!#?$!
+3cfs.0kq[RFit7$$\"3yELL$=2Vs\"F-$\"3'HNB(e_x:<F-7$$\"3)e*****\\`pfKF-$
+\"3\"Gw_=;uA?$F-7$$\"36HLLLm&z\"\\F-$\"3^2EP8]4AZF-7$$\"3=(******z-6j'
+F-$\"3K]La%z4d:'F-7$$\"3q\"******4#32$)F-$\"3O(3JxR\"4%Q(F-7$$\"3r$***
+**\\#y'G**F-$\"3()e*3.&3'fP)F-7$$\"3G******H%=H<\"F1$\"3q1jy`I&)=#*F-7
+$$\"3qKLLo,\"QD\"F1$\"3/5^]$f\"z,&*F-7$$\"35mmm1>qM8F1$\"3u!\\j\"4$*eA
+(*F-7$$\"3(HLLL5r5U\"F1$\"3'336q-@\")))*F-7$$\"3%)*******HSu]\"F1$\"3D
+\\U\"=yO*z**F-7$$\"3Smm;HOq&e\"F1$\"3#*ppD#))))))***F-7$$\"3'HLL$ep'Rm
+\"F1$\"3/]:Acvic**F-7$$\"3Umm;\\%H&\\<F1$\"3I^sk<rpS)*F-7$$\"3')******
+R>4N=F1$\"3Ls^vouw_'*F-7$$\"3%GLLed*f:>F1$\"3)yrD\"\\(>9T*F-7$$\"3#emm
+;@2h*>F1$\"3*ojqj/0\"4\"*F-7$$\"3]*****\\c9W;#F1$\"3+B>)f(>A*G)F-7$$\"
+3Kmmmmd'*GBF1$\"3??2@x!f4E(F-7$$\"3j*****\\iN7]#F1$\"3E*[:Tu<[(fF-7$$
+\"3`LLLt>:nEF1$\"3MpM\"pw4%oXF-7$$\"35LLL.a#o$GF1$\"3P@(QWf62+$F-7$$\"
+3ammm^Q40IF1$\"3&=X)*4C`2O\"F-7$$\"3y******z]rfJF1$!3WL<#eWV@\"=FH7$$
+\"3gmmmc%GpL$F1$!3I%3t&G'f4%>F-7$$\"3/LLL8-V&\\$F1$!3rMf7E<+lMF-7$$\"3
+=+++XhUkOF1$!3'QC<5)4P$*\\F-7$$\"3=+++:o<EQF1$!3k*f(*\\B4NK'F-7$$\"\"%
+F*$!3-#GzI&\\-ovF--%'COLOURG6&%$RGBG$\"#5!\"\"$F*F*Fd^l-%+AXESLABELSG6
+$Q\"x6\"Q!Fi^l-%%VIEWG6$;F(Fi]l%(DEFAULTG" 1 2 0 1 10 0 2 9 1 4 2 
+1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 26 "(That's sin(x) again.....)" }{MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 " " }}}}{MARK "52 0 1" 0 }{VIEWOPTS 1 1 0 3 2 1804 1 1 
+1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DirectedGraph", "DirectedGraph.vcproj", "{1C17B9EA-2861-4FB6-A6E2-B65005138D33}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1C17B9EA-2861-4FB6-A6E2-B65005138D33}.Debug.ActiveCfg = Debug|Win32
+		{1C17B9EA-2861-4FB6-A6E2-B65005138D33}.Debug.Build.0 = Debug|Win32
+		{1C17B9EA-2861-4FB6-A6E2-B65005138D33}.Release.ActiveCfg = Release|Win32
+		{1C17B9EA-2861-4FB6-A6E2-B65005138D33}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

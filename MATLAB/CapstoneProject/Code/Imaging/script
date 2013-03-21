@@ -1,0 +1,16 @@
+#!/bin/bash
+# Conveyer belt script for DSIVE
+
+if [ -n "$1" ]  # If command-line parameter is present
+then
+  filename=$1      # Use filename in script arg if given
+else
+  echo "Enter PGM file to process: " # Else read from stdin
+  read filename
+fi
+
+./intmatrix1 $filename image0.dsv
+./matrix_convolution image0.dsv image1.dsv 1 1 1 1 1 1 1 1 1
+./threshold image1.dsv image2.dsv 128
+./matrix_convolution image2.dsv image3.dsv 0 -1 0 -1 4 -1 0 -1 0
+./absvalue image3.dsv o.txt

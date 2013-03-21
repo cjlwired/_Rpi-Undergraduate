@@ -1,0 +1,66 @@
+;;Carlos Lazo
+;;9-9-04
+;;Problem Solving in Computer Science Quiz #1
+
+;;Contract: feet->meter: number -> number
+
+;;Purpose: to convert a number of feet entered into meters
+
+;;Example: (feet->meter 1) should produce 0.3048 meters
+
+;;Definition:
+
+(define (feet->meter x)
+  (* x .3048))
+
+;;Tests:
+(feet->meter 1)
+;;expected value
+.3048
+(feet->meter 3280.8)
+;;expected value
+999.98784
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;Contract: meter->feet: number -> number
+
+;;Purpose: to convert a number of meters entered into feet
+
+;;Example: (meter->feet 1000) should produce 3280.73 feet
+
+;;Definition:
+
+(define (meter->feet x)
+  (* x 3.28073))
+
+;;Tests:
+(meter->feet 1000)
+;;expected value
+3280.73
+(meter->feet 1.0)
+;;expected value
+3.28073
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;Contract: check: number -> boolean
+
+;;Purpose: to ensure that the original number before being 
+;;         changed by meter->feet is equivalent to that after using  
+;;         feet->meter
+
+;;Example: (check 1) should produce true
+
+;;Definition:
+
+(define (check x)
+  {= x (meter->feet(feet->meter x))})
+
+;;Tests:
+(check 1)
+;;expected value
+true
+(check 12.345)
+;;expected value
+true

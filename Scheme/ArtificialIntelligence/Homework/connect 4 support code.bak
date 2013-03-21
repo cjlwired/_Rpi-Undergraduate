@@ -1,0 +1,476 @@
+; Connect-Four support code for HW3
+; (Connect-Four is a registered trademark of Hasbro.)
+;
+; This code includes a procedure named "play-connect4" that accepts
+; the following parameters:
+;   # rows in the game board
+;   # columns in the game board
+;   getmove procedure for player 1 (first player to take a turn)
+;   getmove procedure for player 2 
+;
+; Two sample getmove procedures are provided:
+;   getmove-random selects a move randomly.
+;   getmove-human prompts the user for the next move.
+;
+; The getmove procedure returns a single integer that indicates
+; a column in which to drop a marble. This procedure must accept the
+; following parameters
+;     a representation of the state of the game board (see below)
+;     a integer indicating which player is moving (1 or 2)
+;
+; IMPORTANT: If your getmove returns an invalid move
+; (something other than an integer specifying a valid column
+; or a column that is already full) you will lose the game!
+; 
+; REMINDER: your getmove procedure must have the following name:
+; yourname-getmove, where yourname is your userid. For example,
+; my procedure would be named hollid2-getmove.
+
+;
+; The game board representation is a list of the columns, the first 
+; element represents the leftmost column in the connect-4 board. 
+; Each column is represented by a list of board squares,
+;  the first element represents the top position.
+;
+;  Each game  board square is either a 0, 1 or 2:
+;    0 : spot is available (empty)
+;    1 : player 1 has dropped a marble on the square
+;    2 : player 2 has dropped a marble on the square
+;
+; For example, the following game board:
+;
+;COL: 0   1   2   3   4   5   6   
+;   |---|---|---|---|---|---|---|
+;   | 1 |   |   |   |   |   |   | 
+;   |---|---|---|---|---|---|---|
+;   | 1 |   |   |   |   |   |   | 
+;   |---|---|---|---|---|---|---|
+;   | 2 |   |   |   |   |   | 1 | 
+;   |---|---|---|---|---|---|---|
+;   | 1 |   |   | 1 |   |   | 2 | 
+;   |---|---|---|---|---|---|---|
+;   | 1 |   |   | 2 | 2 | 2 | 1 | 
+;   |---|---|---|---|---|---|---|
+;   | 2 | 1 | 2 | 2 | 1 | 2 | 1 | 
+;   |---|---|---|---|---|---|---|
+;
+; would be represented by the following list:
+;
+; '((1 1 2 1 1 2)
+;   (0 0 0 0 0 1)
+;   (0 0 0 0 0 2)
+;   (0 0 0 1 2 2)
+;   (0 0 0 0 2 1)
+;   (0 0 0 0 2 2)
+;   (0 0 1 2 1 1))
+;
+; You don't need to use this board representation inside your getmove
+; procedure (feel free to convert to whatever you want), but you must 
+; accept ; this format as the first parameter of your getmove.
+;
+; NOTE: The standard size board is a 7 column x 6 row board, but your
+;     code should be able to handle any size game board!!!
+;
+;
+;
+;---------------------------------------
+; There is also a bunch of support code here - you may use any of
+; it or ignore it all. Many of the procedures here can be implemented
+; more efficiently (especially if you use vectors instead of lists).
+;
+; IF YOUR GETMOVE  REQUIRES ANY CODE YOU FIND HERE YOU MUST INCLUDE IT
+; WITH YOUR SUBMISSION !!!
+;
+
+
+
+; Misc. support code 
+
+; =================================
+; displays - calls display on each parameter
+;
+; usage: (displays e1 e2 ... )
+;
+(define displays
+  (lambda l
+    (for-each display l)))
+
+; =================================
+; make-list ; create a list of n identical elements
+; used to create a blank game
+; n is the number of elements in the created list
+; e is the value of each element.
+; Example: (make-list 4 1) => (1 1 1 1)
+;
+(define make-list
+  (lambda (n e)
+    (if (<= n 0)
+	()
+	(cons e (make-list (- n 1) e)))))
+
+; =================================
+; blank-game creates (and returns) a connect-4 game board that
+; has rows rows and cols columns, each element is initialized to 0
+; Board returned is a list of cols elements, the first element represents 
+;    the leftmost column in the connect-4 board. Each column contains
+;    rows elements, the first element represents the top position
+;    
+
+(define (blank-game rows cols)
+  (do ((bg () (cons (make-list rows 0) bg))
+       (i 0 (+ i 1)))
+      ((= i cols) bg)))
+
+; =================================
+; nth-row extracts a single row from a board
+; (and returns it as a list). 
+; board is a game board representation (see above) and n is
+; a row number (0 is the top row).
+;
+(define nth-row
+  (lambda (board n)
+    (let g-row ((ls board))
+      (if (null? ls) 
+	  ()
+	  (cons (list-ref (car ls) n) (g-row (cdr ls)))))))
+
+; =================================
+; getsquare extracts and returns a single board element (0, 1 or 2)
+; board is a game board representation (see above)
+; row and col are the row number and column number
+;
+(define getsquare
+  (lambda (board row col)
+    (list-ref (list-ref board col) row)))
+
+
+; =================================
+;
+; list-replaceelem modifies a list by setting the specified
+; list element to a new value, and returns the new list.
+; parameters are l (the list), pos the position of the element to
+; be changed: 0 is the first element (the car), etc.
+; newval is the value the new element shoudl take.
+;
+; example - this replaces the value of position 1 in the
+; list '(a b c) with the value 'foo:
+; (list-replaceelem '(a b c) 1 'foo) => (a foo c)
+;
+
+(define list-replaceelem
+  (lambda (l pos newval)
+    (if (= pos 0) 
+        (cons newval (cdr l))
+        (cons (car l) (list-replaceelem (cdr l) (- pos 1) newval)))))
+
+; =================================
+; setsquare sets the value of a single board element
+; No check is done to make sure the board element has the value 0!
+; board is a game board representation (see above)
+; row and col are the row number and column number
+; newval is the new value (probably should be 1 or 2)
+;
+(define setsquare
+  (lambda (board row col newval)
+    (list-replaceelem 
+     board col 
+     (list-replaceelem (list-ref board col) row newval))))
+
+
+
+; =================================
+; rightdiag extracts a right diagonal from a board.
+; right diags start at the bottom and move up and to the right
+; board is a game board representation (see above)
+; row and col are the starting coordinates of the diagonal
+; (the bottom most element is the start)
+; 
+(define rightdiag
+  (lambda (board row col)
+    (let ((cols (length board))  
+	  (rows (length (car board)))
+	  (diag ()))
+      (do  ( (r row (- r 1))  (c col (+ c 1)))
+	  ((or  (< r 0)  (>= c cols)) 
+	   diag)
+	(set! diag (append diag (list (getsquare board r c))))))))
+
+; =================================
+; leftdiag extracts a left diagonal from a board
+; left diags start at the bottom and move up and to the left
+; row and col are the starting coordinates of the diagonal
+(define leftdiag
+  (lambda (board row col)
+    (let ((cols (length board))
+	  (rows (length (car board)))
+	  (diag ()))
+      (do  ( (r row (- r 1))  (c col (- c 1)))
+	  ((or  (< r 0)  (< c 0))   diag)
+	(set! diag (append diag (list (getsquare board r c))))))))
+
+; =================================
+; rightdiags returns a list of all the right diagonals
+; that include 4 or more elements.
+;
+(define rightdiags
+  (lambda (board)
+    (let ((diags ()) 
+	  (rows (length (car board))) 
+	  (cols (length board)))
+      (do ((r 3 (+ r 1))) ((= r rows) ())
+	(set! diags (cons (rightdiag board r 0) diags)))
+      (do ((c 1 (+ c 1))) ((= c (- cols 3)) ())
+	(set! diags (cons (rightdiag board (- rows 1) c) diags)))
+      diags)))
+
+
+; =================================
+; leftdiags returns a list of all the left diagonals
+; that include 4 or more elements.
+;
+(define leftdiags
+  (lambda (board)
+    (let ((diags ()) 
+	  (rows (length (car board))) 
+	  (cols (length board)))
+      (do ((c 3 (+ c 1))) ((= c cols) ())
+	(set! diags (cons (leftdiag board (- rows 1) c) diags)))
+      (do ((r (- rows 2) (- r 1))) ((< r 3) ())
+	(set! diags (cons (leftdiag board r (- cols 1)) diags)))
+      diags)))
+
+
+; =================================
+; getall extracts all rows, columns and diagonals and makes a big list.
+; each element of the list could contain 4 in a row.
+
+(define getall
+  (lambda (board)
+    (append
+        board                    ; board holds the columns
+	(board-transpose board)  ; the rows
+	(rightdiags board)       ; the diagonals
+	(leftdiags board))))
+
+; =================================
+; convert list of columns to list of rows
+; Given a board of c columns and r rows,
+; the board representation is a list of c elements (one per column),
+; each element is a list contains the values for each square in a
+; column. This procedure returns a list of r elements (one per row),
+; each element is a list containinf the values for each square in 
+; a row. 
+(define board-transpose
+  (lambda (board)
+    (let ((bt ())   (len (length (car board))))
+      (do ( (i (- len 1) (- i 1))) ((< i 0) bt)
+	(set! bt (cons (nth-row board i) bt))))))
+
+; =================================
+; display-row displays a row from the game board (formatted)
+; display-rows must be given a list contains the row elements
+;
+(define display-row
+  (lambda (row)
+    (if (null? row)
+	()
+	(let ((vchars '(#\space #\1 #\2)))
+	  (display (list-ref vchars (car row)))
+	  (display " | ")
+	  (display-row (cdr row))))))
+	  
+
+; =================================
+; show-game prints out the state of the game given a 
+; representation of the board.
+;
+(define show-game
+  (lambda (board)
+
+      (display "COL: ")
+      (do ((j 0 (+ j 1))) 
+	  ((= j (length board)))
+	(displays j "   " ))
+      (newline)
+
+      (display "   |-")
+      (do ((j 0 (+ j 1))) 
+	  ((= j (- (length board) 1)))
+	(display "--|-"))
+      (display "--|")
+      (newline)
+
+      (do ((i 0 (+ i 1)) (len (length (car board)) len))
+	((= i len))
+      (display "   | ")
+      (display-row (nth-row board i))
+      (newline)
+
+      (display "   |-")
+      (do ((j 0 (+ j 1))) 
+	  ((= j (- (length board) 1)))
+	(display "--|-"))
+      (display "--|")
+      (newline)
+      )))
+
+
+
+
+
+; =================================
+; four-in-a-row? is a predicate that returns true if a list contains
+; 4 consecutive elements that all match a single value.
+; l is the list (could be from a row, column or diaganol) and
+; e is the value we are looking for (1 or 2)  
+;
+(define four-in-a-row?
+  (lambda (l e)
+    (let finar ((ls l) (count 0))
+      ; if we don't have enough elements left to make 4 in a row - FALSE
+      (if (< (+ count (length ls)) 4)
+	  #f
+	  (if (= e (car ls))
+	      ; we got a match
+	      (if (= count 3)
+		  #t            ; 4 in a row!
+		  (finar (cdr ls) (+ count 1)))
+	      ; no match
+	      (finar (cdr ls) 0))))))
+		    
+; =================================
+; find-first-zero finds the first element in a list that has the value 0
+; and return it's position in the list (starting at 0).
+; returns (+ (length ls) 1) if the element is not found!
+; Used (by find-last-zero) to find where dropped marble will end up.
+;
+; CHANGE 10/30/98
+; DLH - member returns #f if not found, this is () only with MIT scheme!
+(define find-first-zero
+  (lambda (ls)
+    (cond
+     ((null? ls) 1)
+     ((= (car ls) 0) 0)
+     (else (+ 1 (find-first-zero (cdr ls)))))))
+
+
+; =================================
+; find-last-zero finds the last zero in a list.
+; This assume the list consists of a (possibly null)
+; prefix of zeros followed by a (possibly null) suffix of
+; things other than zeros. This is used to find where a marble
+; should drop to (should end up replacing the last 0 in a column).
+; If there are no zeros, this returns -1, otherwise it returns the
+; position (starting at 0) of the last zero in the list
+
+(define find-last-zero
+  (lambda (ls)
+    (- (- (length ls) 1) (find-first-zero (reverse ls)))))
+
+; =================================
+; makemove applies a move (by dropping a marble in a column)
+; to a board and returns the resulting board or #f if the
+; move is not valid (column is full)
+; board is the current game state
+; player is 1 or 2 (the player dropping the marble)
+; col is the column number (starting at 0).
+;
+(define makemove
+  (lambda (board player col)
+    (let ((row (find-last-zero (list-ref board col))))
+      (if (< row 0)
+	  #f                 ; no room left!
+	  (setsquare board row col player)))))
+
+
+; =================================
+; getmove-random picks a move (an open column) randomly
+;
+
+(define getmove-random
+  (lambda (board player)
+    (let* ((cols (length board))
+	   (c (random cols))
+	   (newboard (makemove board player c)))
+      (if newboard
+	  c
+	  (getmove-random board player)))))
+
+
+; =================================
+; getmove-human prompts human for the next move
+;
+	  
+(define getmove-human
+  (lambda (board player)
+    (let ((cols (length board)) (move 0) (newboard ()))
+      (displays "\nEnter column [0-" (- cols 1) "]: " )
+      (set! move (read))
+      (set! newboard (makemove board player move))
+      (if newboard
+	  move
+	  (begin
+	    (displays "INVALID MOVE - TRY AGAIN!\n")
+	    (getmove-human board player))))))
+
+; =================================
+; play-connect4 plays a game given 2 opponents and a board size.
+; rows is the number of rows in the game board.
+; cols is the number of columns in the game board.
+; player1 is a getmove procedure
+; player2 is a getmove procedure
+; A complete animation of the game is displayed.
+;  
+(define play-connect4
+  (lambda (rows cols player1 player2)
+    (let rt ((b (blank-game rows cols))   ; b is the board
+	     (n 0)                        ; n is the move number
+	     (player 1)         ; player determines whose turn it is
+	     (other 2)          ; other determines whose turn is next
+	     (done 0)           ; a flag indicatin game over
+	     (move 0))          ; the move selected
+
+      (if (= n (* rows cols))   ; tie game ?       
+	  (set! done 1)         ; YES - TIE
+	  (begin
+	    (set! move          ; get next move
+		  (if (= player 1)
+		      (player1 b player)
+		      (player2 b player)))
+	    ; apply the move and make sure it is legal
+	    (set! b (makemove b player move)) 
+	    (if b
+		(begin
+		  (displays "STEP " n " Player was " player " :\n")
+		  (show-game b)
+		  (let ckem ((ls (getall b)))
+		    (if (null? ls)
+			(displays "NO WINNER STEP " n "\n")
+			(if (four-in-a-row? (car ls) player)
+			    (begin
+			      (set! done 1)
+			      (displays "Player " player " WINS !!!\n"))
+
+			    (if (four-in-a-row? (car ls) other)
+				(begin
+				  (set! done 1)
+				  (displays "Player " other " WINS !!!\n"))
+				(ckem (cdr ls)))))))
+		(begin
+		  (display "INVALID MOVE - YOU LOSE!!!\n")
+		  (set! done 1)))))
+      (if (= 0 done)
+	  (rt b (+ n 1) other player done -1)))))
+
+;;
+;; To run a game (MIT scheme), you need something like this:
+;; (play-connect4 6 7 getmove-human getmove-random)
+;; 
+;; From MIT scheme you can play against the random agent
+;; by uncommenting the above line and starting up scheme like this:
+;;
+;; scheme -load c4.scm
+;;
+;; The program will prompt you for moves and will display the state
+;; of the board after every move.
+

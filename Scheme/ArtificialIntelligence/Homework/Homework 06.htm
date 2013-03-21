@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW6</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<style>
+pre { background-color: #dddddd; 
+  padding: .1in; border: solid black 1px;}
+</style>
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW6</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+</td></tr>
+</table>
+
+<div class="page">
+
+<h3 align=center>Q-Learning and Tic-tac-toe</h3>
+
+<h4 align=center>Due Date: Dec 4th by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW6
+</h4>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+
+<p>Write a 1-2 page description of how you could use Q-learning 
+(the reinforcement learning algorithm) to create a tic-tac-toe agent.
+Your description may include pseudo-code where appropriate (or
+describe things in English).
+Your description must include the following:</p>
+
+<ul>
+
+<li><p>A description of what your agent will do each time
+it is asked to make a move (how it uses the results of Q-learning 
+to decide what to do).</p></li>
+
+<li><p>A general description of the software you would need 
+in order to train the agent, and a plan for using this software.</p></li>
+
+<li><p>A detailed description of how/when Q values are changed. You
+should include specifics such as the range of Q values, initial Q
+values, etc. Pseudo code would be great!</p></li>
+
+<li><p>An estimate as to how well you think this would work (and
+why).</p></li>
+
+<li><p>Anything else you find interesting...</p></li>
+
+
+</div>
+
+</div>
+</body>
+</html>

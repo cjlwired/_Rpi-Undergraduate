@@ -1,0 +1,557 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Comment" 2 18 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "" -1 256 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 
+257 "" 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 258 "" 0 1 0 0 
+0 0 1 0 0 0 0 0 0 0 0 1 }{CSTYLE "" -1 259 "" 1 36 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 }{CSTYLE "" -1 260 "" 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }
+{CSTYLE "" -1 261 "" 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 }{PSTYLE "NormalS
+plitParagraphs" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 12 3 0 3 36 2 2 0 1 }{PSTYLE "Heading 1" -1 3 
+1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 
+8 4 3 0 3 0 2 2 0 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 -1 "Time
+s" 1 14 0 0 0 1 2 1 2 2 2 2 1 1 1 1 }1 1 0 0 8 2 3 0 3 0 2 2 0 1 }
+{PSTYLE "Warning" -1 7 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 2 
+2 2 2 2 1 1 1 3 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output
+" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 3 3 3 0 3 36 
+2 2 15 2 }{PSTYLE "Normal" -1 256 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 1 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal
+" -1 257 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+3 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Normal" -1 258 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 1 2 
+0 1 }{PSTYLE "Normal" -1 259 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 1 2 0 1 }{PSTYLE "Normal" -1 
+260 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 
+0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "NormalSplitParagraphs" -1 261 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 
+12 3 0 3 0 2 2 0 1 }{PSTYLE "NormalSplitParagraphs" -1 262 1 {CSTYLE "
+" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 12 3 0 3 
+0 2 2 0 1 }{PSTYLE "Heading 1" -1 263 1 {CSTYLE "" -1 -1 "Times" 1 18 
+0 0 0 1 2 1 2 2 2 2 1 1 1 1 }3 1 0 0 8 4 3 0 3 0 2 2 0 1 }{PSTYLE "Nor
+malSplitParagraphs" -1 264 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 
+2 2 2 2 2 1 1 1 1 }2 1 0 0 0 12 3 0 3 36 2 2 0 1 }}
+{SECT 0 {PARA 263 "" 0 "" {TEXT 259 67 "Maple Tutorial #1\nSystems of \+
+Linear Equations\nand Vector Operations" }}{PARA 264 "" 0 "" {TEXT -1 
+1 "\n" }{TEXT 260 20 "Learning Objectives\n" }{TEXT -1 88 "Basic Maple
+ Commands\nManipulating Matrices\nSolving Linear Systems\nManipulating
+ Vectors\n\n" }{TEXT 261 20 "Maple Commands Used\n" }{TEXT -1 173 "sqr
+t\nexp\ncos\narcsin\nrestart\nwith\nevalf\nevalm\nsimplify\nmatrix\nmu
+ltiply\naugment\nswaprow\nmulrow\naddrow\nrref\ngaussjord\ndet\ninvers
+e\nsolve\nvector\ndotprod\nnorm\nnormalize\ncrossprod\n" }}{PAGEBK }
+{SECT 0 {PARA 3 "" 0 "" {TEXT -1 33 "Organizational Structure in Maple
+" }}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 39 "Description of Organizational
+ Hierarchy" }}{PARA 0 "" 0 "" {TEXT -1 149 "The largest organizational
+ unit in Maple is the Worksheet.  When you save your work in Maple, th
+e file extension \".mws\" stands for \"Maple WorkSheet.\"" }}{PARA 0 "
+" 0 "" {TEXT -1 531 "Within a worksheet, Maple allows you to provide s
+tructure to your work through the use of Sections (and Subsections).  \+
+For example, right now the text you are reading is in the section \"Or
+ganizational Structure in Maple\" and under the subsection \"Descripti
+on of Organizational Hierarchy.\"  The grey boxes to the left of the s
+ection headings can be clicked to collapse and expand the correspondin
+g sections.  The extent of a section is delimited by its \"range\" (a \+
+vertical line with a horizontal tail) to the left of this paragraph." 
+}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 36 "Creating an Organizational Hie
+rarchy" }}{PARA 15 "" 0 "" {TEXT -1 37 "A Worksheet is created by File
+->New. " }}{PARA 15 "" 0 "" {TEXT -1 40 "The Worksheet is named by Fil
+e->Save As." }}{PARA 15 "" 0 "" {TEXT -1 60 "To create the first Secti
+on in a worksheet, Insert->Section." }}{PARA 15 "" 0 "" {TEXT -1 89 "A
+nytime a new Section has been created, you should type in its heading \+
+and press [Enter]." }}{PARA 15 "" 0 "" {TEXT -1 99 "To highlight a Sec
+tion, click the range indicator (the vertical line on the left) for th
+at Section." }}{PARA 15 "" 0 "" {TEXT -1 106 "To create a new Section \+
+within an existing Section, highlight the existing Section and Insert-
+>Subsection." }}{PARA 15 "" 0 "" {TEXT -1 111 "To create a new Section
+ at the end of an existing Section, highlight the existing Section and
+ Insert->Section. " }}}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 29 "Functiona
+l Structure in Maple" }}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 37 "Descripti
+on of Functionality in Maple" }}{PARA 0 "" 0 "" {TEXT -1 372 "The fund
+amental building block of functionality in Maple is called a Paragraph
+..  Although Paragraphs can be comprised of Text, Standard Math, Maple
+ Input, Standard Math Input, and any combination thereof,  we will lim
+it ourselves to paragraphs that contain only Text or only Maple Input.
+  Adventurous students may investigate more complicated scenarios at t
+heir own risk." }}{PARA 0 "" 0 "" {TEXT -1 324 "Text Paragraphs are us
+ed in places where you want to speak English.  They allow you to provi
+de notes, comments, descriptions, explanations, or any other collectio
+ns of words that would help you (or your grader) to understand what is
+ going on in the worksheet.  Text Paragraphs use black Times New Roman
+ 12pt font by default." }}{PARA 0 "" 0 "" {TEXT -1 359 "Maple Input Pa
+ragraphs are used in places where you want to speak Maple.  They allow
+ you to issue the commands that Maple will carry out for you.  Maple I
+nput Paragraphs begin with a command prompt (\">\"), and they are alwa
+ys located within an Execution Group (described in the next paragraph)
+.  Maple Input Paragraphs use red Courier New 12pt font by default." }
+}{PARA 0 "" 0 "" {TEXT -1 427 "Execution Groups contain one or more Ma
+ple Input Paragraphs as well as any related Text Paragaphs.  When you \+
+press [Enter] while the cursor is in a Maple Input Paragraph, all of t
+he Maple Commands within the Execution Group are executed, sequentiall
+y, and any corresponding output is placed by Maple at the end of the E
+xecution Group.  The range of an execution group is delimited by a squ
+are bracket to the left.  For example:" }}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 231 "This is a Text Paragraph, within an Execution Group, in \+
+the Subsection \"Description of Functionality in Maple,\" of the Secti
+on \"Functionality in Maple.\"  The line that follows is a Maple Input
+ Paragraph with a sample Maple command." }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 5 "a:=0;" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 33 "Creating Functi
+onality with Maple" }}{PARA 15 "" 0 "" {TEXT -1 148 "To create an Exec
+ution Group, Insert->ExecutionGroup and choose a location.\n(By defaul
+t, new execution groups will contain a Maple Input Paragraph.)" }}
+{PARA 15 "" 0 "" {TEXT -1 82 "To change an empty Maple Input Paragraph
+ to an empty Text Paragraph, Insert->Text." }}{PARA 15 "" 0 "" {TEXT 
+-1 116 "To create a new Paragraph, Insert->Paragraph and choose a loca
+tion.\n(By default, new Paragraphs are Text Paragraphs)" }}{PARA 15 "
+" 0 "" {TEXT -1 88 "To change an empty Text Paragraph to an empty Mapl
+e Input Paragraph, Insert->MapleInput." }}{PARA 15 "" 0 "" {TEXT -1 
+112 "To delete a paragraph, click Edit->DeleteParagraph or type [Ctrl]
++[Delete] while the cursor is in the paragraph." }}{PARA 15 "" 0 "" 
+{TEXT -1 73 "To delete an Execution Group, select all its contents and
+ press [Delete]." }}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 21 "The Shady [E
+nter] Key" }}{PARA 0 "" 0 "" {TEXT -1 543 "The [Enter] key acts in a v
+ariety of ways under different circumstances.  If you press [Enter] wh
+ile the cursor is in a Text Paragraph, a new Paragraph is created on t
+he next line (Text by default).  If you press [Enter] while the cursor
+ is in a Maple Input Paragraph, all of the Maple commands in the curre
+nt Execution Group are executed.  If you press [Shift]+[Enter], the cu
+rsor will skip to a new line, but you will still be in the same paragr
+aph.  This can conceivably be used to help make a paragraph more reada
+ble in some circumstances." }}}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 21 "B
+asic Maple Operation" }}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 14 "General S
+yntax" }}{PARA 15 "" 0 "" {TEXT -1 211 "Basic interaction with Maple b
+egins when you enter a command statement.  Maple responds to your comm
+ands by performing any operations or functions requested and then disp
+laying its interpretation of that result." }}{PARA 15 "" 0 "" {TEXT 
+-1 178 "Every command must end with a either a colon or a semi-colon. \+
+ If a command ends with a semi-colon, the result is displayed.  If a l
+ine ends with a colon, no result is displayed." }}{PARA 15 "" 0 "" 
+{TEXT -1 80 "All commands and variables are case sensitive (i.e. capit
+alization is important)" }}{PARA 15 "" 0 "" {TEXT -1 190 "Some strings
+ of characters, such as D and Pi are \"protected.\"  This means that M
+aple has reserved them to name functions or special variables.  In thi
+s case, a different name should be used." }}}{SECT 0 {PARA 4 "" 0 "" 
+{TEXT -1 14 "Basic Displays" }}{PARA 0 "" 0 "" {TEXT -1 160 "The simpl
+est Maple commands are statements.  In this case, Maple displays its i
+nterpretation of what you typed.  Generally there will be a close corr
+espondence." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 42 "See how Maple inter
+prets some simple stuff" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "5; Gamma
+; gamma; PollyWannaCracker;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"&" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#%&GammaG" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%&gammaG" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%2PollyWann
+aCrackerG" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 15 "Basic Operators" }
+}{PARA 0 "" 0 "" {TEXT -1 167 "Maple can be made more useful by using \+
+commands that contain operators.  In this case, Maple performs whateve
+r operations it can and displays the resulting expression." }}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 41 "See how Maple interprets some expressions
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "5+5; Gamma+5; gamma^2; 3!; 2/3;
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#5" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#,&%&GammaG\"\"\"\"\"&F%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*$)%&
+gammaG\"\"#\"\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"'" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6##\"\"#\"\"$" }}}}{SECT 0 {PARA 4 "" 0 "" 
+{TEXT -1 15 "Basic Functions" }}{PARA 0 "" 0 "" {TEXT -1 101 "Addition
+al functionality is unleashed (that's right, unleashed) when your comm
+ands contain functions." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "The sqr
+t function returns the square root of its argument" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "sqrt(2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*$-%%sqr
+tG6#\"\"#\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 74 "The evalf func
+tion returns a floating point representation of its argument" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 15 "evalf(sqrt(2));" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"+iN@99!\"*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 39 "T
+he exp function returns an exponential" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 7 "exp(4);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$expG6#\"\"%" }}}}
+{SECT 0 {PARA 4 "" 0 "" {TEXT -1 23 "Trigonometric Functions" }}{PARA 
+0 "" 0 "" {TEXT -1 279 "Maple even has trigonometric functions (cos, s
+in, tan) and inverse trig functions (arcsin, arccos, arctan).  The bad
+ news is that all angles are given in radians (and inverse trig functi
+ons return values in radians).  The good news is that you don't have t
+o type in the value of " }{XPPEDIT 18 0 "Pi;" "6#%#PiG" }{TEXT -1 32 "
+ because Maple already knows it." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+105 "Everyone knows these values by heart, but at least we see how to \+
+deal with the degrees vs. radians issue." }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 58 "cos(Pi); cos(180*(Pi/180));\narcsin(1); arcsin(1)*(18
+0/Pi);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#!\"\"" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,$%#PiG#\"\"\"
+\"\"#" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#!*" }}}}{SECT 0 {PARA 4 "
+" 0 "" {TEXT -1 11 "Simplifying" }}{PARA 0 "" 0 "" {TEXT -1 119 "Maple
+ tends to automatically simplify expressions.  Sometimes it needs to b
+e coaxed a little with the simplify command." }}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 12 "B+2*(A+B)^2;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,&
+%\"BG\"\"\"*&\"\"#F%),&%\"AGF%F$F%F'F%F%" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "simplify(B+2*(A+B)^2);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#,*%\"BG\"\"\"*&\"\"#F%)%\"AGF'F%F%*(\"\"%F%F)F%F$F%F%*&F'F%)F$F'
+F%F%" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 19 "Assigning Variables" }}
+{PARA 0 "" 0 "" {TEXT -1 192 "Up to now all operations have not depend
+ed on previous results..  In order to make references to previous resu
+lts, those results must be stored.  Storage is accomplished with the :
+= operator. " }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 29 "Assign an expressi
+on to gamma" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Gamma:=sqrt((2*A+3*B
+)/C);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&GammaG*$-%%sqrtG6#*&,&%\"A
+G\"\"#*&\"\"$\"\"\"%\"BGF/F/F/%\"CG!\"\"F/" }}}}{SECT 0 {PARA 4 "" 0 "
+" {TEXT -1 20 "Displaying Variables" }}{PARA 0 "" 0 "" {TEXT -1 57 "To
+ display the content of a variable, just give its name." }}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "Gamma;" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#*$-%%sqrtG6#*&,&%\"AG\"\"#*&\"\"$\"\"\"%\"BGF-F-F-%\"CG!\"\"F-" 
+}}}{PARA 0 "" 0 "" {TEXT -1 57 "You may prefer to display the name alo
+ng with the content" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "'Gamm
+a'=Gamma;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%&GammaG*$-%%sqrtG6#*&,&
+%\"AG\"\"#*&\"\"$\"\"\"%\"BGF/F/F/%\"CG!\"\"F/" }}}}{SECT 0 {PARA 4 "
+" 0 "" {TEXT -1 15 "Using Variables" }}{PARA 0 "" 0 "" {TEXT -1 123 "W
+henever you type a name that has been assigned an expression, Maple wi
+ll behave as though you typed the entire expression." }}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "1-Gamma;" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#,&\"\"\"F$*$-%%sqrtG6#*&,&%\"AG\"\"#*&\"\"$F$%\"BGF$F$F$%\"CG!\"\"F$
+F1" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 24 "Inheritance in Variables
+" }}{PARA 0 "" 0 "" {TEXT -1 100 "When you assign an expression to a n
+ame, other expressions that use that name inherit the expression" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "A:=2*x*y*z;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%\"AG,$*(%\"xG\"\"\"%\"yGF(%\"zGF(\"\"#" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "Gamma;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#*$-%%sqrtG6#*&,&*(%\"xG\"\"\"%\"yGF+%\"zGF+\"\"%*&\"\"$
+F+%\"BGF+F+F+%\"CG!\"\"F+" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 19 "Re
+member Your Colon" }}{PARA 0 "" 0 "" {TEXT -1 112 "When you forget to \+
+put a colon before the equal sign, the resulting equation is echoed, b
+ut nothing is assigned." }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "Ti
+me=420;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%%TimeG\"$?%" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "Time;" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#%%TimeG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "Time:=420;
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%TimeG\"$?%" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 5 "Time;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"$?
+%" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 18 "Clearing Variables" }}
+{PARA 0 "" 0 "" {TEXT -1 291 "To clear a variable, reassign the variab
+le to its own name in single quotes.  The restart command clears the v
+alues of all variables.  It is a good idea to place a restart command \+
+at the beginning of any new task (for example, the start of each probl
+em).  No result is displayed for restart." }}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 72 "Set A to five, B to six, and C to seven (without displayi
+ng the output)." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "A:=5: B:=6: C:=7
+:" }{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 19 "Display A, B \+
+and C." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "A; B; C;" }{TEXT -1 0 "" }
+{MPLTEXT 1 0 0 "" }{TEXT -1 0 "" }{MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#\"\"&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"'" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"(" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 31 "Clear B and display A, B and C." }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "B:='B': A; B; C;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+\"\"&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"BG" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 43 "Clear all
+ variables and display A, B and C." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+17 "restart; A; B; C;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"AG" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#%\"BG" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#%\"CG" }}}}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 45 "Tools for Solving \+
+Systems of Linear Equations" }}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 34 "Lo
+ading the Linear Algebra Library" }}{PARA 0 "" 0 "" {TEXT -1 137 "Many
+ specialized commands are not loaded by default when Maple is open.  T
+hese commands are grouped into groups known as libraries.  The " }
+{TEXT 257 4 "with" }{TEXT -1 92 " command is used to load a library.  \+
+The linear algebra commands in Maple are stored in the " }{TEXT 256 6 
+"linalg" }{TEXT -1 9 " library." }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 22 "restart: with(linalg):" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning
+, the protected names norm and trace have been redefined and unprotect
+ed\n" }}}{PARA 0 "" 0 "" {TEXT -1 71 "Linear algebra commands will nee
+d to be used in nearly all IEA problems" }}}{SECT 0 {PARA 4 "" 0 "" 
+{TEXT -1 17 "Creating Matrices" }}{PARA 0 "" 0 "" {TEXT -1 236 "To cre
+ate a matrix variable, use the matrix function.  The matrix is given a
+s a list of rows.  Each row, in turn, is a list of matrix elements, fr
+om left to right.  Lists in Maple are enclosed by square brackets and \+
+separated by commas." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 191 "Define ea
+ch row as a list of elements, then the matrix as a list of rows. (Note
+ that [Shift]+[Enter] is used between each command to make the definit
+ion process easier to read and comprehend)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 73 "row1:=[0,1,3]:\nrow2:=[2,4,0]:\nrow3:=[4,8,1]:\nA:=ma
+trix([row1,row2,row3]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"AG-%'ma
+trixG6#7%7%\"\"!\"\"\"\"\"$7%\"\"#\"\"%F*7%F/\"\")F+" }}}{PARA 0 "" 0 
+"" {TEXT -1 119 "A vector is a special case of a matrix.  Vectors have
+ only one column.  They can be constructed with the vector command" }}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 16 "Define a vector " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 20 "v:=vector([-3,0,3]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"vG-%'vectorG6#7%!\"$\"\"!\"\"$" }}}{PARA 0 "" 0 "" 
+{TEXT -1 163 "Note that, although Maple appears to display the element
+s of the vector horizontally, they are separated by commas, indicating
+ that each element is a separate row." }}{PARA 0 "" 0 "" {TEXT -1 0 "
+" }}{PARA 0 "" 0 "" {TEXT -1 140 "Matrices can also be created from ex
+isting matrices.  One good example is augmented matrices, which are co
+nstructed with the augment command" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+39 "Create an augmented matrix from A and v" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "A_AugmentedBy_v:=augment(A,v);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%0A_AugmentedBy_vG-%'matrixG6#7%7&\"\"!\"\"\"\"\"$!\"$
+7&\"\"#\"\"%F*F*7&F0\"\")F+F," }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 
+19 "Evaluating a Matrix" }}{PARA 0 "" 0 "" {TEXT -1 264 "Matrices are \+
+often defined in terms of other matrices.  In these cases, the new mat
+rix is defined only in terms of the names of the matrices to which its
+ definition refers.  The actual elements of the new matrix are not def
+ined until the evalm function is applied." }}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 23 "Define A4 in terms of A" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 8 "A4:=3*A;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#A4G,$%\"AG\"\"$" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 55 "Define all elements of A4 in ter
+ms of the elements of A" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "A4:=eval
+m(3*A);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#A4G-%'matrixG6#7%7%\"\"!
+\"\"$\"\"*7%\"\"'\"#7F*7%F/\"#CF+" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT 
+-1 39 "Calculating the Determinant of a Matrix" }}{PARA 0 "" 0 "" 
+{TEXT -1 70 "Maple makes determinant calculations easy for you with th
+e det command" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 37 "Calculate the det
+erminant of matrix A" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "det(A);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#!\"#" }}}}{SECT 0 {PARA 4 "" 0 "" 
+{TEXT -1 31 "Finding the Inverse of a Matrix" }}{PARA 0 "" 0 "" {TEXT 
+-1 77 "Maple makes it easy to find the inverse of a matrix with the in
+verse command." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 21 "Find the inverse
+ of A" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "A_inverted:=inverse(A);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%+A_invertedG-%'matrixG6#7%7%!\"##!#
+B\"\"#\"\"'7%\"\"\"F.!\"$7%\"\"!F*F0" }}}{PARA 0 "" 0 "" {TEXT -1 103 
+"Note that if the matrix cannot be inverted (because it is singular), \+
+an error message will tell you so." }}}{SECT 0 {PARA 4 "" 0 "" {TEXT 
+-1 20 "Multiplying Matrices" }}{PARA 0 "" 0 "" {TEXT -1 70 "Maple make
+s it easy to multiply two matrices with the multiply command" }}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 70 "Multiply A by its inverse.  The re
+sults should be the identity matrix." }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 41 "ShouldBeIdentity:=multiply(A,A_inverted);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%1ShouldBeIdentityG-%'matrixG6#7%7%\"\"\"\"\"!F+7%F+F*
+F+7%F+F+F*" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 25 "Elementary Row Op
+erations" }}{PARA 0 "" 0 "" {TEXT -1 174 "There are three fundamental \+
+operations commonly performed on a matrix in solving equations; swappi
+ng two rows, multiplying a row by a constant, and adding rows to each \+
+other." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 37 "The command below swaps \+
+rows 1 and 2." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "A1:=swaprow(A, 1, \+
+2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#A1G-%'matrixG6#7%7%\"\"#\"\"
+%\"\"!7%F,\"\"\"\"\"$7%F+\"\")F." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+42 "The command below multiplues row 1 by 1/2." }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "A2:=mulrow(A1, 1, 1/2);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%#A2G-%'matrixG6#7%7%\"\"\"\"\"#\"\"!7%F,F*\"\"$7%\"\"%\"\")F*
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "The command below adds row 1,
+ multiplied by -4, to row 3." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "A3:
+=addrow(A2, 1, 3, -4);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#A3G-%'mat
+rixG6#7%7%\"\"\"\"\"#\"\"!7%F,F*\"\"$7%F,F,F*" }}}{PARA 0 "" 0 "" 
+{TEXT -1 194 "These three operations can be used to perform Gauss-Jord
+an Elimination on an augmented matrix, after which the solution for th
+e corresponding system of equations can be determined by inspection." 
+}}}}{SECT 0 {PARA 3 "" 0 "" {TEXT -1 47 "Methods for Solving Systems o
+f Linear Equations" }}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 24 "Gauss-Jorda
+n Elimination" }}{PARA 0 "" 0 "" {TEXT -1 89 "We will illustrate the u
+se of Gauss-Jordan Elimination in solving the system of equations" }}
+{PARA 261 "" 0 "" {XPPEDIT 18 0 "x+2*y = 3;" "6#/,&%\"xG\"\"\"*&\"\"#F
+&%\"yGF&F&\"\"$" }{TEXT -1 0 "" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "x-y
+ = -3;" "6#/,&%\"xG\"\"\"%\"yG!\"\",$\"\"$F(" }}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 83 "Define the coeffecient matrix and right-hand side vecto
+r by inspection of equations" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "B_c
+oeff:=matrix(2,2, [1,2, 1,-1]);\nB_rhs:=vector([3,-3]);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%(B_coeffG-%'matrixG6#7$7$\"\"\"\"\"#7$F*!\"\"
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&B_rhsG-%'vectorG6#7$\"\"$!\"$" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "Augment the coefficient matrix \+
+by the right-hand side vector" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "B:
+=augment(B_coeff, B_rhs);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"BG-%'
+matrixG6#7$7%\"\"\"\"\"#\"\"$7%F*!\"\"!\"$" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 63 "Use elementary row operations to reach reduced row echelo
+n form" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "B1:=addrow(B, 1, 2, -1);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#B1G-%'matrixG6#7$7%\"\"\"\"\"#
+\"\"$7%\"\"!!\"$!\"'" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "B2:
+=mulrow(B1, 2, -1/3);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#B2G-%'matr
+ixG6#7$7%\"\"\"\"\"#\"\"$7%\"\"!F*F+" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "B3:=addrow(B2, 2, 1, -2);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#B3G-%'matrixG6#7$7%\"\"\"\"\"!!\"\"7%F+F*\"\"#" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 38 "Reading the solution from the matr
+ix, " }{XPPEDIT 18 0 "x = -1;" "6#/%\"xG,$\"\"\"!\"\"" }{TEXT -1 5 " a
+nd " }{XPPEDIT 18 0 "y = 2;" "6#/%\"yG\"\"#" }}}{PARA 0 "" 0 "" {TEXT 
+-1 129 "The augmented matrix could also have been brought to reduced r
+ow echelon form by either of the single commands rref or gaussjord." }
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 49 "Use rref to convert B to reduced \+
+row echelon form" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "rref(B);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7$7%\"\"\"\"\"!!\"\"7%F)F(
+\"\"#" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 54 "Use gaussjord to convert
+ B to reduced row echelon form" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "g
+aussjord(B);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7$7%\"\"\"
+\"\"!!\"\"7%F)F(\"\"#" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 13 "Cramer
+'s Rule" }}{PARA 0 "" 0 "" {TEXT -1 64 "Here we will use the Cramer's \+
+Rule algorithm to solve the system" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 
+"2*x+3*y-z = 1;" "6#/,(*&\"\"#\"\"\"%\"xGF'F'*&\"\"$F'%\"yGF'F'%\"zG!
+\"\"F'" }}{PARA 261 "" 0 "" {TEXT -1 0 "" }{XPPEDIT 18 0 "3*x+5*y+2*z \+
+= 8;" "6#/,(*&\"\"$\"\"\"%\"xGF'F'*&\"\"&F'%\"yGF'F'*&\"\"#F'%\"zGF'F'
+\"\")" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "x-2*y-3*z = -1;" "6#/,(%\"xG
+\"\"\"*&\"\"#F&%\"yGF&!\"\"*&\"\"$F&%\"zGF&F*,$F&F*" }}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 41 "Form the 4 matrices used in the algorithm" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 295 "d1:=[ 2, 3,-1]: x1:=[ 1, 3,-1]: y1
+:=[ 2, 1,-1]: z1:=[ 2, 3, 1]: \nd2:=[ 3, 5, 2]: x2:=[ 8, 5, 2]: y2:=[ \+
+3, 8, 2]: z2:=[ 3, 5, 8]: \nd3:=[ 1,-2,-3]: x3:=[-1,-2,-3]: y3:=[ 1,-1
+,-3]: z3:=[ 1,-2,-1]: \nD_coeff:=matrix([d1,d2,d3]);\nNx:=matrix([x1,x
+2,x3]);\nNy:=matrix([y1,y2,y3]);\nNz:=matrix([z1,z2,z3]);" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>%(D_coeffG-%'matrixG6#7%7%\"\"#\"\"$!\"\"7%F+
+\"\"&F*7%\"\"\"!\"#!\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#NxG-%'ma
+trixG6#7%7%\"\"\"\"\"$!\"\"7%\"\")\"\"&\"\"#7%F,!\"#!\"$" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%#NyG-%'matrixG6#7%7%\"\"#\"\"\"!\"\"7%\"\"$\"
+\")F*7%F+F,!\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#NzG-%'matrixG6#7
+%7%\"\"#\"\"$\"\"\"7%F+\"\"&\"\")7%F,!\"#!\"\"" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT -1 71 "Now the determinants of the matrices are used to cal
+culate the solution" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "x=det(Nx)/de
+t(D_coeff); y=det(Ny)/det(D_coeff); z=det(Nz)/det(D_coeff);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#/%\"xG\"\"$" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#/%\"yG!\"\"" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%\"zG\"\"#" }}}}
+{SECT 0 {PARA 4 "" 0 "" {TEXT -1 16 "Matrix Inversion" }}{PARA 0 "" 0 
+"" {TEXT -1 61 "We will use matrix inversion to solve the system of eq
+uations" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "7*x+4*y-2*z+4*w = 8;" "6#/
+,**&\"\"(\"\"\"%\"xGF'F'*&\"\"%F'%\"yGF'F'*&\"\"#F'%\"zGF'!\"\"*&F*F'%
+\"wGF'F'\"\")" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "2*x-3*y+7*z-6*w = 4;
+" "6#/,**&\"\"#\"\"\"%\"xGF'F'*&\"\"$F'%\"yGF'!\"\"*&\"\"(F'%\"zGF'F'*
+&\"\"'F'%\"wGF'F,\"\"%" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "5*x+6*y+2*z
+-5*w = 2;" "6#/,**&\"\"&\"\"\"%\"xGF'F'*&\"\"'F'%\"yGF'F'*&\"\"#F'%\"z
+GF'F'*&F&F'%\"wGF'!\"\"F-" }}{PARA 261 "" 0 "" {XPPEDIT 18 0 "3*x+3*y-
+5*z+8*w = 9;" "6#/,**&\"\"$\"\"\"%\"xGF'F'*&F&F'%\"yGF'F'*&\"\"&F'%\"z
+GF'!\"\"*&\"\")F'%\"wGF'F'\"\"*" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 29 
+"Define the coefficient matrix" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 113 "
+row1:=[7, 4,-2, 4]:\nrow2:=[2,-3, 7,-6]:\nrow3:=[5, 6, 2,-5]:\nrow4:=[
+3, 3,-5, 8]:\nA:=matrix([row1,row2,row3,row4]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"AG-%'matrixG6#7&7&\"\"(\"\"%!\"#F+7&\"\"#!\"$F*!\"'
+7&\"\"&\"\"'F.!\"&7&\"\"$F6F4\"\")" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 25 "Define the vector of rhs." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 
+"v:=vector([8,4,2,9]);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"vG-%'vec
+torG6#7&\"\")\"\"%\"\"#\"\"*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 111 "
+Solution vector to the set of equations can be found by multiplying th
+e coefficient matrix by the vector of rhs" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "multiply(inverse(A), v);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#-%'vectorG6#7&#!#H\"#G#\"#@\"\")#\"$&H\"#c#\"$2\"F)" }}
+}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 13 "Solve Command" }}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{PARA 0 "" 0 "" {TEXT -1 106 
+"We will illustrate the use of the solve command for the same system o
+f equations used for matrix inversion" }}{PARA 261 "" 0 "" {XPPEDIT 
+18 0 "7*x+4*y-2*z+4*w = 8;" "6#/,**&\"\"(\"\"\"%\"xGF'F'*&\"\"%F'%\"yG
+F'F'*&\"\"#F'%\"zGF'!\"\"*&F*F'%\"wGF'F'\"\")" }}{PARA 261 "" 0 "" 
+{XPPEDIT 18 0 "2*x-3*y+7*z-6*w = 4;" "6#/,**&\"\"#\"\"\"%\"xGF'F'*&\"
+\"$F'%\"yGF'!\"\"*&\"\"(F'%\"zGF'F'*&\"\"'F'%\"wGF'F,\"\"%" }}{PARA 
+261 "" 0 "" {XPPEDIT 18 0 "5*x+6*y+2*z-5*w = 2;" "6#/,**&\"\"&\"\"\"%
+\"xGF'F'*&\"\"'F'%\"yGF'F'*&\"\"#F'%\"zGF'F'*&F&F'%\"wGF'!\"\"F-" }}
+{PARA 261 "" 0 "" {XPPEDIT 18 0 "3*x+3*y-5*z+8*w = 9;" "6#/,**&\"\"$\"
+\"\"%\"xGF'F'*&F&F'%\"yGF'F'*&\"\"&F'%\"zGF'!\"\"*&\"\")F'%\"wGF'F'\"
+\"*" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 166 "Define the equations.  If \+
+equations are going to be used in the solve command it is important th
+at they are formatted correctly.  The following syntax should be used:
+" }}{PARA 261 "" 0 "" {TEXT 258 20 "var_name:= lhs = rhs" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 95 "eq1:=7*x+4*y-2*z+4*w=8;\neq2:=2*x-3*y+7*z-6*w
+=4;\neq3:=5*x+6*y+2*z-5*w=2;\neq4:=3*x+3*y-5*z+8*w=9;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#>%$eq1G/,*%\"xG\"\"(*&\"\"%\"\"\"%\"yGF+F+*&\"\"#F
++%\"zGF+!\"\"*&F*F+%\"wGF+F+\"\")" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%$eq2G/,*%\"xG\"\"#*&\"\"$\"\"\"%\"yGF+!\"\"*&\"\"(F+%\"zGF+F+*&\"\"'F
++%\"wGF+F-\"\"%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$eq3G/,*%\"xG\"\"
+&*&\"\"'\"\"\"%\"yGF+F+*&\"\"#F+%\"zGF+F+*&F(F+%\"wGF+!\"\"F." }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%$eq4G/,*%\"xG\"\"$*&F(\"\"\"%\"yGF*F
+**&\"\"&F*%\"zGF*!\"\"*&\"\")F*%\"wGF*F*\"\"*" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 244 "The solve command has two components to its syntax: a
+ set of equations, and a set of variables to solve for.  In Maple, a s
+et of variables is enclosed in curly brackets \{\}..  Note that this w
+ill not assign the solution values to the variables.." }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 67 "solve(\{eq1, eq2, eq3, eq4\}, \{w, x, y, z\});\n
+'w'=w;'x'=x;'y'=y;'z'=z;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#<&/%\"wG#
+\"$2\"\"#G/%\"xG#!#HF(/%\"zG#\"$&H\"#c/%\"yG#\"#@\"\")" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#/%\"wGF$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%\"xG
+F$" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%\"yGF$" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#/%\"zGF$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 80 "The so
+lution values can be assigned to the variables by using the assign com
+mand" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "assign(solve(\{eq1, eq2, eq
+3, eq4\}, \{w, x, y, z\}));\n'w'=w;'x'=x;'y'=y;'z'=z;" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#/%\"wG#\"$2\"\"#G" }}{PARA 11 "" 1 "" {XPPMATH 20 
+"6#/%\"xG#!#H\"#G" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%\"yG#\"#@\"\")
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%\"zG#\"$&H\"#c" }}}}}{SECT 0 
+{PARA 3 "" 0 "" {TEXT -1 17 "Vector Operations" }}{SECT 0 {PARA 4 "" 
+0 "" {TEXT -1 16 "Creating Vectors" }}{PARA 0 "" 0 "" {TEXT -1 249 "As
+ discussed when introducing matrices, vectors are just a specific type
+ of matrix in which each row has only one element (that is, the matrix
+ has only one column).  Maple provides a special function (called vect
+or) to create these special matrices." }}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 26 "Generate vectors v1 and v2" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+41 "V1:=vector([1,2,3]);\nV2:=vector([4,5,6]);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#V1G-%'vectorG6#7%\"\"\"\"\"#\"\"$" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%#V2G-%'vectorG6#7%\"\"%\"\"&\"\"'" }}}}{SECT 0 
+{PARA 4 "" 0 "" {TEXT -1 25 "Accessing Vector Elements" }}{PARA 0 "" 
+0 "" {TEXT -1 125 "The elements of a vector can be accessed by their i
+ndex.  Indices are addressed in square brackets, following the vector \+
+name" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 26 "Extract the elements of V2
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "Element1OfV2:=V2[1];\nElement2O
+fV2:=V2[2];\nElement3OfV2:=V2[3];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%-Element1OfV2G\"\"%" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%-Element2OfV
+2G\"\"&" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%-Element3OfV2G\"\"'" }}}}
+{SECT 0 {PARA 4 "" 0 "" {TEXT -1 19 "Evaluating a Vector" }}{PARA 0 "
+" 0 "" {TEXT -1 261 "Vectors are often defined in terms of other vecto
+rs.  In these cases, the new vector is defined only in terms of the na
+mes of the vectors to which its definition refers.  The actual element
+s of the new vector are not defined until the evalm function is applie
+d." }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 31 "Define V3 in terms of V1 and
+ V2" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "V3:=V1+5*V2; Element1OfV3:=V
+3[1];" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#V3G,&%#V1G\"\"\"*&\"\"&F'%
+#V2GF'F'" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%-Element1OfV3G&,&%#V1G\"
+\"\"*&\"\"&F(%#V2GF(F(6#F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 63 "Def
+ine all elements of V3 in terms of the elements of V1 and V2" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 40 "V3:=evalm(V1+5*V2); Element1OfV3:=V3[1];
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%#V3G-%'vectorG6#7%\"#@\"#F\"#L" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%-Element1OfV3G\"#@" }}}}{SECT 0 
+{PARA 4 "" 0 "" {TEXT -1 12 "Dot Products" }}{PARA 0 "" 0 "" {TEXT -1 
+64 "Maple has a function to calculate the dot product called dotprod" 
+}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 38 "Calculate the dot product of V1 \+
+and V2" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "\014dotprod(V1,V2);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#\"#K" }}}{PARA 0 "" 0 "" {TEXT -1 84 "
+Some interpretations that can come in handy (for example, while doing \+
+your homework)" }}{PARA 15 "" 0 "" {TEXT -1 37 "The dot product's valu
+e is given by  " }{XPPEDIT 18 0 "A.B = abs(A)*abs(B)*cos(theta);" "6#/
+-%\".G6$%\"AG%\"BG*(-%$absG6#F'\"\"\"-F+6#F(F--%$cosG6#%&thetaGF-" }
+{TEXT -1 9 " , where " }{XPPEDIT 18 0 "theta;" "6#%&thetaG" }{TEXT -1 
+34 " is the angle between the vectors." }}{PARA 15 "" 0 "" {TEXT -1 6 
+"Since " }{XPPEDIT 18 0 "abs(A)*abs(B)*cos(theta) = abs(B)*abs(A)*cos(
+theta);" "6#/*(-%$absG6#%\"AG\"\"\"-F&6#%\"BGF)-%$cosG6#%&thetaGF)*(-F
+&6#F,F)-F&6#F(F)-F.6#F0F)" }{TEXT -1 22 ", it must follow that " }
+{XPPEDIT 18 0 "A.B = B.A;" "6#/-%\".G6$%\"AG%\"BG-F%6$F(F'" }{TEXT -1 
+46 "  (i.e. order is unimportant in dot products)." }}{PARA 15 "" 0 "
+" {TEXT -1 56 "Using simple trigonometry, you (yes, you) can show that
+ " }{XPPEDIT 18 0 "abs(A)*cos(theta);" "6#*&-%$absG6#%\"AG\"\"\"-%$cos
+G6#%&thetaGF(" }{TEXT -1 22 " is the projection of " }{XPPEDIT 18 0 "A
+;" "6#%\"AG" }{TEXT -1 24 " along the direction of " }{XPPEDIT 18 0 "B
+;" "6#%\"BG" }{TEXT -1 33 " (also known as the component of " }
+{XPPEDIT 18 0 "A;" "6#%\"AG" }{TEXT -1 24 " along the direction of " }
+{XPPEDIT 18 0 "B;" "6#%\"BG" }{TEXT -1 1 "." }}{PARA 15 "" 0 "" {TEXT 
+-1 100 "Using simple trigonometry, (or arguing that order is unimporta
+nt in dot products) you can show that " }{XPPEDIT 18 0 "abs(B)*cos(the
+ta);" "6#*&-%$absG6#%\"BG\"\"\"-%$cosG6#%&thetaGF(" }{TEXT -1 22 " is \+
+the projection of " }{XPPEDIT 18 0 "B;" "6#%\"BG" }{TEXT -1 24 " along
+ the direction of " }{XPPEDIT 18 0 "A;" "6#%\"AG" }{TEXT -1 33 " (also
+ known as the component of " }{XPPEDIT 18 0 "B;" "6#%\"BG" }{TEXT -1 
+24 " along the direction of " }{XPPEDIT 18 0 "A;" "6#%\"AG" }{TEXT -1 
+1 "." }}{PARA 15 "" 0 "" {TEXT -1 88 "Using the previous two statement
+s, you can show that the dot product between any vector " }{XPPEDIT 
+18 0 "V;" "6#%\"VG" }{TEXT -1 21 " and any unit vector " }{XPPEDIT 18 
+0 "n;" "6#%\"nG" }{TEXT -1 21 " is the component of " }{XPPEDIT 18 0 "
+V;" "6#%\"VG" }{TEXT -1 24 " along the direction of " }{XPPEDIT 18 0 "
+n;" "6#%\"nG" }{TEXT -1 1 "." }}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 21 "
+Magnitude of a Vector" }}{PARA 0 "" 0 "" {TEXT -1 65 "There are severa
+l ways to determine a vector's magnitude in Maple" }}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 74 "Calculate the magnitude of V1 using the norm comma
+nd (of type \"frobenius\")" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "Magni
+tudeOfV1:=norm(V1,frobenius);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%.Ma
+gnitudeOfV1G*$-%%sqrtG6#\"#9\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 82 "Calculate the magnitude of V1 by taking the root of the sum of \+
+the element squares" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "MagnitudeOfV
+1:=sqrt(V1[1]^2+V1[2]^2+V1[3]^2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%.MagnitudeOfV1G*$-%%sqrtG6#\"#9\"\"\"" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 224 "Calculate the magnitude of V1 by taking the root of the \+
+dot product of V1 with itself (to see why this works, see the note at \+
+the end of the section on dot products, and bear in mind that the angl
+e between V1 and V1 is zero)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "Mag
+nitudeOfV1:=sqrt(dotprod(V1,V1));" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>
+%.MagnitudeOfV1G*$-%%sqrtG6#\"#9\"\"\"" }}}{PARA 0 "" 0 "" {TEXT -1 
+200 "The magnitude of a vector comes into play when calculating collin
+ear unit vectors.  Vector magnitudes also play a key role in the inter
+pretation of dot products included in the \"Dot Products\" section." }
+}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 12 "Unit Vectors" }}{PARA 0 "" 0 "
+" {TEXT -1 166 "A unit vector in the same direction as a defined vecto
+r can be calculated by traditional means with Maple's assistance, or M
+aple can handle the whole task on its own." }}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 61 "Calculate a unit vector by dividing a vector by its magni
+tude" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "unit_V1:=evalm(V1/Magnitude
+OfV1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%(unit_V1G-%'vectorG6#7%,$*
+$-%%sqrtG6#\"#9\"\"\"#F/F.,$F*#F/\"\"(,$F*#\"\"$F." }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 40 "Allow Maple to calculate the unit vector" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "unit_V1:=normalize(V1);" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#>%(unit_V1G-%'vectorG6#7%,$*$-%%sqrtG6#\"#9
+\"\"\"#F/F.,$F*#F/\"\"(,$F*#\"\"$F." }}}}{SECT 0 {PARA 4 "" 0 "" 
+{TEXT -1 14 "Cross Products" }}{PARA 0 "" 0 "" {TEXT -1 68 "Maple has \+
+a function to calculate the cross product called crossprod" }}{PARA 0 
+"" 0 "" {TEXT -1 40 "Calculate the cross product of V1 and V2" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "\014crossprod(V1,V2);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'vectorG6#7%!\"$\"\"'F'" }}}}}}
+{MARK "8 4 8 8" 1 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 
+2 33 1 1 }

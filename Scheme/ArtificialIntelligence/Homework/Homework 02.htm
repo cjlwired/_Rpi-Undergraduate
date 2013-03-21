@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW2</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW2</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+<a class="menu" href="#dfs">Iterated Depth First Search</a> &nbsp | &nbsp
+<a class="menu" href="#bfs">Breadth First Search</a> &nbsp | &nbsp
+<a class="menu" href="#suggest">Suggestions</a> &nbsp | &nbsp
+<a class="menu" href="#grading">Grading</a>
+</td></tr>
+</table>
+
+<div class="page">
+
+<h3 align=center>Water Jug Problems with 3 Jugs</h3>
+
+<h4 align=center>Due Date:Mon, 10/2 by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW2
+</h4>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+<p>The objectives of this assignment are:</p>
+<ol>
+  <li>Depth-First Search (Iterated) and Breadth First Search Algorithms</li>
+  <li>State space representation design</li>
+  <li>Scheme! (writing the operators, modifying search to keep track
+  of the operators at each step, etc).</li>
+</ol>
+
+<p>You are to write two Scheme procedures (you will probably write
+many procedures that help these two out) that solve water jug problems
+based on 3 jugs. One procedure will be an Iterated Depth First Search,
+the other will be a Breadth First Search. Both procedures will have
+arguments that describe the capacity of each of the jugs, the goal
+state (how much water in each jug), and a depth limit. Your procedures 
+should return an english description of a sequence of operations 
+from the start state to the goal state (instead of describing the
+states along the way, you describe the operators used).</p>
+
+<p>Fell free to start with the DFS and BFS code discussed in class
+(available via the course home page) or any other scheme search code
+you can find. If you do happen to find scheme code that solves 3-jug
+water jug problems, please don't use it (and tell Dave it
+exists!).</p>
+</div>
+
+<a name=dfs>
+<p class=section onClick="toggleContent('dfs_content','dfs_flag');">
+<span class="toggle" id="dfs_flag">-</span>
+Procedure: <code>dfswj</code>
+</a>
+<div class=page id="dfs_content">
+
+<p>One procedure should be named <code>dfswj</code> and will be given
+three parameters:</p>
+  <ul>
+   <li>The first parameter is a list of three integers indicating the
+   capacity of the jugs</li>
+   <li>The second parameter is a list of three integers indicating
+   the goal state</li>
+   <li>The third parameter is a depth limit (an integer indicating the
+   maximum depth you should search, with the start state being depth
+   0).</li>
+  </ul>
+
+<p>Sample: with the jugs can hold 3,4 and 10 gallons. The goal state
+has 2 gallons in the jug 1 (4 gallon jug), and nothing in the other
+jugs. Depth limit is 10.</p>
+
+<pre>
+(dfswj '(3 4 10) '(0 2 0) 10)
+=> ( "1. Fill jug 0."
+     "2. Pour jug 0 into jug 1."
+     "3. Fill jug 0."
+     "4. Pour jug 0 into jug 1."
+     "5. Empty jug 1."
+     "6. Pour jug 0 into jug 1." )
+</pre>
+
+<p>It is possible that there is no way to solve the problem,
+that is, not path from the start state to the goal state. For example,
+if you had three jugs that each hold 2 gallons, you could not get to
+the state with 1 gallon in each jug:</p>
+
+<pre>
+(dfswj '(2 2 2) '(1 1 1) 10)
+=> ( "No solution found" )
+</pre>
+
+<p>Your DFS search should be an interated DFS (start with a depth
+limit of 1, if no solution is found start over with a depth limit of
+2, etc. Note that this should always find a solution involving the
+minimum number of steps (if there is a solution within the total depth
+limit).</p>
+</div>
+
+<a name=bfs>
+<p class=section onClick="toggleContent('bfs_content','bfs_flag');">
+<span class="toggle" id="bfs_flag">-</span>
+Procedure: <code>bfswj</code>
+</a>
+<div class=page id="bfs_content">
+
+<p>You also need to write <code>bfswj</code>. The arguments and result
+are the same as for <code>dfswj</code>, the only difference is that
+your procedure should use a breadth-first search and stop when it hits
+the depth limit.</p>
+
+</div>
+<a name=suggest>
+<p class=section onClick="toggleContent('suggest_content','suggest_flag');">
+<span class="toggle" id="suggest_flag">-</span>
+Suggestions
+</a>
+<div class=page id="suggest_content">
+
+<h4>Generating successor states</h4>
+
+<p>Rather than <em>hard-code</em> a successor procedure, think about
+writing some general procedures that can be applied to each jug
+independently, to each pair of jugs, etc.</p>
+
+<p>Consider encoding the rules/operators as data that are operated on.
+The Scheme <code>eval</code> function can be your friend here. You can
+also write procedures that return procedures!</p>
+
+<h4>DFS vs. BFS</h4>
+
+<p>As the text suggests, the difference between a depth-first search
+and a breadth-first search is using a stack vs. a queue for keeping
+track of a list of states to be explored. You could get/write some
+procedures to add an item to a list (enqueue vs. push) and remove
+an item from a list (dequeue, pop) and pass these procedures to a
+general search procedure. If you pass it the enqueue/dequeue
+procedures the search is BFS, the stack procedures will make it
+DFS. You only write one main search function!</p>
+
+<h4>Generating the textual return value</h4>
+
+<p>In general you need to record (along with each state that
+is generated), what operator generated the state. Converting these
+records to text is the easy part, recording them is more work than
+the actual conversion to text.</p>
+
+<p>You may want to leave this part for last, and start out by getting
+the searches working with a list of states as the result. The text
+description of the operations is worth 10 points.</p>
+
+</div>
+<a name=grading>
+<p class=section onClick="toggleContent('grading_content','grading_flag');">
+<span class="toggle" id="grading_flag">-</span>
+Grading
+</a>
+<div class=page id="grading_content">
+
+<p>Each procedure (search algorithm) is worth 45% of the project
+grade, 10% is for code quality (how well can we make sense of the
+code, how well is it organized, etc.)</p>
+
+<p>If you generate a list of states as the return value of the search
+procedures, rather than the text desription, you will lose 10 points.</p>
+ 
+ <p>You can get partial credit for any part as long as your provide
+ a description of what the code does do and what is missing/broken.</p>
+</div>
+
+</div>
+</body>
+</html>

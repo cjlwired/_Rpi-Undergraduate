@@ -1,0 +1,60 @@
+
+Average Displacement: 2 
+Standard Deviation: 0.651
+In bounds: 166/252
+New Displacement Average: 2
+
+Average Displacement: 6208197 
+Standard Deviation: 173803641.146
+In bounds: 215/252
+New Displacement Average: 495188
+
+Average Displacement: 6298148 
+Standard Deviation: 173776261.392
+In bounds: 215/252
+New Displacement Average: 597607
+
+Average Displacement: 6249559 
+Standard Deviation: 173791000.557
+In bounds: 215/252
+New Displacement Average: 542283
+
+Average Displacement: 6128285 
+Standard Deviation: 173828307.187
+In bounds: 215/252
+New Displacement Average: 404200
+
+Average Displacement: 6649521 
+Standard Deviation: 173673219.516
+In bounds: 215/252
+New Displacement Average: 997682
+
+Average Displacement: 6267639 
+Standard Deviation: 173785518.204
+In bounds: 215/252
+New Displacement Average: 562858
+
+Average Displacement: 6572430 
+Standard Deviation: 173695309.125
+In bounds: 215/252
+New Displacement Average: 909894
+
+Average Displacement: 6179294 
+Standard Deviation: 173812541.414
+In bounds: 215/252
+New Displacement Average: 462268
+
+Average Displacement: 6544320 
+Standard Deviation: 173703432.621
+In bounds: 215/252
+New Displacement Average: 877888
+
+Average Displacement: 6410937 
+Standard Deviation: 173743064.668
+In bounds: 215/252
+New Displacement Average: 725626
+
+Average Displacement: -8289354 
+Standard Deviation: 8207697.069
+In bounds: 250/252
+New Displacement Average: 13

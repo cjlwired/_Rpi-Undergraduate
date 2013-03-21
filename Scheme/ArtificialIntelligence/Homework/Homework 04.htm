@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW4</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<style>
+pre { background-color: #dddddd; 
+  padding: .1in; border: solid black 1px;}
+</style>
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW4</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+<a class="menu" href="#prolog">Software</a> &nbsp | &nbsp
+<a class="menu" href="#x">Extra Credit</a> &nbsp | &nbsp
+<a class="menu" href="#grading">Grading</a>
+</td></tr>
+</table>
+
+<div class="page">
+
+<h3 align=center>Prolog Peg Solitaire</h3>
+
+<h4 align=center>Due Date: Thursday, Nov 9th by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW4
+</h4>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+
+<p>You are to develop a Prolog program that can solve
+one dimensional peg solitaire puzzles. Each puzzle is defined by
+a sequence of holes, some of which contain a peg. Each move involves
+jumping one peg over another to an empty space, removing the jumped
+peg. An example is shown below.</p>
+
+<center>
+<img src='pegs.png'>
+</center>
+<p>The goal is to remove all pegs except one. Your Prolog program
+needs to determine whether or not it is possible to solve a given
+puzzle, the puzzle could be of any size (the board could be of any
+size, containing any number of pegs in any configuration). <p>
+
+<p>Your game should include the predicate 
+<code>solve</code> which takes a list containing <code>1</code>s and 
+<code>0</code>s representing pegs and holes respectively. The 
+<code>solve</code> predicate should evalute to "Yes" if the list
+represents a puzzle that is solveable, "No" if it's not possible
+to reduce the puzzle to a single peg.</p>
+
+<p>Some examples are shown below, in this case the prolog
+program is in the file <code>pegs.pl</code>:</p>
+
+<pre>
+?- ['pegs.pl'].
+% pegs.pl compiled 0.00 sec, 1,900 bytes
+
+Yes
+?- solve([0,1,1]).
+
+Yes
+?- solve([1,1,1]).
+
+No
+?- solve([1,1,1,0,1,1,1]).
+
+No
+?- solve([1,0,1,1,1,1,0,1]).
+
+No
+?- solve([1,0,1,1,1,1,1,1]).
+
+Yes
+</pre>
+</div>
+
+<a name=prolog>
+<p class=section onClick="toggleContent('prolog_content','prolog_flag');">
+<span class="toggle" id="prolog_flag">-</span>
+Prolog Environment
+</a>
+<div class=page id="prolog_content">
+
+<p>You should use SWI Prolog, which is available for
+Windows, Linux and Mac at <a href='http://www.swi-prolog.org/'>
+www.swi-prolog.org</a>. The web site also includes documentation
+(a reference manual) and links to lots of Prolog resources.</p>
+</div>
+
+
+<a name=x>
+<p class=section onClick="toggleContent('x_content','x_flag');">
+<span class="toggle" id="x_flag">-</span>
+Extra Credit (10 points)
+</p>
+</a>
+<div class=page id="x_content">
+
+<p>You can get an extra 10 points if your program prints out 
+the list of moves it takes to solve the board. Something
+like this:</p>
+
+<pre>
+?- solve([0,1,1]).
+[0, 1, 1] => [1, 0, 0]
+
+Yes
+?- solve([1,0,1,1,1,1,0,1]).
+
+No
+?- solve([1,0,1,1,1,1,1,1]).
+[1, 0, 1, 1, 1, 1, 1, 1] => [1, 1, 0, 0, 1, 1, 1, 1]
+[1, 1, 0, 0, 1, 1, 1, 1] => [1, 1, 0, 1, 0, 0, 1, 1]
+[1, 1, 0, 1, 0, 0, 1, 1] => [1, 1, 0, 1, 0, 1, 0, 0]
+[1, 1, 0, 1, 0, 1, 0, 0] => [0, 0, 1, 1, 0, 1, 0, 0]
+[0, 0, 1, 1, 0, 1, 0, 0] => [0, 0, 0, 0, 1, 1, 0, 0]
+[0, 0, 0, 0, 1, 1, 0, 0] => [0, 0, 0, 1, 0, 0, 0, 0]
+
+Yes
+</pre>
+
+<p>You can format the list of moves any way you want, the example
+above is just one way... It's fine to say 
+something like "move peg at space 4 to space 6 removing the peg at space 5"
+</div>
+
+<a name=grading>
+<p class=section onClick="toggleContent('grading_content','grading_flag');">
+<span class="toggle" id="grading_flag">-</span>
+Grading
+</a>
+<div class=page id="grading_content">
+
+ <p>You can get partial credit as long as you provide
+ a description of what the code does do and what is
+ missing/broken.</p>
+
+</div>
+
+</div>
+</body>
+</html>

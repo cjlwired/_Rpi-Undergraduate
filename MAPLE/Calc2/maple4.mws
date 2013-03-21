@@ -1,0 +1,156 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 13 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 }3 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 24 "**** MAPLE FILE # 4 ****" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 84 "The pur
+pose of this file is to familiarize you with the basics of handling se
+quences" }}{PARA 0 "" 0 "" {TEXT -1 30 "and infinite series in MAPLE. \+
+" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 18 "SEQUE
+NCES IN MAPLE" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 82 "The best way to define a sequence in MAPLE is using the -
+> operator. For example,\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+14 "a := n -> 1/n;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%\"aGf*6#%\"nG6\"6$%)operatorG%&arrowGF(*&\"\"
+\"F-9$!\"\"F(F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 106 "defines the
+ sequence whose general term is a_n = 1/n. This syntax is preferable t
+o the\nassignment command " }}{PARA 0 "" 0 "" {TEXT -1 48 "           \+
+                            a := 1/n;" }}{PARA 0 "" 0 "" {TEXT -1 86 "
+because it allows us easy access to the terms of the sequence without \+
+the repeated use" }}{PARA 0 "" 0 "" {TEXT -1 33 "of the subs command. \+
+For example:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 5 "a(1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"\"" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "a(2);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6##\"\"\"\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+5 "a(3);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##\"\"\"\"\"$" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 93 "If we want to list out the first few term
+s of a sequence,  we can use the $ \"repeat\" operator" }}{PARA 0 "" 
+0 "" {TEXT -1 12 "as follows:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 28 "a(n) $ n=1..10;\n            " }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6,\"\"\"#F#\"\"##F#\"\"$#F#\"\"%#F#\"\"&#F#\"\"'#F
+#\"\"(#F#\"\")#F#\"\"*#F#\"#5" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 95 "
+We can check whether a sequence has a limit using the same limit comma
+nd we use for functions:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 23 "limit(a(n),n=infinity);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"!" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 89 "IMPORTANT NOTE: We must always refer to t
+he sequence as a(n), NOT JUST AS a, now that we " }}{PARA 0 "" 0 "" 
+{TEXT -1 56 "are using the \"arrow\" operator instead of an assignment
+." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 151 "Often we
+ will want to plot the terms of a sequence. This is a bit more complic
+ated than plotting the \ngraph of a function. Here is what we have to \+
+do:\n" }{MPLTEXT 1 0 1 " " }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 44 "Asse
+mble a list of the points to be plotted:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "LIST1 :
+= [[n,a(n)] $ n = 1..25]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 154 "LIST1 now contains the firs
+t 25 points in the sequence. The : instead of the ; at the end tells M
+APLE\nnot to bore us by listing out all 25 ordered pairs.\n" }
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 46 "Now we plot t
+he points using the plot command:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 24 "plot(LIST1,style=POINT);" }}{PARA 13 "" 1 "" {GLPLOT2D 427 427 
+427 {PLOTDATA 2 "6&-%'CURVESG6$7;7$$\"\"\"\"\"!F(7$$\"\"#F*$\"3+++++++
++]!#=7$$\"\"$F*$\"39LLLLLLLLF07$$\"\"%F*$\"3++++++++DF07$$\"\"&F*$\"35
++++++++?F07$$\"\"'F*$\"3dmmmmmmm;F07$$\"\"(F*$\"3\\G9dG9dG9F07$$\"\")F
+*$\"3+++++++]7F07$$\"\"*F*$\"3066666666F07$$\"#5F*$\"3/+++++++5F07$$\"
+#6F*$\"3;\"4444444*!#>7$$\"#7F*$\"3(GLLLLLLL)Fhn7$$\"#8F*$\"3u#p2Bp2Bp
+(Fhn7$$\"#9F*$\"3YUr&G9dG9(Fhn7$$\"#:F*$\"3emmmmmmmmFhn7$$\"#;F*$\"3++
++++++]iFhn7$$\"#<F*$\"3^qk<THN#)eFhn7$$\"#=F*$\"3DbbbbbbbbFhn7$$\"#>F*
+$\"3\"=%ot%*y:j_Fhn7$$\"#?F*$\"3G+++++++]Fhn7$$\"#@F*$\"3khZ!>w/>w%Fhn
+7$$\"#AF*$\"3eXXXXXXXXFhn7$$\"#BF*$\"3i@l&p3EyM%Fhn7$$\"#CF*$\"3Wmmmmm
+mmTFhn7$$\"#DF*$\"35+++++++SFhn-%'COLOURG6&%$RGBG$FV!\"\"$F*F*Fes-%+AX
+ESLABELSG6$Q!6\"Fis-%&STYLEG6#%&POINTG-%%VIEWG6$%(DEFAULTGFbt" 1 5 0 
+1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 106 "NOTE: style=POINT tells MAPLE to \+
+plot the sequence terms as discrete points. If you leave this option o
+ut," }}{PARA 0 "" 0 "" {TEXT -1 44 "the graph will appear as a continu
+ous curve." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 25 " INFINITE SERIES IN MAPLE" }}{PARA 0 "" 0 "" {TEXT -1 0 "
+" }}{PARA 0 "" 0 "" {TEXT -1 38 "So far we have a sequence a_n defined
+:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 6 "a(n); " }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*&\"\"\"F$%
+\"nG!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 48 "Suppose we want to c
+onsider the infinite series:" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%$Sum
+G6$*&\"\"\"F'%\"nG!\"\"/F(;F'%)infinityG" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 23 "We can use the command:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 1 " " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "sum(a(n),n=1..inf
+inity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%)infinityG" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 85 "This command will return the sum of the s
+eries if it is convergent and will notify us" }}{PARA 0 "" 0 "" {TEXT 
+-1 79 "that the series diverges, with an infinity (as above) if the pa
+rtial sums grow." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 15 "Other example
+s:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "sum((1/2)^n,n=0..infinity);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"#" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 80 "Confirmin
+g that a geometric series with r = 1/2 converges, and giving its sum..
+." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "sum(1/n^2,n=1..infinity);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#,$*&\"\"'!\"\"%#PiG\"\"#\"\"\"" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT -1 79 "Note that this confirms that a p-series with p=2 is co
+nvergent. MAPLE, with its" }}{PARA 0 "" 0 "" {TEXT -1 80 "impressive s
+tore of knowledge, mysteriously knows that the sum of this series is" 
+}}{PARA 0 "" 0 "" {TEXT -1 45 "((Pi)^2)/6. We have no way of verifying
+ this." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{PARA 0 "" 0 "" {TEXT -1 78 "Another thing we can do with MAPLE is con
+struct a sequence of partial sums for" }}{PARA 0 "" 0 "" {TEXT -1 68 "
+a given infinite series... let's look at a geometric series example:" 
+}}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 18 "b := k -> (1/3)^k;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"bGf*
+6#%\"kG6\"6$%)operatorG%&arrowGF()#\"\"\"\"\"$9$F(F(F(" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "S := n -> sum(b(k),k=1..n);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"SGf*6#%\"nG6\"6$%)operatorG%&arrow
+GF(-%$sumG6$-%\"bG6#%\"kG/F2;\"\"\"9$F(F(F(" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 73 "So we've defined b(n) to be the general term of the geo
+metric series, and" }}{PARA 0 "" 0 "" {TEXT -1 77 "S(n) to be the sequ
+ence of partial sums for this geometric series. Let's plot" }}{PARA 0 
+"" 0 "" {TEXT -1 51 "the first 25 terms of each on the same set of axe
+s:" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "LIST1 := [[n,b(n)] $ n = 1
+..25]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "LIST2 := [[n,S(n)
+] $ n = 1..25]:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "plot(\{LIST1,LIST2\},style=P
+OINT);" }}{PARA 13 "" 1 "" {GLPLOT2D 427 427 427 {PLOTDATA 2 "6'-%'CUR
+VESG6$7;7$$\"\"\"\"\"!$\"39LLLLLLLL!#=7$$\"\"#F*$\"3066666666F-7$$\"\"
+$F*$\"3].Pq.Pq.P!#>7$$\"\"%F*$\"3%ycM7!zcM7F87$$\"\"&F*$\"3-g&[uLE_6%!
+#?7$$\"\"'F*$\"38`G[7@ur8FC7$$\"\"(F*$\"3ExhF3PZsX!#@7$$\"\")F*$\"3%es
+eF!z:C:FN7$$\"\"*F*$\"3p&3HDME03&!#A7$$\"#5F*$\"3cGI%3y3Np\"FY7$$\"#6F
+*$\"3;inZp#H]k&!#B7$$\"#7F*$\"3!3#*eJUw;)=F^o7$$\"#8F*$\"3JpI'QuaAF'!#
+C7$$\"#9F*$\"3q*o(G\"e^24#Fio7$$\"#:F*$\"3FKciP><pp!#D7$$\"#;F*$\"3Jx=
+a7t0BBFdp7$$\"#<F*$\"3e\"fR^PCNu(!#E7$$\"#=F*$\"31(>8<zu6e#F_q7$$\"#>F
+*$\"3`BtPsf\"Rg)!#F7$$\"#?F*$\"3NTCz!*>(z'GFjq7$$\"#@F*$\"3$\\![(fj1*f
+&*!#G7$$\"#AF*$\"3)\\$\\KXbj'=$Fer7$$\"#BF*$\"3*\\kT%[=@i5Fer7$$\"#CF*
+$\"3r\\@ZhhqSN!#H7$$\"#DF*$\"3C$QdrQN-=\"Fes-%'COLOURG6&%$RGBG$Ffn!\"
+\"$F*F*Fat-F$6$7;F'7$F/$\"3?WWWWWWWWF-7$F4$\"3b9[\"[\"[\"[\"[F-7$F:$\"
+3Lr#Q\\gr#Q\\F-7$F?$\"3HdFJoQUz\\F-7$FE$\"3%feP%*GTJ*\\F-7$FJ$\"3!='e9
+jPr(*\\F-7$FP$\"3S?'[5#zB**\\F-7$FU$\"3mtGotfu**\\F-7$Fen$\"3)y&4cC`\"
+***\\F-7$Fjn$\"3i_O&[xr***\\F-7$F`o$\"3Q%)yh\"f!****\\F-7$Feo$\"3KGE(Q
+'o****\\F-7$F[p$\"3i4Uia*)****\\F-7$F`p$\"3-.9a^'*****\\F-7$Ffp$\"3MMr
+%Q))*****\\F-7$F[q$\"35yBGh******\\F-7$Faq$\"3%e7%4()******\\F-7$Ffq$
+\"3wT!)p&*******\\F-7$F\\r$\"3u8gc)*******\\F-7$Far$\"3e/?_********\\F
+-7$Fgr$\"3+o1%)********\\F-7$F\\s$\"39*)o%*********\\F-7$Fas$\"3Q'H#)*
+********\\F-7$Fgs$\"3g)4%**********\\F--F\\t6&F^tFatF_tFat-%+AXESLABEL
+SG6$Q!6\"Fby-%&STYLEG6#%&POINTG-%%VIEWG6$%(DEFAULTGF[z" 1 5 0 1 10 0 
+2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Curve 2" }}}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 103 "Note that one set of dots are the
+ TERMS of the geometric series (which quickly decay to 0 as expected),
+" }}{PARA 0 "" 0 "" {TEXT -1 96 "while the other are the PARTIAL SUMS \+
+of the geometric series. They appear to be approaching 1/2," }}{PARA 
+0 "" 0 "" {TEXT -1 78 "and our geometric series sum formula predicts t
+he sum of this series should be" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }}
+{PARA 0 "" 0 "" {TEXT -1 76 "                                         \+
+                              (1/3)" }}{PARA 0 "" 0 "" {TEXT -1 85 "  \+
+                                                                 -----
+---    =  1/2" }}{PARA 0 "" 0 "" {TEXT -1 77 "                        \+
+                                            1 - (1/3)" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 36 "Confirming this via the sum command:" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 24 "sum(b(n),n=1..infinity);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6##\"
+\"\"\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "45
+" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

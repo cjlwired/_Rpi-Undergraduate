@@ -1,0 +1,14 @@
+;;Carlos Lazo
+;;9-15-04
+;;Problem Solving in Computer Science
+;; Homework #2 - Graphic 1
+;;
+;; Function definition -> (draw-star position size color)
+;;
+;; Use: This function will read in a position, a size, and a color.
+;;      Utilizing that one position, it will then proced to draw 
+;;      6 different lines circulating around the center of the position,
+;;      each line of length 'size'. Of course, these lines will be drawn
+;;      in the color inputed in the function.
+;;
+;; Sample Usage:

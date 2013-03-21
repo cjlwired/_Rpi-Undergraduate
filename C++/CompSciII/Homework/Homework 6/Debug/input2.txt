@@ -1,0 +1,54 @@
+111 Chicago 5 25   Newark 7 20  150.23 3
+1234 Minneapolis 7 34 Chicago 8 10 90.95 3
+18 Chicago 8 42 London  16 55 400.12 2
+12 Seattle 5 34 Hawai 8 12 123.90 1
+213 London 17 20 Paris 21 17 260.9 4 
+289 Washington 13 15 Tampa 15 40 290.20 3
+156 Newark 19 18 Boulder 23 12 345.12 2
+167 Tampa 11 12 Chicago 3 20 348.99 7
+2365 Hawai 9 09 Tokyo 15 19 600.12 5
+189 Newark 8 20 Chicago 9 20 160.22 1
+115 Chicago 7 34 Newark 9 31 170.22 2
+0
+0 213 Judy Sawyer 
+0 289 Jonathan Cheng
+0 18 Paul Robinson
+4 Minneapolis London
+0 1234 Asad Javed
+3 1234
+1 Minneapoils London
+0 18 Mira Ganguly
+1 London Paris
+0 2365 Michihiro Kuramoci
+4 Chicago Paris
+0 18 Yung Lo
+0 1234 Jing Pei
+3 111
+0 2365 keoto Namihara
+2 Paul Robinson
+0 2000 John Reidl
+3 1000
+2 Suman Nath
+0 289 Suman Nath
+1 Paris Hawaii
+0 12 Rob Kennedy
+2 Suman Nath
+0 213 Saeed Salem
+3 18
+0 189 Rob Miller
+0 189 George Karypis
+3 115
+2 Yung Lo
+0 2365 Rob Miller
+0 1234 Paolo Palrimi
+4 Chicago Boulder
+1 Chicago Tampa
+4 Chicago Chicago
+0 12 Ralf Nader
+3 2365
+4 Newark Newark
+4 Hawai Tokyo
+3 12
+1 Chicago Newark
+2 Saeed Salem
+5

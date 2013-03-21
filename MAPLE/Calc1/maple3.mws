@@ -1,0 +1,167 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 13 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 }3 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 30 "****    MAPLE FILE # 3    \+
+****" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 49 "T
+his file explores how derivatives work in MAPLE." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 69 "Suppose we have a functio
+n f defined through an assignment as below:\n" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 24 "f := x^3 - x^2 - 2*x -7;" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"fG,**$)%\"xG\"\"$\"\"\"F**$)F(\"\"#F*!\"\"*&F-F*F(F
+*F.\"\"(F." }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" 
+{TEXT -1 52 "We can find its derivative using the \"diff\" command:" }
+}{PARA 0 "" 0 "" {TEXT -1 1 " " }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 20 "fprime := diff(f,x);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%'fprimeG,(*&\"\"$\"\"\")%\"xG\"\"#F(F(*&F+F(F*F(!\"\"
+F+F-" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT 
+-1 227 "The first argument is the function we are differentiating, and
+ the second  \nis the variable (namely x) that we are differentiating \+
+with respect to. It is \nhelpful to use descriptive variable names in \+
+MAPLE so you can keep track" }}{PARA 0 "" 0 "" {TEXT -1 72 "of the mea
+ning of your variables and so your work is easy to understand." }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 66 "Remember,
+ a function can also be defined using \"mapping notation\":" }}{PARA 
+0 "" 0 "" {TEXT -1 1 " " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "
+g := x -> x^3 - x^2 - 2*x -7;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"g
+Gf*6#%\"xG6\"6$%)operatorG%&arrowGF(,**$)9$\"\"$\"\"\"F1*$)F/\"\"#F1!
+\"\"*&F4F1F/F1F5\"\"(F5F(F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 69 "
+To take the derivative of a function defined this way, we need to use
+" }}{PARA 0 "" 0 "" {TEXT -1 37 "the derivative operator D as follows:
+" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 15 "gprime := D(g);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%'gprimeGf*6#%\"xG6\"6$%)operatorG%&arrowGF(,(*&\"\"$\"\"\")9$
+\"\"#F/F/*&F2F/F1F/!\"\"F2F4F(F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 73 "Note that the derivative will now be defined in mapping notatio
+n as well." }}{PARA 0 "" 0 "" {TEXT -1 1 " " }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 187 "Suppose we wanted to find the tan
+gent line to the graph of f(x) at some point \n(say  x = 1).  We can d
+o this as follows:\n\n1. Find the slope of the tangent line by evaluat
+ing f'(x) at x=1:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 23 "m := subs (x=1,fprime);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"mG!\"\"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 50 "2. \+
+Find the y-coordinate of the point of tangency:" }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "c := 1;" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>%\"cG\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "yc := subs(x=c,f);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#>%#ycG!\"*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "
+" {TEXT -1 70 "Use the point-slope formula to find the equation of the
+ tangent line:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "ytan := yc + m * (x-c);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%%ytanG,&\"\")!\"\"%\"xGF'" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+1 " " }}{PARA 0 "" 0 "" {TEXT -1 84 "Notice, I called the tangent line
+ function \"ytan\" rather than just \"y\" to emphasize " }}{PARA 0 "" 
+0 "" {TEXT -1 82 "that it's the name of a particular expression. Since
+ I can't simultaneously use y " }}{PARA 0 "" 0 "" {TEXT -1 83 "to mean
+ different things, it's safer to use names other than \"y\" to represe
+nt MAPLE" }}{PARA 0 "" 0 "" {TEXT -1 12 "expressions." }}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 89 "Now we can plot the gr
+aph of the function with its tangent line on the same set of axes:\n" 
+}{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "plot(
+\{f,ytan\},x=0..2);" }}{PARA 13 "" 1 "" {GLPLOT2D 434 434 434 
+{PLOTDATA 2 "6&-%'CURVESG6$7S7$$\"\"!F)$!\")F)7$$\"39LLLL3VfV!#>$!3yKL
+L3VfV!)!#<7$$\"3&pmm;H[D:)F/$!3$em;H[D:3)F27$$\"3LLLLe0$=C\"!#=$!3+LL$
+e0$=C\")F27$$\"3HLLL3RBr;F;$!3#QLL3RBr;)F27$$\"3Ymm;zjf)4#F;$!3%om;zjf
+)4#)F27$$\"3=LL$e4;[\\#F;$!3aKLe4;[\\#)F27$$\"3p****\\i'y]!HF;$!3e***
+\\i'y]!H)F27$$\"3,LL$ezs$HLF;$!3jLLezs$HL)F27$$\"3^****\\7iI_PF;$!3<**
+*\\7iI_P)F27$$\"3#pmmm@Xt=%F;$!3-mmm@Xt=%)F27$$\"3QLLL3y_qXF;$!36LL$3y
+_qX)F27$$\"3i******\\1!>+&F;$!3'******\\1!>+&)F27$$\"3')******\\Z/NaF;
+$!3l+++vW]V&)F27$$\"3&*******\\$fC&eF;$!3m*****\\$fC&e)F27$$\"3ELL$ez6
+:B'F;$!35LLez6:B')F27$$\"3Rmmm;=C#o'F;$!32mmm\"=C#o')F27$$\"3,mmmm#pS1
+(F;$!3QmmmEpS1()F27$$\"3]****\\i`A3vF;$!3G++DOD#3v)F27$$\"3slmmm(y8!zF
+;$!3-mmmwy8!z)F27$$\"3V++]i.tK$)F;$!3[++DOIFL))F27$$\"39++](3zMu)F;$!3
+*)***\\(3zMu))F27$$\"3\"pmm;H_?<*F;$!3-nm;H_?<*)F27$$\"3dmm;zihl&*F;$!
+3(om;zihl&*)F27$$\"39LLL3#G,***F;$!3UKL$3#G,***)F27$$\"3;LLezw5V5F2$!3
+sKLezw5V!*F27$$\"3*)***\\PQ#\\\"3\"F2$!3n***\\PQ#\\\"3*F27$$\"3ALL$e\"
+*[H7\"F2$!3nLL$e\"*[H7*F27$$\"3#*******pvxl6F2$!3[******pvxl\"*F27$$\"
+3z****\\_qn27F2$!3N****\\_qn2#*F27$$\"3%)***\\i&p@[7F2$!3S***\\i&p@[#*
+F27$$\"3#)****\\2'HKH\"F2$!3%*)***\\2'HKH*F27$$\"3_mmmwanL8F2$!3_mmmwa
+nL$*F27$$\"3&******\\2goP\"F2$!3t*****\\2goP*F27$$\"3CLLeR<*fT\"F2$!3C
+LLeR<*fT*F27$$\"3'******\\)Hxe9F2$!3_*****\\)Hxe%*F27$$\"3Ymm\"H!o-*\\
+\"F2$!37nm\"H!o-*\\*F27$$\"3))***\\7k.6a\"F2$!3K++DTO5T&*F27$$\"3emmmT
+9C#e\"F2$!3YnmmT9C#e*F27$$\"3!****\\i!*3`i\"F2$!3!****\\i!*3`i*F27$$\"
+3PLLL$*zym;F2$!3:LLL$*zym'*F27$$\"3GLL$3N1#4<F2$!3%RLL3N1#4(*F27$$\"3j
+mm\"HYt7v\"F2$!3>mm\"HYt7v*F27$$\"3%*******p(G**y\"F2$!3]******p(G**y*
+F27$$\"3kmm;9@BM=F2$!3Jnm;9@BM)*F27$$\"3DLLL`v&Q(=F2$!3#RLLLbdQ()*F27$
+$\"3/++DOl5;>F2$!3/++DOl5;**F27$$\"3/++v.Uac>F2$!3:***\\P?Wl&**F27$$\"
+\"#F)$!#5F)-%'COLOURG6&%$RGBG$\"#5!\"\"F(F(-F$6$7W7$F($!\"(F)7$F-$!34$
+Q%)4B1!*3(F27$F4$!3CHE()=b:prF27$F9$!3?Y;biC(=E(F27$F?$!37#pf]@4vN(F27
+$FD$!3o$Ga4!z^auF27$FI$!3d?H[*Gwca(F27$FN$!3!))ypO>$*3k(F27$FS$!3D)>'Q
+:m\")RxF27$FX$!3]?rVLvUQyF27$Fgn$!3U32K=tQRzF27$F\\o$!3mm=kRd_F!)F27$F
+ao$!3C#y!=GwUD\")F27$Ffo$!3/=kz5k&=A)F27$F[p$!38iN&zW]DJ)F27$F`p$!3s>8
+_5$RER)F27$Fep$!3O/-&=3%f%[)F27$Fjp$!3b`.*=&*>$f&)F27$F_q$!3Ir#*o+]6U'
+)F27$Fdq$!3S!QPfU'H6()F27$Fiq$!3du?dJ>J#y)F27$F^r$!3abA>k[vW))F27$Fcr$
+!3Tz(>q$G1/*)F27$Fhr$!3&eH-r!)pG&*)F27$F]s$!3;Z*\\F(3,***)F27$Fbs$!3nw
+&4(H5JR!*F27$Fgs$!3#=T4\\<pw1*F27$F\\t$!3I:%=Y\\d34*F27$Fat$!3*GV&yJsD
+1\"*F27$Fft$!3o!H&=v/Y7\"*F27$F[u$!3mo![Me+(4\"*F27$F`u$!33``*RY\\g4*F
+27$Feu$!3F%G#HFc%Q2*F27$Fju$!39\\=!)\\+HR!*F27$F_v$!3eT!RsZ1z**)F27$Fd
+v$!3`8pv9&o7%*)F27$Fiv$!3,\"fB4y*pw))F27$F^w$!3/FL>+f3(z)F27$Fcw$!3Uu;
+#GV[oq)F27$Fhw$!3G/%>jk$y)f)F27$F]x$!3Ub!*fUu6\"[)F27$Fbx$!3A]5?\\paY$
+)F27$Fgx$!3'zXr6@A%)>)F27$F\\y$!3_Nsb)>[!\\!)F27$Fay$!3wQg`*[n<'yF27$$
+\"3&****\\P$[/a=F2$!3!yMwXrDBx(F27$Ffy$!3:%[nQE-$zwF27$$\"3am;zW?)\\*=
+F2$!35x$Rc4Ahd(F27$F[z$!3L\"y**ymg(ouF27$$\"3/+++q`KO>F2$!3L7qh`O.itF2
+7$F`z$!3#>md&3[P^sF27$$\"3-+](=5s#y>F2$!3j\"))R(Qr,GrF27$FezFd[l-Fjz6&
+F\\[lF(F][lF(-%+AXESLABELSG6$Q\"x6\"Q!F^fl-%%VIEWG6$;F(Fez%(DEFAULTG" 
+1 2 0 1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Cur
+ve 2" }}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 90 "It's also interesting to
+ use MAPLE's graphing ability to compare qualitative features of a" }}
+{PARA 0 "" 0 "" {TEXT -1 88 "function and its derivative. Look at the \+
+graphs below and think about why the derivative" }}{PARA 0 "" 0 "" 
+{TEXT -1 69 "looks the way it does. (The bottom one is f, the top one \+
+is fprime.) " }}{PARA 0 "" 0 "" {TEXT -1 58 "This week's MAPLE exercis
+es explore these ideas in detail." }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 25 "plot(\{f,fprime\},x=-2..2);" }}{PARA 13 "" 1 "" {GLPLOT2D 434 
+434 434 {PLOTDATA 2 "6&-%'CURVESG6$7X7$$!\"#\"\"!$!#:F*7$$!3xmmm\"p0k&
+>!#<$!3MUl*z+!HS9!#;7$$!3MLLL$Q6G\">F0$!3Vj*eb&4>$Q\"F37$$!30++v3-)[(=
+F0$!3JJR?\"*[fN8F37$$!3amm;M!\\p$=F0$!3fhV**)40**G\"F37$$!3#)***\\7Y\"
+H%z\"F0$!3NIxZr(e2C\"F37$$!3LLLL))Qj^<F0$!3#*fo3(QNR>\"F37$$!3<LLL`Np3
+<F0$!3#=76kd+\"\\6F37$$!3ALLL=Kvl;F0$!3K\\$3z!\\_16F37$$!3+++Drp,B;F0$
+!3xG`#GcZj1\"F37$$!3wmm;C2G!e\"F0$!3%H7$=\\SJG5F37$$!3OLL$3yO5]\"F0$!3
+e9Dgk4/L'*F07$$!3&*****\\nU)*=9F0$!3cn3UTepK!*F07$$!3SLL$3WDTL\"F0$!3%
+[$*\\TEPi[)F07$$!35++]d(Q&\\7F0$!35\"=q\\JLK,)F07$$!3gmmmc4`i6F0$!3ct0
+%fe^vf(F07$$!3KLLLQW*e3\"F0$!3)3#z\")\\%GyG(F07$$!3w++++()>'***!#=$!3Q
+R.%z=g))*pF07$$!3E++++0\"*H\"*F\\q$!3*H&=FtmfonF07$$!35++++83&H)F\\q$!
+3Ux*3B`Q)*f'F07$$!3[LLL3k(p`(F\\q$!3g%)e#[V5))['F07$$!3Anmmmj^NmF\\q$!
+3JC+v+)f`S'F07$$!3(zmmmYh=(eF\\q$!3o)RUEwpGP'F07$$!3+,++v#\\N)\\F\\q$!
+3mD=LH!=aP'F07$$!3commmCC(>%F\\q$!3Fu=.<@m5kF07$$!39*****\\FRXL$F\\q$!
+3OuCS;4O\"['F07$$!3t*****\\#=/8DF\\q$!3m6![#RiTwlF07$$!3<mmm;a*el\"F\\
+q$!3<h%Q5E\"y+nF07$$!3jomm;Wn(o)!#>$!3E*pO&)y\\W$oF07$$!3IqLLL$eV(>!#?
+$!3q*Q?\"*=bg*pF07$$\"3)Qjmm\"f`@')Fdt$!3!GYC,'HAzrF07$$\"3%z****\\nZ)
+H;F\\q$!31Z/YOS?[tF07$$\"3bkmm;$y*eCF\\q$!3kJeq6IRPvF07$$\"3f)******R^
+bJ$F\\q$!3QfbeG;fOxF07$$\"3&e*****\\5a`TF\\q$!3_'3%=a2dJzF07$$\"3&o***
+*\\7RV'\\F\\q$!3mM[)**)*pp6)F07$$\"3X'*****\\@fkeF\\q$!3;,\\DO$\\^J)F0
+7$$\"3_ILLL&4Nn'F\\q$!3[bhC'e\\G[)F07$$\"3A*******\\,s`(F\\q$!3.(*[*4U
+]tk)F07$$\"3%[mm;zM)>$)F\\q$!3Sc.h2uE!y)F07$$\"3L*******pfa<*F\\q$!3e6
+:P8#4X!*)F07$$\"38HLLeg`!)**F\\q$!3+ZmIOg/)**)F07$$\"3v****\\#G2A3\"F0
+$!3R*yE![c8o!*F07$$\"3:LLL$)G[k6F0$!3M'H)yBO#f5*F07$$\"3\")****\\7yh]7
+F0$!3W^mE5\"e#4\"*F07$$\"3wmmm')fdL8F0$!3mx*G&G@\"R2*F07$$\"3bmmm,FT=9
+F0$!3gL<_^J-&**)F07$$\"3FLL$e#pa-:F0$!3Z()4Of,_q))F07$$\"3*)******Rv&)
+z:F0$!3_Y@$>u>Cr)F07$$\"3HLLLGUYo;F0$!3=o8wle2w%)F07$$\"3_mmm1^rZ<F0$!
+3bI4'zOG:@)F07$$\"34++]sI@K=F0$!34+xR8HoqyF07$$\"34++]2%)38>F0$!3>Ad,G
+zN%[(F07$$\"\"#F*$!\"(F*-%'COLOURG6&%$RGBG$\"#5!\"\"$F*F*F\\]l-F$6$7S7
+$F($\"#9F*7$F5$\"3#3aHJ\\;-G\"F37$F?$\"3&z3rIL/(z6F37$FI$\"3J#*RHhJzq5
+F37$FS$\"39Q-$)*y2dl*F07$Fgn$\"3G2:&)\\HU_')F07$F\\o$\"3Wb,\"R\"yShxF0
+7$Fao$\"3kNvB*e<&yoF07$Ffo$\"3%e(GIdH#z+'F07$F[p$\"3&H$R[M)=J=&F07$F`p
+$\"3>y#e*)e'\\zVF07$Fep$\"3$HYw-2*G4PF07$Fjp$\"3!=X'\\$Rfp*HF07$F`q$\"
+3K2.9s+kEBF07$Feq$\"3m!H3KZnKs\"F07$Fjq$\"3jj)fIov:@\"F07$F_r$\"3'ppB!
+pf0!['F\\q7$Fdr$\"3N&y]%e+N(3#F\\q7$Fir$!3%z3%4PC<#e#F\\q7$F^s$!3!>jp%
+p<Y?jF\\q7$Fcs$!3MYZ/(zv^***F\\q7$Fhs$!3B?Sde-$zI\"F07$F]t$!3eO&QxAhle
+\"F07$Fbt$!3Olcj0Qg.=F07$Fht$!3+[31*eRg*>F07$F^u$!3,@Y'QXJ,:#F07$Fcu$!
+3q7*)oJuFYAF07$Fhu$!32G#yCV)R5BF07$F]v$!3VT(=u%QKLBF07$Fbv$!3WZ*yB6^JJ
+#F07$Fgv$!33F)fl$z_`AF07$F\\w$!3w^ZU(>:69#F07$Faw$!3iS>#>-I')*>F07$Ffw
+$!3kK>X1\"eJ!=F07$F[x$!3)*>X^HuP(e\"F07$F`x$!3Ux-\")=,U48F07$Fex$!3F7f
+J6Ux25F07$Fjx$!3Mn*=6en*3lF\\q7$F_y$!3GhsP*4Y!4EF\\q7$Fdy$\"3QX&o#Q6**
+3>F\\q7$Fiy$\"3Ite3LwA\"o'F\\q7$F^z$\"3;jYTt$e))>\"F07$Fcz$\"3MMpKTz%y
+w\"F07$Fhz$\"3%Rb%3gW8GBF07$F][l$\"3Vpr,(=!R9IF07$Fb[l$\"3b*Hz)oS4oOF0
+7$Fg[l$\"3Hs'>T3)e1WF07$F\\\\l$\"3')eEt\\\\a`^F07$Fa\\l$\"\"'F*-Ff\\l6
+&Fh\\lF\\]lFi\\lF\\]l-%+AXESLABELSG6$Q\"x6\"Q!Fifl-%%VIEWG6$;F(Fa\\l%(
+DEFAULTG" 1 2 0 1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Cur
+ve 1" "Curve 2" }}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+{MARK "0 0 0" 22 }{VIEWOPTS 1 1 0 3 2 1804 1 1 1 1 }{PAGENUMBERS 0 1 
+2 33 1 1 }

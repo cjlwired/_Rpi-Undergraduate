@@ -1,0 +1,31 @@
+ 143 Chicago 11 45  Atlanta 14 05       297.99 5
+  23 NewYork 8 05   SanFrancisco 14 15  378.89 10
+ 152 Chicago 11 18  NewYork 13 15       198.35 2
+ 123 NewYork 8 44   Chicago 11 00       213.45 3
+ 415 Chicago 15 15  Atlanta 17 45       315.89 4
+1918 Boston  20 04  NewYork 20 45       192.78 1
+0
+0 152 Paul Bunyan
+0 152 Sammy Sosa
+0 152 Joe Torre
+0 137 George Washington
+0 123 Paul Bunyan
+1 NewYork Atlanta
+2 Joe Torre
+2 Paul Bunyan
+3 123
+3 152
+0 123 Mia Hamm
+0 143 Mia Hamm
+2 Mia Hamm
+4 NewYork Atlanta
+0 1918 Babe Ruth
+0 1918 Curt Schilling
+0 23 George Washington
+0 23 Paul Bunyan
+0 23 Thomas Jefferson
+0 23 John Adams
+0 23 Joe Torre
+2 Joe Torre
+3 23
+5

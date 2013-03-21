@@ -1,0 +1,5 @@
+
+Average Displacement: 10 
+Standard Deviation: 2.354
+In bounds: 219/252
+New Displacement Average: 9

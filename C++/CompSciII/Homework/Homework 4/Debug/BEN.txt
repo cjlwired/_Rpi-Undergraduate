@@ -1,0 +1,18 @@
+beautiful_day 2
+eight_days_a_week 2
+sidewinder 2
+
+cstewart $2
+ 856798 1 
+ 324561 6 
+ 234123 1 
+
+dowjones $0.5
+ 234123 1 
+
+pauljones $0.5
+ 856798 1 
+
+bfskinner $0.5
+ 324561 1 
+

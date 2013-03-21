@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW5</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<style>
+pre { background-color: #dddddd; 
+  padding: .1in; border: solid black 1px;}
+</style>
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW5</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+<a class="menu" href="#grading">Grading</a>
+</td></tr>
+</table>
+
+<div class="page">
+
+<h3 align=center>One Page Term Project Description</h3>
+
+<h4 align=center>Due Date: Monday, Nov 13th by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW5
+</h4>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+
+<p>Write a one page description of your term project, describing what you
+will be working on, whether you will focus on writing a paper or 
+developing code, who you will be working with (you can work with a partner),
+and a list of resources you have found that are helping you research/develop/understand your topic.</p>
+
+<p>Your description must be either plain text, PDF or a 
+URL to your description (HTML only).</p>
+</div>
+
+<a name=grading>
+<p class=section onClick="toggleContent('grading_content','grading_flag');">
+<span class="toggle" id="grading_flag">-</span>
+Grading
+</a>
+<div class=page id="grading_content">
+
+ <p>This will not count as a homework grade, but will count as 5 points (out of 30) of your term project grade.</p>
+
+</div>
+
+</div>
+</body>
+</html>

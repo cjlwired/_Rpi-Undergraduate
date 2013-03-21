@@ -1,0 +1,34 @@
+
+After 1 round, here are the top 5 divers.
+1: 987 Xiao China 26.432
+2: 742 Ohsumi Japan 26.144
+3: 245 Yang China 24.738
+4: 123 Evans USA 23.2
+5: 876 Kim Korea 22.5
+
+After 2 rounds, here are the top 5 divers.
+1: 987 Xiao China 53.402
+2: 123 Evans USA 51.76
+3: 245 Yang China 46.562
+4: 234 Wright Australia 46.026
+5: 742 Ohsumi Japan 42.804
+
+Final places:  
+1: 987 Xiao China 85.962
+2: 123 Evans USA 81.138
+3: 234 Wright Australia 74.97
+4: 245 Yang China 71.858
+5: 742 Ohsumi Japan 68.916
+6: 876 Kim Korea 65.764
+7: 852 Thompson Australia 59.818
+8: 623 Stevens USA 38.78
+
+Results in order of id:
+123 Evans USA 81.138 2
+234 Wright Australia 74.97 3
+245 Yang China 71.858 4
+623 Stevens USA 38.78 8
+742 Ohsumi Japan 68.916 5
+852 Thompson Australia 59.818 7
+876 Kim Korea 65.764 6
+987 Xiao China 85.962 1

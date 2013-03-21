@@ -1,0 +1,539 @@
+{VERSION 5 0 "SUN SPARC SOLARIS" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "Maple Plot" 0 13 1 {CSTYLE "" -1 -1 "" 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 }3 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "" 0 "" {TEXT -1 28 "****  MAPLE   FILE  # 1 **
+**" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 87 "The purpose of this file is to  provide some general MAPLE back
+ground and to summarize " }}{PARA 0 "" 0 "" {TEXT -1 64 "some MAPLE co
+mmands that are useful in algebra and pre-calculus." }}{PARA 0 "" 0 "
+" {TEXT -1 1 " " }}{PARA 0 "" 0 "" {TEXT -1 80 "In addition to an expl
+anation of the usefulness and syntax of several commands, " }}{PARA 0 
+"" 0 "" {TEXT -1 70 "some examples are given (which you are encouraged
+ to try on your own)." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 70 " ****   Operat
+ors, Algebraic Expressions and Functions in MAPLE   ****" }}{PARA 0 "
+" 0 "" {TEXT -1 337 "\n The recognized mathematical operators in MAPLE
+ are similar \n to those used in many computing languages. They are + \+
+for\n addition, - for subtraction, * for multiplication, / for\n divis
+ion and ^ for exponentiation. To assign an algebraic \n expression to \+
+a variable, we use the assignment operator : =\n as shown in the follo
+wing example:\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "y := (3*
+x^2 + 2*x -7)/(x^3-6*x-2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"yG*&
+,(*$)%\"xG\"\"#\"\"\"\"\"$F)F*!\"(F+F+,(*$)F)F,F+F+F)!\"'!\"#F+!\"\"" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 64 "Note that I only typed in the p
+art after the prompt > and ending" }}{PARA 0 "" 0 "" {TEXT -1 161 "wit
+h the semi-colon....the rest is an acknowledgement from \nMAPLE. All M
+APLE commands (with very few exceptions we'll\ndiscuss as necessary) e
+nd in a semi-colon.\n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 64 "Another \+
+way to define a function in MAPLE is using the \"mapping\"" }}{PARA 0 
+"" 0 "" {TEXT -1 9 "operator:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "f := x -> (3*x^2 + 2*x -7)/(
+x^3-6*x-2);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fGf*6#%\"xG6\"6$%)o
+peratorG%&arrowGF(*&,(*$)9$\"\"#\"\"\"\"\"$F0F1!\"(F2F2,(*$)F0F3F2F2F0
+!\"'!\"#F2!\"\"F(F(F(" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 68 "This com
+mand just says that f \"maps\" a number x to the corresponding" }}
+{PARA 0 "" 0 "" {TEXT -1 71 "value given by the function. We'll see a \+
+major difference between these" }}{PARA 0 "" 0 "" {TEXT -1 44 "two way
+s of defining a function momentarily." }}{PARA 0 "" 0 "" {TEXT -1 0 "
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 " There are several mathematic
+al functions we are familiar" }}{PARA 0 "" 0 "" {TEXT -1 74 " with tha
+t are known by MAPLE. These include the square\n root function...\n" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "y := sqrt(x);" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>%\"yG*$-%%sqrtG6#%\"xG\"\"\"" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 34 " ...the absolute value function..." }}{PARA 0 "
+" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "y :=
+ abs(x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"yG-%$absG6#%\"xG" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 57 "...and the usual trigonometric fun
+ctions sin(x), cos(x), " }}{PARA 0 "" 0 "" {TEXT -1 35 "tan(x),sec(x),
+ csc(x), and cot(x).\n" }}{PARA 0 "" 0 "" {TEXT -1 64 "Note that my la
+test definition of y is the only one I retain. If" }}{PARA 0 "" 0 "" 
+{TEXT -1 69 "I want to use several functions at once, I must assign th
+em different" }}{PARA 0 "" 0 "" {TEXT -1 6 "names." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 56 "Often we wish to \+
+evaluate a function we've defined at a " }}{PARA 0 "" 0 "" {TEXT -1 
+54 "particular number. If we've defined the function as an" }}{PARA 0 
+"" 0 "" {TEXT -1 52 "algebraic expression, we can use the \"subs\" com
+mand." }}{PARA 0 "" 0 "" {TEXT -1 62 "For instance, we can compute the
+ square root of 4 as follows:\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 13 "y := sqrt(x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"yG*$-%%sq
+rtG6#%\"xG\"\"\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "subs(x=
+4,y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#*$-%%sqrtG6#\"\"%\"\"\"" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 63 "Notice that maple doesn't simplify
+ that last expression. We can" }}{PARA 0 "" 0 "" {TEXT -1 10 "ask it t
+o:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "simplify(%);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"#
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 72 "The symbol % in MAPLE refers \+
+to the result of the last MAPLE calculation" }}{PARA 0 "" 0 "" {TEXT 
+-1 19 "that was performed." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "ans := subs(x=Pi,y);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%$ansG*$-%%sqrtG6#%#PiG\"\"\"" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 59 "I
+n the above command, I plugged Pi (it must be capitalized)" }}{PARA 0 
+"" 0 "" {TEXT -1 45 "into our sqrt funtion and assigned the result" }}
+{PARA 0 "" 0 "" {TEXT -1 67 "to the variable ans. I can get a decimal \+
+version of ans as follows:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "evalf(ans);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#$\"+^QXs<!\"*" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 86 "I
+f you wish to round a decimal to a certain number of decimal places, i
+t's pretty easy" }}{PARA 0 "" 0 "" {TEXT -1 78 "to do this without MAP
+LE's help. However, if you know in advance that you want" }}{PARA 0 "
+" 0 "" {TEXT -1 78 "ALL decimals displayed with m SIGNIFICANT DIGITS, \+
+you can execute the command:" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "Digits := m;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "" 0 "" {TEXT -1 85 "The
+ default is for floating point numbers to be displayed with 10 signifi
+cant digits." }}{PARA 0 "" 0 "" {TEXT -1 30 "So if we executed the com
+mand:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "  " }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 12 "Digits := 4;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%'DigitsG\"\"%" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 41 "...and then re
+-evaluate the result above:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "evalf(ans);" }}{PARA 11 "" 
+1 "" {XPPMATH 20 "6#$\"%t<!\"$" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 90 
+"...we get ans to 4 significant figures. You should be aware that this
+ Digits command is an" }}{PARA 0 "" 0 "" {TEXT -1 85 "\"environmental
+\" command, so that all computations from now on will be affected. If \+
+we" }}{PARA 0 "" 0 "" {TEXT -1 44 "wish to revert to the default, we m
+ust type:" }}{PARA 0 "" 0 "" {TEXT -1 1 " " }{MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "Digits := 10;" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#>%'DigitsG\"#5" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+-1 91 "On the other hand, we could have defined the square root functi
+on \nusing mapping notation:\n" }{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 19 " f := x -> sqrt(x);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%\"fG%%sqrtG" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 64 "(
+Notice the strange way MAPLE acknowledges the definition of the" }}
+{PARA 0 "" 0 "" {TEXT -1 65 "function.) One benefit of this approach i
+s that we can bypass the" }}{PARA 0 "" 0 "" {TEXT -1 49 "subs command \+
+in evaluating f(x) at different x's:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "f(4);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "f(16
+);" }}{PARA 11 "" 1 "" {TEXT -1 0 "" }{XPPMATH 20 "6#\"\"%" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 60 "Notice also that the simplify command is \+
+not necessary here." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 38 "****   Plotting Graphs in MAPLE   ****" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 59 "Once you'
+ve defined a function using an assignment command," }}{PARA 0 "" 0 "" 
+{TEXT -1 119 "you can graph it using the \"plot\" command. You need to
+ specify\na range of x over which you want to graph the function:\n" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "z:= x^3 + 2*x^2 -3*x -4;" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"zG,**$)%\"xG\"\"$\"\"\"F**&\"\"#
+F*)F(F,F*F**&F)F*F(F*!\"\"\"\"%F/" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "plot(z,x=-6..6);" }}{PARA 13 "" 1 "" {GLPLOT2D 432 
+432 432 {PLOTDATA 2 "6%-%'CURVESG6$7S7$$!\"'\"\"!$!$I\"F*7$$!3z******
+\\TVQd!#<$!35!*[\"yP**))4\"!#:7$$!3l****\\-r%3^&F0$!3aU9.L/**3%*!#;7$$
+!3A+++l;!\\D&F0$!3%QLNW>7;\"yF97$$!3o*****\\lfs*\\F0$!3;v+Gm*fdQ'F97$$
+!3%)****\\s@%3u%F0$!3UaqTM.&z8&F97$$!3J++]U.6.XF0$!3Yb:\")RZ([7%F97$$!
+3&)****\\-G&pD%F0$!3^Q+B%R%)G@$F97$$!3(*****\\AjP-SF0$!3-70]$)p*oS#F97
+$$!32++]sih[PF0$!3K#fV*zBfK<F97$$!3%)******pGf([$F0$!3GH@gtl7j6F97$$!3
+(******\\J$odKF0$!3XGp$f'\\6uvF07$$!3y******4'f))*HF0$!3A(RU>UCj)RF07$
+$!33+++]J(*QFF0$!3C3aBYy$oK\"F07$$!3\")*******QC&)[#F0$\"3J#z>yv>ES%!#
+=7$$!3/++]AH4hAF0$\"33\"3*4V/V[9F07$$!3%*******4\\l!*>F0$\"31&)[G$e'**
+3?F07$$!3&*******R%e:w\"F0$\"3!eRJj\\!eC?F07$$!33++]#yk]\\\"F0$\"34i&*
+*)*)\\$Qh\"F07$$!3M+++SF<f7F0$\"3RB$\\$fo6@&*F`p7$$!3u****\\#yh.+\"F0$
+\"3f([pg1**pW\"!#?7$$!3'p****\\ZD\"RvF`p$!3#Gi1e-1+.\"F07$$!3I'*****\\
+ion\\F`p$!3E&[;\"*3G(Q@F07$$!39'****\\K-jg#F`p$!3Yge_(=d**4$F07$$!3*36
++++vI#fF_r$!3@ZK;<3;#)RF07$$\"3/*****\\xgke#F`p$!3eD)HQzR[i%F07$$\"3E)
+****\\-V&*)[F`p$!3Z&yls*G\"=([F07$$\"3a-++]\\$pP(F`p$!3C'*3BG/DBZF07$$
+\"3y&******>am%**F`p$!3%3B\"4$='>@SF07$$\"3k*****\\JigC\"F0$!3ksXlt\">
+\")p#F07$$\"3%*****\\P<I*[\"F0$!3z]%z[S`cG(F`p7$$\"3#)*****\\kx$f<F0$
+\"30vju%3\"oeBF07$$\"3;******fG0-?F0$\"3EbY_UB$\\.'F07$$\"3@+++]/;hAF0
+$\"3f\")ejGyJ+6F97$$\"3Y****\\P/&f\\#F0$\"3(zDI*[z3_;F97$$\"3p+++5zj_F
+F0$\"3V2:o?(*GvBF97$$\"3=****\\<3;%*HF0$\"3y&=[(Gk,zJF97$$\"3;++]Z=iYK
+F0$\"3%\\#)4>BVi:%F97$$\"3[******\\'[M\\$F0$\"3z3]'e#4Fc_F97$$\"3W****
+\\PM&=v$F0$\"3W@.xm`)4d'F97$$\"3v+++gzs+SF0$\"37YY$zHTW+)F97$$\"35+++0
+\"Q_D%F0$\"3H:L^8.#)\\'*F97$$\"3q++]x2k2XF0$\"3DulaUp/Z6F37$$\"3d+++?E
+dRZF0$\"3C/5p$**f<L\"F37$$\"3M+++&o#R0]F0$\"3C1qa:i'\\c\"F37$$\"3++++?
+`9V_F0$\"39WC)4y()Qz\"F37$$\"3G++]<#Rm\\&F0$\"3zrbPIO1g?F37$$\"3E++]A_
+ERdF0$\"38a1_292PBF37$$\"\"'F*$\"$m#F*-%'COLOURG6&%$RGBG$\"#5!\"\"$F*F
+*Fc[l-%+AXESLABELSG6$Q\"x6\"Q!Fh[l-%%VIEWG6$;F(Fhz%(DEFAULTG" 1 2 0 1 
+10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 59 "MAPLE automatically adjusts the vertical \+
+scale to show the " }}{PARA 0 "" 0 "" {TEXT -1 258 "graph over the spe
+cified domain. In the example above, it's\nhard to see clearly the beh
+avior of the function on the\ninterval [-2,2] because the function gro
+ws so quickly outside\nthis interval. To fix this problem, we can plot
+ it again on a smaller interval:\n" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "plot(z,x=-3..2);" }}{PARA 13 "" 1 "" {GLPLOT2D 432 
+432 432 {PLOTDATA 2 "6%-%'CURVESG6$7[o7$$!\"$\"\"!$!\"%F*7$$!39LLe9r]X
+H!#<$!3LI-p\"))4nO$F07$$!3smm;HU,\"*GF0$!35LH\"e^@Sx#F07$$!3&**\\P4E+O
+%GF0$!3?Pg!\\g.1H#F07$$!3=L$3FH'='z#F0$!3W!)))\\w#\\l$=F07$$!3gmmTgBa*
+o#F0$!3SSDoW\"GF>*!#=7$$!3vmm\"H_\">#e#F0$!3'p]\"=EX6`8FG7$$!3ML$3_!4N
+vCF0$\"3I_U*)Hf0M^FG7$$!3'omTg(fHwBF0$\"3'=N]5PES+\"F07$$!3;+]PM.ttAF0
+$\"3bH.HMj/19F07$$!3zm;/,oln@F0$\"3E^\\Bb`>:<F07$$!3%)**\\(oWB>1#F0$\"
+3&>`aP0,D#>F07$$!3smTNrNa2?F0$\"3Qn-]x$GA*>F07$$!3:LL$epjJ&>F0$\"3$[Iw
+&)[k\"Q?F07$$!3u**\\(=(eE0>F0$\"3$Q\"[k/hof?F07$$!3amm\"z/ot&=F0$\"3t^
+&*[V\"eT1#F07$$!3@L$3FWYM!=F0$\"3x.VZmQh\\?F07$$!3()****\\P[_\\<F0$\"3
+mwHz'>Q_,#F07$$!3#*****\\7)Q7k\"F0$\"3_I@5M))4!*=F07$$!3'*****\\i^)o`
+\"F0$\"3xo'oZ9SXq\"F07$$!3dm;/^?7U9F0$\"3]WdDbQf'[\"F07$$!3CLL$eaR%H8F
+0$\"3Gp*e&eNZt6F07$$!3;LLL$o#)RB\"F0$\"3dV;(fxFPo)FG7$$!3'***\\PfO%H7
+\"F0$\"3KeI!3$=,[ZFG7$$!3SLLL3`lC5F0$\"3m)\\AJ:O)*z*!#>7$$!3q'**\\P4u
+\"o\"*FG$!3/&e](p8u!R$FG7$$!3*z**\\7G-89)FG$!3+hQ_-J0;xFG7$$!3$)GL$3Fp
+)pqFG$!3EVg_G=vK7F07$$!3YKL3-$ff3'FG$!3\"H>]'Q9&)e;F07$$!37nm;z%zY-&FG
+$!3<-C+\">3X6#F07$$!35kmT5!3B#RFG$!3s1SRU.'fd#F07$$!3C***\\iS!piHFG$!3
+AO\\M1tkhHF07$$!3kim;/rFE>FG$!3**GF1MN0bLF07$$!3P&******\\2cb)Fas$!3S6
+(4![$=$HPF07$$\"3t9++DJE>>Fas$!3TC&>)4T$o0%F07$$\"3t-+D1RU07FG$!3%Qsd'
+)p93L%F07$$\"3+++](=S2L#FG$!3ZBcxjO\"zd%F07$$\"3:jmm;p)=M$FG$!3;q!zH-z
+=u%F07$$\"3O-++v=]@WFG$!3ad@GW!=!\\[F07$$\"3qm;H#oZ1\"\\FG$!3L3y9ru[s[
+F07$$\"3/JLe*[$z*R&FG$!3J`C6<nLz[F07$$\"3Wo;Hd!fX$fFG$!3H6m&)4(yp'[F07
+$$\"3#e++]iC$pkFG$!3M#=!**[*)*H$[F07$$\"3GN$e*[t\\spFG$!32&zc_%=Y!y%F0
+7$$\"3ukm\"H2qcZ(FG$!39X)>>`0sq%F07$$\"3i.+DJ5fF&)FG$!3YFZ;Wjv$[%F07$$
+\"3akmmTg.c&*FG$!3P%y)e!*y\"y;%F07$$\"3w**\\ilAFj5F0$!3%*=hhO2kEPF07$$
+\"3yLLL$)*pp;\"F0$!3kr![zBq!)=$F07$$\"3(RL$3xe,t7F0$!3#G'G&)y\")*[^#F0
+7$$\"3Cn;HdO=y8F0$!3Q@%*Hi?1=<F07$$\"3*Q$e9\"z-lU\"F0$!35S'e$[G)oI\"F0
+7$$\"3`+++D>#[Z\"F0$!3]O)*H?h\"Qm)FG7$$\"3'RL3_5,-`\"F0$!3!p=Rn$)HeC$F
+G7$$\"3RnmT&G!e&e\"F0$\"3\\\"\\()pv/kd#FG7$$\"3m+]P%37^j\"F0$\"3il'ep?
+'oM\")FG7$$\"3\"RLLL)Qk%o\"F0$\"3&=P,t&)zJS\"F07$$\"3-n\"z>6but\"F0$\"
+3+0a/y#y+2#F07$$\"37+]iSjE!z\"F0$\"35%p;ek2sx#F07$$\"3L+++DM\"3%=F0$\"
+3A\\JE/t^#\\$F07$$\"3a+]P40O\"*=F0$\"3$)yV%*[nEYUF07$$\"3F+voa-oX>F0$
+\"3*\\$p!)H\"4+5&F07$$\"\"#F*$\"\"'F*-%'COLOURG6&%$RGBG$\"#5!\"\"$F*F*
+Fg_l-%+AXESLABELSG6$Q\"x6\"Q!F\\`l-%%VIEWG6$;F(F\\_l%(DEFAULTG" 1 2 0 
+1 10 0 2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 61 "Sometimes we want to plot more tha
+n one graph on the same set" }}{PARA 0 "" 0 "" {TEXT -1 90 "of axes. T
+his can be done by listing the functions within braces (\{\}) in the p
+lot command:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 12 "w := sin(x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#
+>%\"wG-%$sinG6#%\"xG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "plo
+t(\{z,w\},x=-3..3);" }}{PARA 13 "" 1 "" {GLPLOT2D 432 432 432 
+{PLOTDATA 2 "6&-%'CURVESG6$7W7$$!\"$\"\"!$!\"%F*7$$!3*)*****\\2<#pG!#<
+$!3crXY!=(4[DF07$$!3#)***\\7bBav#F0$!3'[k$>/h<p9F07$$!36++]K3XFEF0$!3S
+TA9F*HD\\%!#=7$$!3%)****\\F)H')\\#F0$\"3.fe(*)o\"oGQF=7$$!3\"****\\i3@
+/P#F0$\"3y6)z@l0*H5F07$$!3:++Dr^b^AF0$\"3cs1t*R1%z9F07$$!3#****\\7Sw%G
+@F0$\"3^-Jq+#yL!=F07$$!3*****\\7;)=,?F0$\"3G:S;!>1))*>F07$$!3.++DO\"3V
+(=F0$\"3TefC@Q[k?F07$$!3#******\\V'zV<F0$\"3CZgYo(f/,#F07$$!3)*****\\d
+;%)G;F0$\"3GJ-%Q]a7(=F07$$!3!******\\!)H%*\\\"F0$\"3BQ&H'[irB;F07$$!3.
++++vl[p8F0$\"3M0e2UN)4H\"F07$$!3!******\\>iUC\"F0$\"3**\\'*Gc46G!*F=7$
+$!3-++DhkaI6F0$\"3_IyWUk=H]F=7$$!3s******\\XF`**F=$!3Ud7Em5>r=!#>7$$!3
+u*******>#z2))F=$!35swu&e@S*[F=7$$!3R++]7RKvuF=$!3i6@)*p!=v0\"F07$$!3s
+,+++P'eH'F=$!3'fNo%4x.o:F07$$!3q)***\\7*3=+&F=$!3B(fKe>JU7#F07$$!3[)**
+*\\PFcpPF=$!3WV)o\\5.&QEF07$$!3:)****\\7VQ[#F=$!3mj%=8a\"yYJF07$$!32)*
+**\\i6:.8F=$!3)>)\\N2OIxNF07$$!3Wb+++v`hH!#?$!3%>/m?(y4\"*RF07$$\"3]**
+**\\(QIKH\"F=$!3L%pkIOdBN%F07$$\"38****\\7:xWCF=$!3[2u)\\7\"G*f%F07$$
+\"3E,++vuY)o$F=$!3dLDEiNE%y%F07$$\"3*y******4FL(\\F=$!3xf/&fH3V([F07$$
+\"3A)****\\d6.B'F=$!3/Kg'y<<4&[F07$$\"3s****\\(o3lW(F=$!3jj$=f?I?r%F07
+$$\"35*****\\A))oz)F=$!30m-g!H71T%F07$$\"3e******Hk-,5F0$!39te76!*)e*R
+F07$$\"35+++D-eI6F0$!3A(4%Hvl>!R$F07$$\"3t***\\(=_(zC\"F0$!3um0Tf@R&o#
+F07$$\"3M+++b*=jP\"F0$!3aBe+K;NL<F07$$\"3g***\\(3/3(\\\"F0$!3'e,#*[L1T
+`'F=7$$\"33++vB4JB;F0$\"3s*feh;G*znF=7$$\"3u*****\\KCnu\"F0$\"3qmzi$za
+7>#F07$$\"3r***\\(=n#f(=F0$\"3QUbRXw*>,%F07$$\"3P+++!)RO+?F0$\"3zY(**)
+>()=1gF07$$\"30++]_!>w7#F0$\"3URwKc`*=I)F07$$\"3N++v)Q?QD#F0$\"3'y)*)=
+D(pY3\"!#;7$$\"3G+++5jypBF0$\"3E(4qyy'3V8F]y7$$\"3<++]Ujp-DF0$\"3pXvk!
+**\\%p;F]y7$$\"33++D,X8iDF0$\"3-FcR!*z=E=F]y7$$\"3++++gEd@EF0$\"3#G+%*
+))>q(*)>F]y7$$\"31+]PMh%\\o#F0$\"3f\"e+Ysj=<#F]y7$$\"39++v3'>$[FF0$\"3
+s!p%=$pL?O#F]y7$$\"39+++5h(*3GF0$\"3CuPh'3c<b#F]y7$$\"37++D6EjpGF0$\"3
+J<XAa5:\\FF]y7$$\"31+]i0j\"[$HF0$\"3')pBn4[)*pHF]y7$$\"\"$F*$\"#KF*-%'
+COLOURG6&%$RGBG$\"#5!\"\"$F*F*Fg\\l-F$6$7Y7$F($!38s')f!3+7T\"F=7$F.$!3
+7&\\+T&>?!p#F=7$F4$!3\\Bpf?SUmPF=7$F9$!31Y)*)*3!yy\"\\F=7$F?$!3!=CN$pG
+p&*fF=7$FD$!3![E7QTe(ppF=7$FI$!3MTS;)Q`4x(F=7$FN$!3P44_B9&[[)F=7$FS$!3
+kXmcbL-)3*F=7$FX$!3!)HH>'*y#Ha*F=7$Fgn$!3&y-$pows])*F=7$$!3%****\\i/>j
+o\"F0$!3!4%4v#oYL$**F=7$F\\o$!3Q!R]tUeJ)**F=7$$!3$****\\7tNTc\"F0$!3+(
+)\\:$=y(****F=7$Fao$!3g$)e`/\\au**F=7$$!3'********=eWV\"F0$!3\">w?&QM?
+2**F=7$Ffo$!3%fncxHb!)z*F=7$F[p$!3%>?)p'\\(fr%*F=7$F`p$!3?QX\"Q2_k/*F=
+7$Fep$!3RoA\"R@s$*Q)F=7$F[q$!3irBtd7N7xF=7$F`q$!3Khs?Z;J)z'F=7$Feq$!3,
+]@NJ[5))eF=7$Fjq$!3m(RhwxUez%F=7$F_r$!30=O'pa@4o$F=7$Fdr$!3W;)*Ht<QeCF
+=7$Fir$!3;@*QW$fY*H\"F=7$F^s$!3LTO(3<L:'HF`s7$Fds$\"3R7!y)R'G'*G\"F=7$
+Fis$\"3FG3ql0\\?CF=7$F^t$\"30A\\))G)*R0OF=7$Fct$\"3be5o(oI3x%F=7$Fht$
+\"3^L`)H\"[*\\$eF=7$F]u$\"3?t#G)p7:xnF=7$Fbu$\"37!>h[u0aq(F=7$Fgu$\"3Q
+M*o$R7D?%)F=7$F\\v$\"3')p\"=\"effY!*F=7$Fav$\"3**)R2p:UM[*F=7$Ffv$\"3l
+%[&>M!)[6)*F=7$$\"3'***\\(=o*pO9F0$\"3%=1lr4D-\"**F=7$F[w$\"3stGb=@%G(
+**F=7$$\"3$)***\\im&>g:F0$\"3or;CN\"Q%****F=7$F`w$\"3[FY9aU@')**F=7$$
+\"3!***\\PCw,&o\"F0$\"3Uc-Vm$Q[$**F=7$Few$\"3(3W_(GakX)*F=7$Fjw$\"3se$
+\\k)y2Q&*F=7$F_x$\"3wQ%4Z(*e94*F=7$Fdx$\"3!31#zebQ*[)F=7$Fix$\"3re<erl
+ncxF=7$F_y$\"37<mcb*3V(pF=7$Fdy$\"3')*\\'=O\")4jfF=7$F^z$\"3'R;^c)[(*o
+\\F=7$Fhz$\"3e*=+5UO@$QF=7$Fb[l$\"3oxJ#)[&*>'o#F=7$F\\\\l$\"38s')f!3+7
+T\"F=-Fa\\l6&Fc\\lFg\\lFd\\lFg\\l-%+AXESLABELSG6$Q\"x6\"Q!Fbhl-%%VIEWG
+6$;F(F\\\\l%(DEFAULTG" 1 2 0 1 10 0 2 9 1 4 2 1.000000 45.000000 
+45.000000 0 0 "Curve 1" "Curve 2" }}}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+56 "If we don't like the fact that the sin(x) is compressed," }}{PARA 
+0 "" 0 "" {TEXT -1 150 "but we don't want to change the interval we're
+ sketching\nthe graphs over, we can restrict the y-range of the plot\n
+explicitly within the plot command:\n" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "y := 'y';" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"yGF$
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 69 "(Necessary so that MAPLE will
+ forget the definition we gave \"y\" above" }}{PARA 0 "" 0 "" {TEXT 
+-1 39 "and consider it as a fresh variable)..." }}{PARA 0 "" 0 "" 
+{TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "plot(\{z,w
+\},x=-3..3,y=-5..3);" }}{PARA 13 "" 1 "" {GLPLOT2D 432 432 432 
+{PLOTDATA 2 "6&-%'CURVESG6$7W7$$!\"$\"\"!$!\"%F*7$$!3*)*****\\2<#pG!#<
+$!3crXY!=(4[DF07$$!3#)***\\7bBav#F0$!3'[k$>/h<p9F07$$!36++]K3XFEF0$!3S
+TA9F*HD\\%!#=7$$!3%)****\\F)H')\\#F0$\"3.fe(*)o\"oGQF=7$$!3\"****\\i3@
+/P#F0$\"3y6)z@l0*H5F07$$!3:++Dr^b^AF0$\"3cs1t*R1%z9F07$$!3#****\\7Sw%G
+@F0$\"3^-Jq+#yL!=F07$$!3*****\\7;)=,?F0$\"3G:S;!>1))*>F07$$!3.++DO\"3V
+(=F0$\"3TefC@Q[k?F07$$!3#******\\V'zV<F0$\"3CZgYo(f/,#F07$$!3)*****\\d
+;%)G;F0$\"3GJ-%Q]a7(=F07$$!3!******\\!)H%*\\\"F0$\"3BQ&H'[irB;F07$$!3.
++++vl[p8F0$\"3M0e2UN)4H\"F07$$!3!******\\>iUC\"F0$\"3**\\'*Gc46G!*F=7$
+$!3-++DhkaI6F0$\"3_IyWUk=H]F=7$$!3s******\\XF`**F=$!3Ud7Em5>r=!#>7$$!3
+u*******>#z2))F=$!35swu&e@S*[F=7$$!3R++]7RKvuF=$!3i6@)*p!=v0\"F07$$!3s
+,+++P'eH'F=$!3'fNo%4x.o:F07$$!3q)***\\7*3=+&F=$!3B(fKe>JU7#F07$$!3[)**
+*\\PFcpPF=$!3WV)o\\5.&QEF07$$!3:)****\\7VQ[#F=$!3mj%=8a\"yYJF07$$!32)*
+**\\i6:.8F=$!3)>)\\N2OIxNF07$$!3Wb+++v`hH!#?$!3%>/m?(y4\"*RF07$$\"3]**
+**\\(QIKH\"F=$!3L%pkIOdBN%F07$$\"38****\\7:xWCF=$!3[2u)\\7\"G*f%F07$$
+\"3E,++vuY)o$F=$!3dLDEiNE%y%F07$$\"3*y******4FL(\\F=$!3xf/&fH3V([F07$$
+\"3A)****\\d6.B'F=$!3/Kg'y<<4&[F07$$\"3s****\\(o3lW(F=$!3jj$=f?I?r%F07
+$$\"35*****\\A))oz)F=$!30m-g!H71T%F07$$\"3e******Hk-,5F0$!39te76!*)e*R
+F07$$\"35+++D-eI6F0$!3A(4%Hvl>!R$F07$$\"3t***\\(=_(zC\"F0$!3um0Tf@R&o#
+F07$$\"3M+++b*=jP\"F0$!3aBe+K;NL<F07$$\"3g***\\(3/3(\\\"F0$!3'e,#*[L1T
+`'F=7$$\"33++vB4JB;F0$\"3s*feh;G*znF=7$$\"3u*****\\KCnu\"F0$\"3qmzi$za
+7>#F07$$\"3r***\\(=n#f(=F0$\"3QUbRXw*>,%F07$$\"3P+++!)RO+?F0$\"3zY(**)
+>()=1gF07$$\"30++]_!>w7#F0$\"3URwKc`*=I)F07$$\"3N++v)Q?QD#F0$\"3'y)*)=
+D(pY3\"!#;7$$\"3G+++5jypBF0$\"3E(4qyy'3V8F]y7$$\"3<++]Ujp-DF0$\"3pXvk!
+**\\%p;F]y7$$\"33++D,X8iDF0$\"3-FcR!*z=E=F]y7$$\"3++++gEd@EF0$\"3#G+%*
+))>q(*)>F]y7$$\"31+]PMh%\\o#F0$\"3f\"e+Ysj=<#F]y7$$\"39++v3'>$[FF0$\"3
+s!p%=$pL?O#F]y7$$\"39+++5h(*3GF0$\"3CuPh'3c<b#F]y7$$\"37++D6EjpGF0$\"3
+J<XAa5:\\FF]y7$$\"31+]i0j\"[$HF0$\"3')pBn4[)*pHF]y7$$\"\"$F*$\"#KF*-%'
+COLOURG6&%$RGBG$\"#5!\"\"$F*F*Fg\\l-F$6$7Y7$F($!38s')f!3+7T\"F=7$F.$!3
+7&\\+T&>?!p#F=7$F4$!3\\Bpf?SUmPF=7$F9$!31Y)*)*3!yy\"\\F=7$F?$!3!=CN$pG
+p&*fF=7$FD$!3![E7QTe(ppF=7$FI$!3MTS;)Q`4x(F=7$FN$!3P44_B9&[[)F=7$FS$!3
+kXmcbL-)3*F=7$FX$!3!)HH>'*y#Ha*F=7$Fgn$!3&y-$pows])*F=7$$!3%****\\i/>j
+o\"F0$!3!4%4v#oYL$**F=7$F\\o$!3Q!R]tUeJ)**F=7$$!3$****\\7tNTc\"F0$!3+(
+)\\:$=y(****F=7$Fao$!3g$)e`/\\au**F=7$$!3'********=eWV\"F0$!3\">w?&QM?
+2**F=7$Ffo$!3%fncxHb!)z*F=7$F[p$!3%>?)p'\\(fr%*F=7$F`p$!3?QX\"Q2_k/*F=
+7$Fep$!3RoA\"R@s$*Q)F=7$F[q$!3irBtd7N7xF=7$F`q$!3Khs?Z;J)z'F=7$Feq$!3,
+]@NJ[5))eF=7$Fjq$!3m(RhwxUez%F=7$F_r$!30=O'pa@4o$F=7$Fdr$!3W;)*Ht<QeCF
+=7$Fir$!3;@*QW$fY*H\"F=7$F^s$!3LTO(3<L:'HF`s7$Fds$\"3R7!y)R'G'*G\"F=7$
+Fis$\"3FG3ql0\\?CF=7$F^t$\"30A\\))G)*R0OF=7$Fct$\"3be5o(oI3x%F=7$Fht$
+\"3^L`)H\"[*\\$eF=7$F]u$\"3?t#G)p7:xnF=7$Fbu$\"37!>h[u0aq(F=7$Fgu$\"3Q
+M*o$R7D?%)F=7$F\\v$\"3')p\"=\"effY!*F=7$Fav$\"3**)R2p:UM[*F=7$Ffv$\"3l
+%[&>M!)[6)*F=7$$\"3'***\\(=o*pO9F0$\"3%=1lr4D-\"**F=7$F[w$\"3stGb=@%G(
+**F=7$$\"3$)***\\im&>g:F0$\"3or;CN\"Q%****F=7$F`w$\"3[FY9aU@')**F=7$$
+\"3!***\\PCw,&o\"F0$\"3Uc-Vm$Q[$**F=7$Few$\"3(3W_(GakX)*F=7$Fjw$\"3se$
+\\k)y2Q&*F=7$F_x$\"3wQ%4Z(*e94*F=7$Fdx$\"3!31#zebQ*[)F=7$Fix$\"3re<erl
+ncxF=7$F_y$\"37<mcb*3V(pF=7$Fdy$\"3')*\\'=O\")4jfF=7$F^z$\"3'R;^c)[(*o
+\\F=7$Fhz$\"3e*=+5UO@$QF=7$Fb[l$\"3oxJ#)[&*>'o#F=7$F\\\\l$\"38s')f!3+7
+T\"F=-Fa\\l6&Fc\\lFg\\lFd\\lFg\\l-%+AXESLABELSG6$Q\"x6\"Q\"yFbhl-%%VIE
+WG6$;F(F\\\\l;$!\"&F*F\\\\l" 1 2 0 1 10 0 2 9 1 4 2 1.000000 
+45.000000 45.000000 0 0 "Curve 1" "Curve 2" }}}}{EXCHG {PARA 0 "" 0 "
+" {TEXT -1 51 "If we've defined a function using mapping notation:" }}
+{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 18 "f := x -> x^2 + 1;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"fGf*6#
+%\"xG6\"6$%)operatorG%&arrowGF(,&*$)9$\"\"#\"\"\"F1F1F1F(F(F(" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 73 "...we can still use the plot comma
+nd to sketch its graph. It's essential," }}{PARA 0 "" 0 "" {TEXT -1 
+81 "though, that we refer to the function as f(x) and not just f. This
+ is universally" }}{PARA 0 "" 0 "" {TEXT -1 36 "true, not just for the
+ plot command." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 19 "plot(f(x),x=-1..1);" }}{PARA 13 "" 1 "" 
+{GLPLOT2D 434 434 434 {PLOTDATA 2 "6%-%'CURVESG6$7S7$$!\"\"\"\"!$\"\"#
+F*7$$!3ommm;p0k&*!#=$\"3%\\R_q%=r9>!#<7$$!3vKL$3<XZ=*F0$\"3Mi9`QafV=F3
+7$$!3mmmmT%p\"e()F0$\"32Q%*o>`0n<F37$$!3:mmm\"4m(G$)F0$\"3Ikp4YMo$p\"F
+37$$!3\"QLL3i.9!zF0$\"39\"=$z\"z@Vi\"F37$$!3\"ommT!R=0vF0$\"34CONayFj:
+F37$$!3u****\\P8#\\4(F0$\"3!z7`y3zL]\"F37$$!3*pmmT?F1n'F0$\"37%opHns\\
+W\"F37$$!3[++](y$pZiF0$\"3%4mBmxO.R\"F37$$!33LLL$yaE\"eF0$\"3#)y?Ic&py
+L\"F37$$!3hmmm\">s%HaF0$\"3O;3!Go\"z%H\"F37$$!3Q+++]$*4)*\\F0$\"3:/Z7r
+*4)\\7F37$$!38+++]_&\\c%F0$\"3gD]Mk\")Q37F37$$!30+++]1aZTF0$\"3@CSVM4-
+s6F37$$!3umm;/#)[oPF0$\"3+L%\\M.:?9\"F37$$!3hLLL$=exJ$F0$\"3\"HvIO>v+6
+\"F37$$!3)RLLLtIf$HF0$\"3'>J4F*o>'3\"F37$$!3]++]PYx\"\\#F0$\"3^#)3W3%*
+3i5F37$$!3EMLLL7i)4#F0$\"3Lv*436US/\"F37$$!3c****\\P'psm\"F0$\"3s$HT/)
+yzF5F37$$!3')****\\74_c7F0$\"3R)\\N![%)y:5F37$$!3)3LLL3x%z#)!#>$\"3EWt
+2u\\&o+\"F37$$!3KMLL3s$QM%Fer$\"34]#p@*o)=+\"F37$$!3\\^omm;zr)*!#@$\"3
+?2F_u4++5F37$$\"3%pJL$ezw5VFer$\"3Uf!R?Fe=+\"F37$$\"3s*)***\\PQ#\\\")F
+er$\"3?d#4'35k15F37$$\"3GKLLe\"*[H7F0$\"35#f/fV;^,\"F37$$\"3H*******pv
+xl\"F0$\"3$\\5:F?#[F5F37$$\"3#z****\\_qn2#F0$\"3c(3N\"e(HJ/\"F37$$\"3U
+)***\\i&p@[#F0$\"3G9+Pd;hh5F37$$\"3A)****\\2'HKHF0$\"3#Rg9Fg$)f3\"F37$
+$\"3ElmmmZvOLF0$\"3,F(GPKR86\"F37$$\"3h******\\2goPF0$\"3a0!Hh^B?9\"F3
+7$$\"3UKL$eR<*fTF0$\"3un:SF\"\\I<\"F37$$\"3l******\\)Hxe%F0$\"3?5ew^EZ
+57F37$$\"3ckm;H!o-*\\F0$\"3]H#H+vF!\\7F37$$\"3y)***\\7k.6aF0$\"3Y3Sd]J
+z#H\"F37$$\"3#emmmT9C#eF0$\"3FySR'40!R8F37$$\"32****\\i!*3`iF0$\"35rbB
+G7,\"R\"F37$$\"3%QLLL$*zym'F0$\"3[$\\`!GigW9F37$$\"3wKLL3N1#4(F0$\"3-L
+B1[O(H]\"F37$$\"3Mmm;HYt7vF0$\"3A+G3;=Tk:F37$$\"3Y*******p(G**yF0$\"3m
+7Pnhu)Ri\"F37$$\"3]mmmT6KU$)F0$\"3=')pI?K%fp\"F37$$\"3fKLLLbdQ()F0$\"3
+Q>x^Bqij<F37$$\"3Z++]i`1h\"*F0$\"3qs*fd=^#R=F37$$\"3W++]P?Wl&*F0$\"3W@
+xs8o(\\\">F37$$\"\"\"F*F+-%'COLOURG6&%$RGBG$\"#5F)$F*F*F_[l-%+AXESLABE
+LSG6$Q\"x6\"Q!Fd[l-%%VIEWG6$;F(Fgz%(DEFAULTG" 1 2 0 1 10 0 2 9 1 4 2 
+1.000000 45.000000 45.000000 0 0 "Curve 1" }}}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 40 "****   Solving Equations in MAPLE   ****" }}{PARA 0 "" 0 
+"" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 64 "MAPLE provides a coupl
+e of different ways for solving equations." }}{PARA 0 "" 0 "" {TEXT 
+-1 81 "First we'll discuss the \"solve\" command.  This command is use
+d by MAPLE to solve " }}{PARA 0 "" 0 "" {TEXT -1 144 "equations for wh
+ich an analytic (as opposed to a numerical) solution is possible.\nA g
+ood example is finding the roots of a polynomial equation:\n" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "z := x^4 -x^3 -10*x^2 +4*x +
+24;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"zG,,*$)%\"xG\"\"%\"\"\"F**$
+)F(\"\"$F*!\"\"*&\"#5F*)F(\"\"#F*F.*&F)F*F(F*F*\"#CF*" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "solve (z=0,x);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6&\"\"#\"\"$!\"#F%" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 
+62 "The first argument to the solve command is the ** equation ** " }}
+{PARA 0 "" 0 "" {TEXT -1 236 "to  be solved, in this case z = 0. The s
+econd argument is the \nvariable we are solving for, in this case x. M
+APLE lists the\nroot x = -2 twice because it is a \"double zero\" of t
+he \npolynomial, i.e. (x+2)^2 is a factor of the polynomial.\n" }}
+{PARA 0 "" 0 "" {TEXT -1 59 "Some equations are not well-suited to an \+
+analytic solution:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 20 "solve(cos(x)=x^3,x);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#-%'RootOfG6$,&-%$cosG6#%#_ZG!\"\"*$)F*\"\"$\"\"\"F//%&l
+abelG%$_L1G" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT -1 79 "When this command is typed in, MAPLE eith
+er gets stuck and doesn't do anything," }}{PARA 0 "" 0 "" {TEXT -1 82 
+"or desperately returns an answer in terms of some pretty obscure func
+tions we know" }}{PARA 0 "" 0 "" {TEXT -1 15 "nothing about.\n" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 70 "A command which attempts to solve \+
+an equation using numerical methods " }}{PARA 0 "" 0 "" {TEXT -1 99 "(
+and therefore returns a decimal answer) is \"fsolve\".\n Let's try sol
+ving the above equation again:\n" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "fsolve(cos(x)=x^3,x);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#$\"+J.ua')!#5" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "plot
+(\{cos(x),x^3\},x=-2..2);" }}{PARA 13 "" 1 "" {GLPLOT2D 432 432 432 
+{PLOTDATA 2 "6&-%'CURVESG6$7S7$$!\"#\"\"!$!32C9Zl$o9;%!#=7$$!3MLLL$Q6G
+\">!#<$!3d7/ax6'QN$F-7$$!3amm;M!\\p$=F1$!3yZZRJc@IEF-7$$!3LLLL))Qj^<F1
+$!3Y&Q4<SN&)z\"F-7$$!3ALLL=Kvl;F1$!338XbYaU\"[*!#>7$$!3wmm;C2G!e\"F1$!
+3]H#*[z^D%[*!#?7$$!3OLL$3yO5]\"F1$\"3g&QI^,)HqpFC7$$!3&*****\\nU)*=9F1
+$\"3o&z4(zfH7:F-7$$!3SLL$3WDTL\"F1$\"3QqB%G?wYM#F-7$$!35++]d(Q&\\7F1$
+\"3/.Zw3/gdJF-7$$!3gmmmc4`i6F1$\"3PG;6R'y,(RF-7$$!3KLLLQW*e3\"F1$\"3*3
+2ZQg:7m%F-7$$!3w++++()>'***F-$\"3Y(p$*=N@iS&F-7$$!3E++++0\"*H\"*F-$\"3
+'zS*\\Cc\"Q6'F-7$$!35++++83&H)F-$\"3Cst@ZkQ_nF-7$$!3[LLL3k(p`(F-$\"3=j
+)[G<M;H(F-7$$!3Anmmmj^NmF-$\"3&G0'e_o4yyF-7$$!3(zmmmYh=(eF-$\"3K,Ycd!H
+]K)F-7$$!3+,++v#\\N)\\F-$\"3'G@%>Q1q$y)F-7$$!3commmCC(>%F-$\"3'*)>%**o
+M,K\"*F-7$$!39*****\\FRXL$F-$\"3GK!=n\"[<\\%*F-7$$!3t*****\\#=/8DF-$\"
+3(>\\/)y$*)eo*F-7$$!3<mmm;a*el\"F-$\"33:_R.N@j)*F-7$$!3jomm;Wn(o)FC$\"
+3a&G\"R')eGi**F-7$$!3IqLLL$eV(>FI$\"3w)=_&40)*****F-7$$\"3)Qjmm\"f`@')
+FC$\"34*4#ouv&G'**F-7$$\"3%z****\\nZ)H;F-$\"3[%3ivetu')*F-7$$\"3bkmm;$
+y*eCF-$\"3k+!zBf\">*p*F-7$$\"3f)******R^bJ$F-$\"3b8etuEPb%*F-7$$\"3&e*
+****\\5a`TF-$\"3+(QRb\"\\t\\\"*F-7$$\"3&o****\\7RV'\\F-$\"37&pIf^mGz)F
+-7$$\"3X'*****\\@fkeF-$\"3leQO4U0H$)F-7$$\"3_ILLL&4Nn'F-$\"3LQ].Y$RY&y
+F-7$$\"3A*******\\,s`(F-$\"3W.o&=8![\"H(F-7$$\"3%[mm;zM)>$)F-$\"3kH!e)
+>w5MnF-7$$\"3L*******pfa<*F-$\"3%3#4C2wqxgF-7$$\"38HLLeg`!)**F-$\"3%4n
+jf:\"R>aF-7$$\"3v****\\#G2A3\"F1$\"3i$zNa([!Qp%F-7$$\"3:LLL$)G[k6F1$\"
+3'*RF!>4cA&RF-7$$\"3\")****\\7yh]7F1$\"3PfO%p2gt9$F-7$$\"3wmmm')fdL8F1
+$\"3laF3Cs,]BF-7$$\"3bmmm,FT=9F1$\"37mV+`c%z^\"F-7$$\"3FLL$e#pa-:F1$\"
+3ZDiVBHk>oFC7$$\"3*)******Rv&)z:F1$!3NBvd4#*3h!*FI7$$\"3HLLLGUYo;F1$!3
+?Gbge*p7v*FC7$$\"3_mmm1^rZ<F1$!3n.&zQ*G(*f<F-7$$\"34++]sI@K=F1$!3$H%=$
+GA%\\%e#F-7$$\"34++]2%)38>F1$!3ej2=S3ZcLF-7$$\"\"#F*F+-%'COLOURG6&%$RG
+BG$\"#5!\"\"$F*F*F`[l-F$6$7S7$F($!\")F*7$F/$!3w?n/M\\o)*pF17$F5$!3Y+6:
+/tc)>'F17$F:$!3#R^x(o.Su`F17$F?$!3V-BOJ<-AYF17$FE$!32P=*Hx9k%RF17$FK$!
+3Y%oa)3J+#Q$F17$FP$!3'\\N3]-[r&GF17$FU$!3ely$RX(fuBF17$FZ$!3#z`vMsj4&>
+F17$Fin$!3G\"flSFN6d\"F17$F^o$!3aA8G&f]/G\"F17$Fco$!3rD_TM/g))**F-7$Fh
+o$!3m+v\"*e6E5wF-7$F]p$!3V-)Gda5xq&F-7$Fbp$!3g&=[p#eX\"G%F-7$Fgp$!3tcM
+g&*Hi@HF-7$F\\q$!3pU[Q^[aC?F-7$Faq$!3UdHo0DqP7F-7$Ffq$!3o!pIDr;UR(FC7$
+F[r$!3MR*HP'\\s2PFC7$F`r$!3ia=g573(e\"FC7$Fer$!3^9sTi![/a%FI7$Fjr$!3Ia
+6KI>3dl!#@7$F_s$!3)GpZ66Gip(!#E7$Fds$\"351\\2^OY3kF\\`l7$Fis$\"3hd6ewH
+`HVFI7$F^t$\"3FKpeC&Ro[\"FC7$Fct$\"3=*)f[FiuWOFC7$Fht$\"3A;jiN)[c;(FC7
+$F]u$\"3EEA&\\kWMA\"F-7$Fbu$\"3$)Q^.Y].<?F-7$Fgu$\"33&=aL:'4sHF-7$F\\v
+$\"3Ug7@N%R=G%F-7$Fav$\"3F#[#H.1'*edF-7$Ffv$\"3-,t\"pLLZs(F-7$F[w$\"3q
+t$pZv@<%**F-7$F`w$\"3:W#p#>:Xn7F17$Few$\"3J$oa%GD1z:F17$Fjw$\"3$GjvwUA
+g&>F17$F_x$\"3BI$=qvk;P#F17$Fdx$\"3gJ41Wop`GF17$Fix$\"3%*zojc4A#R$F17$
+F^y$\"3O/Fw%=XK%RF17$Fcy$\"31WK8saiWYF17$Fhy$\"3,!GV%R*4%Q`F17$F]z$\"3
+#4>UY(zu]hF17$Fbz$\"3ik^*=9E<+(F17$Fgz$\"\")F*-Fjz6&F\\[lF`[lF][lF`[l-
+%+AXESLABELSG6$Q\"x6\"Q!F_el-%%VIEWG6$;F(Fgz%(DEFAULTG" 1 2 0 1 10 0 
+2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Curve 2" }}}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 83 "Note from the combined plot of cos(x) and x^3 that this e
+quation  happens to have a" }}{PARA 0 "" 0 "" {TEXT -1 227 " unique so
+lution. Unlike \"solve,\" \"fsolve\"\n may not always return ALL solut
+ions to a given equation.\n If an equation has several solutions, we c
+an obtain whichever\n one we want by specifying an interval in the fso
+lve command:\n " }}{PARA 0 "" 0 "" {TEXT -1 46 "Consider the equation \+
+ 1 - x/10 = sin (x)....." }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "
+" 0 "" {TEXT -1 102 "Plotting the graphs of both equations shows that \+
+the equation has 7 solutions on the interval [0,20]:\n" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "plot(\{sin(x),1-x/10\},x=0..20);" }
+}{PARA 13 "" 1 "" {GLPLOT2D 432 432 432 {PLOTDATA 2 "6&-%'CURVESG6$7S7
+$$\"\"!F)$\"\"\"F)7$$\"39LLLL3VfV!#=$\"3ommm;p0k&*F/7$$\"3%pmm;H[D:)F/
+$\"3vKL$3<XZ=*F/7$$\"3MLLLe0$=C\"!#<$\"3mmmmT%p\"e()F/7$$\"3iLLL3RBr;F
+:$\"3:mmm\"4m(G$)F/7$$\"3imm;zjf)4#F:$\"3\"QLL3i.9!zF/7$$\"3ULL$e4;[\\
+#F:$\"3\"ommT!R=0vF/7$$\"3!)****\\i'y]!HF:$\"3u****\\P8#\\4(F/7$$\"3oL
+L$ezs$HLF:$\"3)emmT?F1n'F/7$$\"3=++]7iI_PF:$\"3P****\\(y$pZiF/7$$\"3On
+mm;_M(=%F:$\"33LLL$yaE\"eF/7$$\"3$QLL$3y_qXF:$\"3hmmm\">s%HaF/7$$\"3]+
+++]1!>+&F:$\"3E******\\$*4)*\\F/7$$\"3J+++]Z/NaF:$\"3-******\\_&\\c%F/
+7$$\"3;+++]$fC&eF:$\"30+++]1aZTF/7$$\"3qLL$ez6:B'F:$\"3jlm;/#)[oPF/7$$
+\"3/nmm;=C#o'F:$\"3]KLL$=exJ$F/7$$\"3Mnmmm#pS1(F:$\"3wJLLL2$f$HF/7$$\"
+3<++]i`A3vF:$\"3Q****\\PYx\"\\#F/7$$\"3Rmmmm(y8!zF:$\"3;LLLL7i)4#F/7$$
+\"3K,+]i.tK$)F:$\"3X)***\\P'psm\"F/7$$\"3!3++v3zMu)F:$\"3v)***\\74_c7F
+/7$$\"3Yomm\"H_?<*F:$\"3o3LL$3x%z#)!#>7$$\"3,nm;zihl&*F:$\"3@BLL3s$QM%
+Ffr7$$\"39LLL3#G,***F:$\"3\\^omm;zr)*!#@7$$\"3WLLezw5V5!#;$!39RLLezw5V
+Ffr7$$\"3.++v$Q#\\\"3\"Fes$!3#>,+]PQ#\\\")Ffr7$$\"3]LL$e\"*[H7\"Fes$!3
+]MLLe\"*[H7F/7$$\"3-+++qvxl6Fes$!3^,+++dxd;F/7$$\"31++]_qn27Fes$!3O-++
+D0xw?F/7$$\"36++Dcp@[7Fes$!3'G++Dcp@[#F/7$$\"3+++]2'HKH\"Fes$!3W+++vgH
+KHF/7$$\"3_mmmwanL8Fes$!3ElmmmZvOLF/7$$\"35+++v+'oP\"Fes$!3$=+++v+'oPF
+/7$$\"3CLLeR<*fT\"Fes$!3UKL$eR<*fTF/7$$\"3B+++&)Hxe9Fes$!34/++])Hxe%F/
+7$$\"3gmm\"H!o-*\\\"Fes$!3ymm;H!o-*\\F/7$$\"39++DTO5T:Fes$!3A.+]7k.6aF
+/7$$\"3emmmT9C#e\"Fes$!3#emmmT9C#eF/7$$\"3\"****\\i!*3`i\"Fes$!32****
+\\i!*3`iF/7$$\"3_LLL$*zym;Fes$!31OLLL*zym'F/7$$\"3fLL$3N1#4<Fes$!3?PLL
+3N1#4(F/7$$\"3!pm;HYt7v\"Fes$!3yqm;HYt7vF/7$$\"3A+++q(G**y\"Fes$!3!R++
++q(G**yF/7$$\"3'pmmT6KU$=Fes$!3%4nm;9@BM)F/7$$\"3dLLL`v&Q(=Fes$!3.PLLL
+bdQ()F/7$$\"30++DOl5;>Fes$!3Z++]i`1h\"*F/7$$\"3A++v.Uac>Fes$!3m-+]P?Wl
+&*F/7$$\"#?F)$!\"\"F)-%'COLOURG6&%$RGBG$\"#5FjzF(F(-F$6$7ct7$F(F(7$$\"
+3GLLL3x&)*3\"F/$\"3r-w#GX,x3\"F/7$$\"3dmmm;arz@F/$\"3#omk:3'\\i@F/7$$
+\"3')*****\\7t&pKF/$\"3#4*yP;-j6KF/7$F-$\"3s$p(fyYlAUF/7$$\"3\\****\\i
+&*)fD'F/$\"3K\"f*)Q**Ge&eF/7$F3$\"3q!>.Ca.!zsF/7$$\"3'****\\PpU&G5F:$
+\"3nV?$RIyac)F/7$F8$\"3'>@&GI(pPY*F/7$$\"3SLL$eR\"=\\8F:$\"3k8xP6vVb(*
+F/7$$\"3[LLLLA`c9F:$\"36v>a\"e*yM**F/7$$\"3TLL3_w?5:F:$\"3&*>'eon];)**
+F/7$$\"3bLL$32$)Qc\"F:$\"3]!z6a.h(****F/7$$\"3qLLe*[evh\"F:$\"3K>$oG\\
+o!*)**F/7$F>$\"3(\\r)eZQg\\**F/7$$\"3B++vV^\"\\)=F:$\"3yRMhZ,p5&*F/7$F
+C$\"3wzy*fGr\"R')F/7$$\"3-++]Piq'H#F:$\"3g)oe:=d*yuF/7$FH$\"3))z>=f8<E
+gF/7$$\"3#omm\"zt%**p#F:$\"3DqhrEXFuUF/7$FM$\"3OHrRh4:VBF/7$$\"3gLL$e>
+_6,$F:$\"3a9'z:r32I\"F/7$$\"3'pmm\"HdA<JF:$\"3-oSm>8XOCFfr7$$\"3K++]i#
+*HBKF:$!3vZ%ySus:;)Ffr7$FR$!3qaQA<_ym=F/7$$\"3=+++]h5NMF:$!3+%H`gRsJ*G
+F/7$$\"3qmm;/&R3a$F:$!3LqEs``C()QF/7$$\"3ALLLeGdYOF:$!3SA+Ef6!z$[F/7$F
+W$!3]V\"[N\"=_MdF/7$$\"3+MLe9d#)pRF:$!3%H+y[bxtO(F/7$Ffn$!3)3\"o\\e+-`
+')F/7$$\"3/,+]7l$*yVF:$!33Z^:%fz\"\\%*F/7$F[o$!3m-9$enX&**)*F/7$$\"3%p
+mTNT\\Wi%F:$!3nNGBv!e8'**F/7$$\"3$4+](=5PyYF:$!3y'y$R\\W@%***F/7$$\"31
+M$eRi#HKZF:$!3-sFD!H>!)***F/7$$\"3;nm;HU@'y%F:$!3&[&[wP:ws**F/7$$\"3QL
+LeRu0%*[F:$!3gW(z**>Oa$)*F/7$F`o$!3A_n7/S$Qe*F/7$$\"3S++++FZ=_F:$!3\\P
+A#**['\\Y()F/7$Feo$!3)3o#Rh!>0](F/7$$\"3!)******\\?vVcF:$!3Cf%eYj2u'fF
+/7$Fjo$!3'e\"*[ti0`<%F/7$$\"3Qnm\"Hd&)>/'F:$!3)G+o_-y')Q#F/7$F_p$!3oSG
+lR=0l^Ffr7$$\"3/n;/,V>WjF:$\"3mvMF+a6(4'Ffr7$$\"3P++D1o(oX'F:$\"3FL*zJ
+t%>G<F/7$$\"3rL$e9Jf&plF:$\"3#H$\\+ZwvCGF/7$Fdp$\"3h2#G!o:\\&)QF/7$$\"
+3knmmTb:toF:$\"3>\\!3H*GOjbF/7$Fip$\"3#>M#>Jc2RqF/7$$\"3JLLe9t9'G(F:$
+\"3WG&Heqw1V)F/7$F^q$\"3mMr3]T>3%*F/7$$\"3Gm;a8P^1wF:$\"3G:P(\\hd`p*F/
+7$$\"3GLLek?![q(F:$\"3?^Dm([L*)))*F/7$$\"3xmT5Si%Rv(F:$\"3s1zj6j+]**F/
+7$$\"3G+]i:/4.yF:$\"3r^Q49K0()**F/7$$\"3xLe9\"fMA&yF:$\"2cl5#RZ)*****F
+:7$Fcq$\"3OI3qh'p())**F/7$$\"3IMLekX0<\")F:$\"3U5P@fU&fl*F/7$Fhq$\"3U?
+Aj$R?d())F/7$$\"3<+++DZ5Q&)F:$\"3X1J5fat\\xF/7$F]r$\"37aYW<Y-)H'F/7$$
+\"3rn;a)QA1&))F:$\"3u3Z)eff7V&F/7$$\"3jMLe*olx&*)F:$\"3@$>$HP]?-XF/7$$
+\"3b,]i!**3\\1*F:$\"3U/pD)*f^@NF/7$Fbr$\"3]_[?;(R/]#F/7$$\"3tnmT&GM)o$
+*F:$\"3;t$o8))\\9f&Ffr7$Fhr$!3QV-+==t.9F/7$$\"3lK$e9EW<n*F:$!3'o`vMOMY
+W#F/7$$\"33++vVA(yx*F:$!3C%GPEYG!eMF/7$$\"3\\n;/E-+%))*F:$!3;o'[i\"3^K
+WF/7$F]s$!3?#\\VE)f6d`F/7$$\"3HL$3-Dg5-\"Fes$!3%ox\"=;@3uqF/7$Fcs$!3cF
+]^Yad[%)F/7$$\"3tmmmJ+Ii5Fes$!3lR9^0Z$RJ*F/7$Fis$!3%*G!R([.FP)*F/7$$\"
+3p;/E]Wn'3\"Fes$!3fYezX\"Hr\"**F/7$$\"3OL3x;l&=4\"Fes$!3\"4SR%GEOq**F/
+7$$\"3-]7G$eQq4\"Fes$!3e0kXwy#o***F/7$$\"3nm;z\\1A-6Fes$!3K#[mk$QX'***
+F/7$$\"3L$3-jr-u5\"Fes$!3!*z[o7:Cp**F/7$$\"3++D\"Gy%e76Fes$!37&QEU'RE:
+**F/7$$\"3m;HK\\ow<6Fes$!3gKw&*3hmM)*F/7$F^t$!3y^WUMVmF(*F/7$$\"3wmm\"
+HCjV9\"Fes$!3\"\\x\")eX+H,*F/7$Fct$!3%R\\!*G&fS')yF/7$$\"38++D6ts'=\"F
+es$!31lx?j:FNkF/7$Fht$!3'o-%[i*HFq%F/7$$\"3;+vVG?\"y@\"Fes$!3qXhb$[&p&
+y$F/7$$\"33+]P/q%zA\"Fes$!3_58Nr%3)HGF/7$$\"3,+DJ!)>3Q7Fes$!3p7%f#z\"z
+[%=F/7$F]u$!3IoeK6#f,T)Ffr7$$\"33+D1>,Zf7Fes$\"3!3,SHmyE$GFfr7$$\"31+]
+(=GB2F\"Fes$\"3(>N.DJoRS\"F/7$$\"3.+voWk(>G\"Fes$\"3YQZ8Y&3p]#F/7$Fbu$
+\"39njoij8yNF/7$$\"3ELL3UDX88Fes$\"3#e2Qtgw2Q&F/7$Fgu$\"3wu\\&Hu4T'pF/
+7$$\"3JLL$exn_N\"Fes$\"3z;lL+0%*R$)F/7$F\\v$\"3wd!3\\u[%G$*F/7$$\"3HLe
+9\"*Hk'Q\"Fes$\"3!=WxiXSdj*F/7$$\"3om;H2fU'R\"Fes$\"3&y4KsS')3&)*F/7$$
+\"3F$ek`O<8S\"Fes$\"3()>PQgnAB**F/7$$\"3/+vVB)3iS\"Fes$\"3CiiZv\"H=(**
+F/7$$\"3k;/^\"G+6T\"Fes$\"3s]fz(Qxl***F/7$Fav$\"3#QKzc>7u***F/7$$\"3i;
+/E&RR8U\"Fes$\"3JPCky7'4(**F/7$$\"3***\\P40(oE9Fes$\"32leGyF+;**F/7$$
+\"3O$e9mqM?V\"Fes$\"3%3$pHCQpK)*F/7$$\"3um;HiBQP9Fes$\"3(4;I?gs7s*F/7$
+$\"3\\Lektw2[9Fes$\"3aUGqcqW:%*F/7$Ffv$\"3XB3eP6--!*F/7$$\"3KL$eR*)**)
+y9Fes$\"3C\")R4Fwt\\zF/7$F[w$\"3CCy<&*=]wlF/7$$\"3PLL3A_1?:Fes$\"3#\\s
+f(frGe[F/7$F`w$\"3LL7z'GHe#HF/7$$\"3vmTN\"4)Q^:Fes$\"3-lvN%*>mG>F/7$$
+\"3OL$e9as;c\"Fes$\"3;O^hYB86\"*Ffr7$$\"3(**\\i:*p&>d\"Fes$!3U\\V43(Q1
+;\"Ffr7$Few$!3y1#o8X9?9\"F/7$$\"3y*\\7yI3If\"Fes$!3\"R'yd&[yH?#F/7$$\"
+3;L$eR<vPg\"Fes$!3F>3cj!H%QKF/7$$\"3`mT5S?a9;Fes$!3nG[$QFujB%F/7$Fjw$!
+3F$fgvcc_=&F/7$$\"3rm;z\\%[gk\"Fes$!30em?vM\"[$oF/7$F_x$!3))[&*)QrP9>)
+F/7$$\"3bLL3sr*zo\"Fes$!3nz`&QTB`@*F/7$Fdx$!3_#RNvZGi#)*F/7$$\"3D]P%)R
+ZY9<Fes$!3bB=_/V?5**F/7$$\"3#p;a)GJs><Fes$!3jo=.\"3%ym**F/7$$\"3e$eky^
+\")\\s\"Fes$!3[lIK'R6e***F/7$$\"3C+](o!*R-t\"Fes$!3_D*fk+1s***F/7$$\"3
+\"pT&)eH)\\N<Fes$!3mTD9cS'4(**F/7$$\"3eLe*[oc2u\"Fes$!3m*Hk$*3er\"**F/
+7$$\"3C]i!R2:gu\"Fes$!3G#>p)[o$f$)*F/7$Fix$!3$=:j\\'[_F(*F/7$$\"3uL$ek
+6,1x\"Fes$!3t6A<a03,\"*F/7$F^y$!3ui8ha\\rN\")F/7$$\"3wLL3U/37=Fes$!32D
+6)yl(QfmF/7$Fcy$!3At+rG0id[F/7$$\"3F++vL[/a=Fes$!3qPw-uj3UIF/7$Fhy$!3M
+'4*e2r_26F/7$$\"3>+D1*z>W)=Fes$!3()QbRy_!zN&!#?7$$\"3#om\"zW?)\\*=Fes$
+\"3Y;s)*zh'4+\"F/7$$\"3VL3_!HWb!>Fes$\"3%>%[=3\\NW?F/7$F]z$\"3\\B;s'zd
+\\1$F/7$$\"39+++q`KO>Fes$\"38<(G\"y6,9\\F/7$Fbz$\"3<(ppQfiGc'F/7$$\"3H
++](=5s#y>Fes$\"3M-mZ^73N!)F/7$Fgz$\"3mwiF2DXH\"*F/-F\\[l6&F^[lF(F_[lF(
+-%+AXESLABELSG6$Q\"x6\"Q!Fjdn-%%VIEWG6$;F(Fgz%(DEFAULTG" 1 2 0 1 10 0 
+2 9 1 4 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Curve 2" }}}}
+{EXCHG {PARA 0 "" 0 "" {TEXT -1 60 "If we want the solution which appe
+ars to be between 2 and 3:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "fsolve (sin(x) = 1 - x/10, x=2..3);
+" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+[QzbA!\"*" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT -1 60 "On the other hand, if we want the solution between
+ 9 and 10:" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 36 "fsolve (sin(x) = 1 - x/10, x=9..10);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#$\"+_f\"3O*!\"*" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{MARK "71" 0 }{VIEWOPTS 1 1 0 3 2 1804 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

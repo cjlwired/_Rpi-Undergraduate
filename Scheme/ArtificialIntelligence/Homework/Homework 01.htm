@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>AI Fall 2006 - HW1</title>
+<link rel="stylesheet" type="text/css" href="hw.css" />
+<style>
+.line {
+  background-color:black;
+}
+.cell {
+  font-size:16pt;
+  font-weight:bold;
+  width: 30px;
+  height: 30px;
+  text-align:center;
+}
+
+.vline {
+  background-color:black;
+  width:3px;
+}
+.hline {
+  background-color:black;
+  height:4px;
+}
+</style>
+<script>
+function toggleContent(id,flag) {
+  var item = document.getElementById(id);
+  var f = document.getElementById(flag);
+  if (item.style.display == "none") {
+    item.style.display = "block";
+	f.innerHTML=" - ";
+  } else {
+    item.style.display = "none";
+	f.innerHTML=" + ";
+  }
+}
+</script>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr><td class=title>AI Fall 2006 - HW1</td>
+</td></tr>
+<tr style="height:3px; background-color:black"><td></td></tr> 
+<tr><td bgcolor=black class=menu style="height: 18px;">
+&nbsp 
+<a class="menu" href="../../">AI Home</A> &nbsp | &nbsp
+<a class="menu" href="#assignment">Assignment</a> &nbsp | &nbsp
+<a class="menu" href="#fibo">fibo</a> &nbsp | &nbsp
+<a class="menu" href="#remov">remove-duplicates</a> &nbsp | &nbsp
+<a class="menu" href="#transpose">transpose</a> &nbsp | &nbsp
+<a class="menu" href="#transpose">ttt-legal-boards</a> &nbsp | &nbsp
+<a class="menu" href="#grading">Grading</a>
+</td></tr>
+</table>
+
+<div class="page">
+
+<h3 align=center>Scheme Programming Warmup</h3>
+
+<h4 align=center>Due Date:Mon 9/18  by 11:59PM<br/><br/>
+Submit to WebCT drop box labeled HW1
+</h4>
+
+<a name=assignment>
+<p class=section onClick="toggleContent('assignment_content','assignment_flag');">
+<span class="toggle" id="assignment_flag">-</span>
+Assignment
+</p>
+</a>
+<div class=page id="assignment_content">
+<p>The objectives of this assignment are:</p>
+<ol>
+  <li>Make sure everyone can write some scheme procedures.</li>
+  <li>Recursion, Recursion, Recursion</li>
+  <li>Get familiar with a Scheme reference (there may be many
+  useful/necessary procedures that are part of the Scheme library).</li>
+</ol>
+
+<p>You are to write a number of Scheme procedures, each is described
+below. You will put all procedure definitions into a single file,
+named "hw1.scm" and submit this file to the WebCT dropbox named "HW1".
+</p>
+</div>
+
+<a name=fibo>
+<p class=section onClick="toggleContent('fibo_content','fibo_flag');">
+<span class="toggle" id="fibo_flag">-</span>
+Procedure: <code>fibo</code>
+</a>
+<div class=page id="fibo_content">
+<p>This procedure generates a list of the first <em>n</em>
+Fibonacci numbers, where <em>n</em> is a non-negative integer
+that is passed to the procedure.</p>
+
+<p>If you don't know what a Fibonacci number is, you can
+read about them at <a href='http://en.wikipedia.org/wiki/Fibonacci_number'>
+en.wikipedia.org/wiki/Fibonacci_number</a></p>
+
+<h3>Sample Usage:</h3>
+
+<pre>
+(fibo 0)
+=> ()
+
+(fibo 1)
+=> (1)
+(fibo 2)
+=> (1 1)
+(fibo 10)
+=> (1 1 2 3 5 8 13 21 34 55)
+(fibo 20)
+=> (1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765)
+</pre>
+
+<p>Issues: There are some efficiency issues you may want to consider,
+but for now all you have to worry about is getting a procedure to work any way you
+can.</p>
+
+</div>
+
+<a name=remov>
+<p class=section onClick="toggleContent('remov_content','remov_flag');">
+<span class="toggle" id="remov_flag">-</span>
+Procedure: <code>remove-duplicates</code>
+</a>
+<div class=page id="remov_content">
+<p>This procedure removes all duplicate elements from a list or numbers.
+Each element in the list returned is unique. This procedure
+could be used to generate a representation of a set when
+given a list of numbers in the set (possibly containing duplicates).
+The order of elements in the return value is not important
+(If there are two 3s in the list, you can remove the first
+or the last - we don't care). Note that there can be many
+duplicates in the list!</p>
+
+
+<h3>Sample Usage:</h3>
+
+<pre>
+(remove-duplicates '(1 2 3))
+=> (1 2 3)
+
+(remove-duplicates '(1 2 1))
+=> (2 1)
+
+(remove-duplicates '(1 1 1 1))
+=> (1)
+
+(remove-duplicates '(1 2 3 2 1 4 3 9 8 9 2))
+=> (1 4 3 8 9 2)
+
+
+</pre>
+
+<p>Issues: You don't need to worry about anything other than numbers
+in the list.</p>
+
+</div>
+
+
+
+<a name=transpose>
+<p class=section onClick="toggleContent('transpose_content','transpose_flag');">
+<span class="toggle" id="transpose_flag">-</span>
+Procedure: <code>transpose</code>
+</a>
+<div class=page id="transpose_content">
+<p>This procedure produces the transpose of a matrix represented using
+Scheme lists. The single argument is a list-based representation of
+a matrix, where the number of elements of the list is the number of
+rows in the matrix and each list element is actually another list
+representing the individual values in one row. A few examples:</p>
+
+<pre>
+1 2 3 
+4 5 6  --is represented as-->  ( (1 2 3) (4 5 6) (7 8 9) ) 
+7 8 9   
+
+1 0 1 1 0 1
+0 0 1 0 0 0  -is-->  ( (1 0 1 1 0 1) (0 0 1 0 0 0) )
+</pre>
+
+<p>If you can't remember any linear algebra, Wikipedia
+can: <a href='http://en.wikipedia.org/wiki/Matrix_transpose'>
+en.wikipedia.org/wiki/Matrix_transpose</a>.</p>
+
+<h3>Sample Usage:</h3>
+
+<pre>
+(transpose '((1 2 3 4) (3 4 5 5)))
+=> ((1 3) (2 4) (3 5) (4 5))
+(transpose '( (1 2 3) (4 5 6) (7 8 9) ))
+=> ((1 4 7) (2 5 8) (3 6 9))
+(transpose '( (1 0 1 1 0 1) (0 0 1 0 0 0) ))
+=> ((1 0) (0 0) (1 1) (1 0) (0 0) (1 0))
+</pre>
+
+<p><b>NOTE:</b> Look at <code>map</code> and <code>apply</code>!</p>
+
+</div>
+
+<a name=ttt>
+<p class=section onClick="toggleContent('ttt_content','ttt_flag');">
+<span class="toggle" id="ttt_flag">-</span>
+Procedure: <code>ttt-legal-boards</code>
+</a>
+<div class=page id="ttt_content">
+
+<p>You need to write a scheme version of our thought exercise from
+class on 9/7: Write a scheme procedure that figures out how many
+valid tic-tac-toe boards exist. A board is valid if it reflects 
+a possible game state when both players have played by the rules. An empty
+board is a valid game state, and a board that represents a (legal)
+win is also valid and should be counted.</p>
+
+<p>Below are some examples of valid and invalid boards:</p>
+
+<table border=0 align=center cellspacing=10><tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+</table><br/>
+</td><td>Valid board</td></tr>
+<tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+</table><br/>
+</td><td>Valid (X has won)</td></tr>
+<tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+  </tr>
+</table><br/>
+</td><td>Invalid (O has won, then X took another turn)</td></tr>
+<tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+</table><br/>
+</td><td>Invalid - X has made three moves, O only moved once.</td></tr>
+<tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+</table><br/>
+</td><td>Invalid - O is a blatant cheater.</td></tr>
+<tr><td>
+<table cellspacing='0'>
+ <tr>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+   <td class=vline></td>
+   <td class=cell>X</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+   <td class=vline></td>
+   <td class=cell>O</td>
+  </tr>
+  <tr>
+    <td class=hline colspan=5>
+  </tr>
+ <tr>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+   <td class=vline></td>
+   <td class=cell></td>
+  </tr>
+</table><br/>
+</td><td>Invalid - X Won first, O doesn't get to make another move.</td></tr>
+</table>
+
+
+<p>Don't consider isomorphisms, that is, don't worry about
+reflections, etc. If the board looks different, it is different.
+Strategic position is not important, just the actual geographic
+position of pieces on the board.
+</p>
+
+<p><b>X goes first (always)!</b></p>
+
+<p>Don't ask Dave what the correct answer is, as he has not
+yet figured it out (although he is working on a scheme procedure
+that will figure it out).</p>
+
+<p><b>NOTE:</b> You will very likely need to/want to write many
+procedures that are called by <code>ttt-legal-boards</code>, this
+is expected.</p>
+
+</div>
+<a name=grading>
+<p class=section onClick="toggleContent('grading_content','grading_flag');">
+<span class="toggle" id="grading_flag">-</span>
+Grading
+</a>
+<div class=page id="grading_content">
+
+<p>Grades will be based on the formula below. Note
+  that to get full credit we must be able to understand your code.
+  Your code must be
+  neat (indented), and if it's not obvious what it's doing you must
+  provide comments!</p>
+
+  <table border=0>
+    <tr><th valign=top>30%</th><td><code>fibo</code>
+    <tr><th valign=top>30%</th><td><code>remove-duplicates</code>
+    <tr><th valign=top>30%</th><td><code>transpose</code>
+    <tr><th valign=top>10%</th><td><code>ttt-legal-boards</code>
+   </td></tr>
+  </table>
+ 
+ <p>You can get partial credit for any part as long as your provide
+ a description of what the code does do and what is missing/broken.</p>
+</div>
+
+</div>
+</body>
+</html>

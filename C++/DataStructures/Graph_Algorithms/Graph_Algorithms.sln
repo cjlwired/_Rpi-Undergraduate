@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graph_Algorithms", "Graph_Algorithms.vcproj", "{E6CE72A0-042B-4CDF-AA3C-66120DE15767}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E6CE72A0-042B-4CDF-AA3C-66120DE15767}.Debug.ActiveCfg = Debug|Win32
+		{E6CE72A0-042B-4CDF-AA3C-66120DE15767}.Debug.Build.0 = Debug|Win32
+		{E6CE72A0-042B-4CDF-AA3C-66120DE15767}.Release.ActiveCfg = Release|Win32
+		{E6CE72A0-042B-4CDF-AA3C-66120DE15767}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

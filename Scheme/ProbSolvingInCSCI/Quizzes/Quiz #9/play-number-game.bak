@@ -1,0 +1,31 @@
+;; Carlos Lazo
+;; 11-4-04
+;; Quiz #9 - GUI Design
+
+(define (play-number-game guess-me)
+  (local
+      (
+       (define (check-guess e)
+         (draw-message
+          answer
+          (cond
+           [(number? (string->number (text-contents make-text)))
+            (cond
+              [( = (string->number (text-contents make-text)) guess-me) (string-append (string->number (text-contents make-text)) " is Right!")]         
+              [( < (string->number (text-contents make-text)) guess-me) (string-append (string->number (text-contents make-text)) " is too Low!")]
+              [( > (string->number (text-contents make-text)) guess-me) (string-append (string->number (text-contents make-text)) " is too High!")])]
+           [else
+            (string-append (text-contents make-text) " is not a number!")])))
+       (define enter (make-text "Enter your guess and press the button "))
+       (define guess-button (make-button "Submit Guess" check-guess))
+       (define answer (make-message "")))
+    
+    (create-window
+     (list
+      (list enter)
+      (list guess-button)
+      (list answer)))))
+
+
+    
+       

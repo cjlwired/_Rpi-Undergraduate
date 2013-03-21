@@ -1,0 +1,65 @@
+;; Carlos Lazo
+;; 10-10-04
+;; Problem Solving in Computer Science
+;; Homework #3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Template: Counting Function ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; This template describes scheme functions that utilize a counter, normally an integer value, to iterate through a function performing the
+;; desired action till the counter is exhausted in some way. The majority of counting functions use recursion and the counter as the base 
+;; case in a cond statement to "kick out" of the function.
+
+;; The functions that match this template can consume many different variables and normally an integer counter. For the majority of times, the 
+;; function will be called over again until the counter reaches a certain value recursively, where it will then cease to call itself again.
+
+;; General structure of the function definition:
+
+;; (define (func <variables> counter)
+;;     (cond
+;;        [<counter check statement>]
+;;        .... Any other desired actions
+;;        [<recursive call of func normally changing the value of counter making it near the base case check statement>]))
+
+;; Example 1: print-symbol
+
+;; function print-symbol symbol counter => symbol
+
+;; (print-symbol sym counter) takes a symbol inputed by the user and prints it out. The amount of times
+;; the symbol is printed all depends on the counter.
+
+;; sample usage: (print-symbol 'RPI 5)
+
+(define (print-symbol symbol counter)
+  (cond
+    [(< counter 1) true]
+    [
+   
+;;
+;; test code
+;;
+(celcius-to-fahrenheit 0)  ;; should produce 32
+(celcius-to-fahrenheit -40)  ;; should produce -40
+(celcius-to-fahrenheit 100)  ;; should produce 212
+
+Example 2: cube
+
+;;
+;; function cube number => number
+;;
+;; (cube x) calculates x raised to the 3rd power
+;;
+;; sample usage: (cube 2)
+
+(define (cube x)
+  (* x (* x x)))
+
+
+;;
+;; test code
+;;
+(cube 2) ;; should produce 8
+(cude 1) ;; should produce 1
+(cube -2) ;; should produce -8
+

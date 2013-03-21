@@ -1,0 +1,29 @@
+#!/bin/bash
+# Conveyer belt script for DSIVE
+
+if [ -n "$1" ]  # If command-line parameter is present
+then
+  filename=$1      # Use filename in script arg if given
+else
+  echo "Enter TIFF file to process: " # Else read from stdin
+  read filename
+fi
+
+# http://tldp.org/LDP/abs/html/string-manipulation.html
+# See 9-12 for code to go through every TIFF in the current directory
+
+  # List of shell commands with parameters
+tiff2pgm $filename
+pgm2mat $(filename/.tiff/.pgm)
+convolution $(filename/.pgm/.dsv)  # Our minimalist list-of-numbers format, ".dsv"
+kmeans $(filename/.dsv/.m1)  # Assumes programs output lowest d* or increment from infiles
+kmeans $(filename/.d1/.d2)
+analysis $(filename/.d3/.d4) > $(filename./d4/.txt)
+
+if [ $2 ]  # If there's a parameter besides the filename, delete intermediate files after completion.
+then
+  rm *.d%d
+  rm *.dsv
+  rm *.pgm
+  #rm $filename # Uncomment to delete TIFF files as well - not advised.
+fi

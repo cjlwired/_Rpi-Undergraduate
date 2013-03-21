@@ -1,0 +1,9 @@
+;; Carlos Lazo
+;; 10-14-04
+;; Quiz #6 - Traveling Salesman Problem : Data Definitions
+
+;; 1) Table of Costs:
+
+;;         The Table of Costs for traveling from one city to another will be represented as a list of lists. Following this logic,
+;;    each element of the big list will stand for one row of the given table. Due to the fact that the cities will be known as 
+;;    numbers and not as symbols, it will be fairly simple to extract the necessary data for a cost analysis between two cities.

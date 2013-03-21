@@ -1,0 +1,4 @@
+There are 8 values in numbers.txt
+The average value is 34.75
+
+The median value is 39.7

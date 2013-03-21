@@ -1,0 +1,123 @@
+Judy Sawyer added to flight 213
+
+Jonathan Cheng added to flight 289
+
+Paul Robinson added to flight 18
+
+One stop flights from Minneapolis to London
+1234 Minneapolis 7:34 Chicago 8:10
+18 Chicago 8:42 London 16:55
+491.07
+
+Asad Javed added to flight 1234
+
+Passengers for flight 1234
+1. Javed, Asad
+$90.95
+
+Flights between Minneapoils and London
+none
+
+Mira Ganguly added to flight 18
+
+Flights between London and Paris
+213 17:20 21:17 $260.9 3
+
+Michihiro Kuramoci added to flight 2365
+
+One stop flights from Chicago to Paris
+none
+
+Flight 18 is full
+
+Jing Pei added to flight 1234
+
+Passengers for flight 111
+none
+$0
+
+keoto Namihara added to flight 2365
+
+Travel schedule for Paul Robinson
+18 Chicago 8:42 London 16:55
+$400.12
+
+No flight 2000
+
+Flight 1000 does not exist
+
+Suman Nath has no travel schedule
+
+Suman Nath added to flight 289
+
+Flights between Paris and Hawaii
+none
+
+Rob Kennedy added to flight 12
+
+Travel schedule for Suman Nath
+289 Washington 13:15 Tampa 15:40
+$290.2
+
+Saeed Salem added to flight 213
+
+Passengers for flight 18
+1. Ganguly, Mira
+2. Robinson, Paul
+$800.24
+
+Rob Miller added to flight 189
+
+Flight 189 is full
+
+Passengers for flight 115
+none
+$0
+
+Yung Lo has no travel schedule
+
+Conflicts with schedule of Rob Miller
+
+Paolo Palrimi added to flight 1234
+
+One stop flights from Chicago to Boulder
+111 Chicago 5:25 Newark 7:20
+156 Newark 19:18 Boulder 23:12
+495.35
+115 Chicago 7:34 Newark 9:31
+156 Newark 19:18 Boulder 23:12
+515.34
+
+Flights between Chicago and Tampa
+none
+
+One stop flights from Chicago to Chicago
+111 Chicago 5:25 Newark 7:20
+189 Newark 8:20 Chicago 9:20
+310.45
+
+Flight 12 is full
+
+Passengers for flight 2365
+1. Kuramoci, Michihiro
+2. Namihara, keoto
+$1200.24
+
+One stop flights from Newark to Newark
+none
+
+One stop flights from Hawai to Tokyo
+none
+
+Passengers for flight 12
+1. Kennedy, Rob
+$123.9
+
+Flights between Chicago and Newark
+111 5:25 7:20 $150.23 3
+115 7:34 9:31 $170.22 2
+
+Travel schedule for Saeed Salem
+213 London 17:20 Paris 21:17
+$260.9
+

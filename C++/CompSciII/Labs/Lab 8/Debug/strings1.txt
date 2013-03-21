@@ -1,0 +1,10 @@
+aardvark
+cardinal
+dodo
+elephant
+monkey
+orangutan
+polecat
+sabertooth
+tiger
+zebra

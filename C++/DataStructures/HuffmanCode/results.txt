@@ -1,0 +1,151 @@
+// Carlos Lazo
+// 11-21-05
+// DSA HW 7
+
+*TEST 1:*
+
+Input:
+------
+
+queue.insert(Node("I", 38));
+queue.insert(Node("L", 21));
+queue.insert(Node("O", 10));
+queue.insert(Node("V",  6));
+queue.insert(Node("E", 44));
+queue.insert(Node("N", 19));
+queue.insert(Node("W", 15));
+queue.insert(Node("Y",  5));
+queue.insert(Node("R", 27));
+queue.insert(Node("K", 30));
+
+Output:
+-------
+
+The following symbols and frequencies have been inserted into the queue:
+
+Symbol: Y        Frequency: 5
+Symbol: V        Frequency: 6
+Symbol: W        Frequency: 15
+Symbol: O        Frequency: 10
+Symbol: K        Frequency: 30
+Symbol: L        Frequency: 21
+Symbol: N        Frequency: 19
+Symbol: I        Frequency: 38
+Symbol: R        Frequency: 27
+Symbol: E        Frequency: 44
+
+Character: O with frequency 10  , Huffman Code is --> 0000
+Character: Y with frequency 5   , Huffman Code is --> 00010
+Character: V with frequency 6   , Huffman Code is --> 00011
+Character: L with frequency 21  , Huffman Code is --> 001
+Character: E with frequency 44  , Huffman Code is --> 01
+Character: R with frequency 27  , Huffman Code is --> 100
+Character: K with frequency 30  , Huffman Code is --> 101
+Character: W with frequency 15  , Huffman Code is --> 1100
+Character: N with frequency 19  , Huffman Code is --> 1101
+Character: I with frequency 38  , Huffman Code is --> 111
+
+===========================================================================
+
+*TEST 2*
+
+Input:
+------
+
+queue.insert(Node("C", 25));
+queue.insert(Node("O", 12));
+queue.insert(Node("M", 99));
+queue.insert(Node("P", 10));
+queue.insert(Node("U", 50));
+queue.insert(Node("T", 34));
+queue.insert(Node("E", 24));
+queue.insert(Node("R",  8));
+
+Output:
+-------
+
+The following symbols and frequencies have been inserted into the queue:
+
+Symbol: R        Frequency: 8
+Symbol: P        Frequency: 10
+Symbol: E        Frequency: 24
+Symbol: O        Frequency: 12
+Symbol: U        Frequency: 50
+Symbol: M        Frequency: 99
+Symbol: T        Frequency: 34
+Symbol: C        Frequency: 25
+
+
+-----------------------------------------------------------------------
+
+Character: M with frequency 99  , Huffman Code is --> 0
+Character: O with frequency 12  , Huffman Code is --> 1000
+Character: R with frequency 8   , Huffman Code is --> 10010
+Character: P with frequency 10  , Huffman Code is --> 10011
+Character: T with frequency 34  , Huffman Code is --> 101
+Character: E with frequency 24  , Huffman Code is --> 1100
+Character: C with frequency 25  , Huffman Code is --> 1101
+Character: U with frequency 50  , Huffman Code is --> 111
+
+===========================================================================
+
+*TEST 3:*
+
+Input:
+------
+
+queue.insert(Node("Q", 87));
+queue.insert(Node("U", 12));
+queue.insert(Node("I", 60));
+queue.insert(Node("C",  7));
+queue.insert(Node("K", 99));
+queue.insert(Node("B", 11));
+queue.insert(Node("R", 24));
+queue.insert(Node("O", 42));
+queue.insert(Node("W", 33));
+queue.insert(Node("N", 71));
+queue.insert(Node("F", 56));
+queue.insert(Node("X",  1));
+
+Output:
+-------
+
+The following symbols and frequencies have been inserted into the queue:
+
+Symbol: X        Frequency: 1
+Symbol: U        Frequency: 12
+Symbol: C        Frequency: 7
+Symbol: W        Frequency: 33
+Symbol: F        Frequency: 56
+Symbol: B        Frequency: 11
+Symbol: R        Frequency: 24
+Symbol: Q        Frequency: 87
+Symbol: O        Frequency: 42
+Symbol: K        Frequency: 99
+Symbol: N        Frequency: 71
+Symbol: I        Frequency: 60
+
+
+-----------------------------------------------------------------------
+
+Character: K with frequency 99  , Huffman Code is --> 00
+Character: R with frequency 24  , Huffman Code is --> 0100
+Character: U with frequency 12  , Huffman Code is --> 01010
+Character: X with frequency 1   , Huffman Code is --> 0101100
+Character: C with frequency 7   , Huffman Code is --> 0101101
+Character: B with frequency 11  , Huffman Code is --> 010111
+Character: F with frequency 56  , Huffman Code is --> 011
+Character: I with frequency 60  , Huffman Code is --> 100
+Character: N with frequency 71  , Huffman Code is --> 101
+Character: W with frequency 33  , Huffman Code is --> 1100
+Character: O with frequency 42  , Huffman Code is --> 1101
+Character: Q with frequency 87  , Huffman Code is --> 111
+
+
+
+
+
+
+
+
+

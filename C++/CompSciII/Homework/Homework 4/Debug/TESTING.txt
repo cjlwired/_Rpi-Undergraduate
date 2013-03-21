@@ -1,0 +1,57 @@
+always 2
+don't_know_why 1
+for_the_beauty_of_the_earth 1
+hero 1
+i_have_a_dream 1
+ironic 2
+keep_the_faith 1
+living_on_a_prayer 1
+love_is_all_around 1
+nightingale 1
+now_or_never 1
+prayer_94 1
+seven_years 1
+sing_forever 2
+someday 2
+song_of_joy 1
+sunrise 1
+the_end_of_the_world 1
+zombie 3
+
+terminator $4
+ 234888 7 
+ 234776 7 
+ 233222 5 
+ 653829 5 
+
+john $2.5
+ 239444 4 
+ 273387 1 
+ 234119 1 
+ 983445 2 
+ 123342 1 
+
+butter $2.5
+ 123342 2 
+ 128739 1 
+ 238422 1 
+ 653829 1 
+ 201928 1 
+
+peter $3
+ 123342 1 
+ 766349 1 
+ 873225 1 
+ 234119 1 
+ 982121 1 
+ 239444 2 
+
+hubert $1.5
+ 987653 1 
+ 876233 1 
+ 123932 1 
+
+david $1
+ 876233 1 
+ 231293 1 
+
