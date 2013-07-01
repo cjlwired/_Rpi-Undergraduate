@@ -1,0 +1,83 @@
+#pragma once
+
+#include "DVC_AppGL.h"
+#include <string>
+
+
+class GripControl; // forward declare GripControl class
+class GravityControl; // forward declare GravityControl class
+
+class App : public DVC_AppGL {
+
+public:
+
+	App(int argc=0, char **argv=0);	// constructor taking optional command line arguments
+	~App();	// destructor
+
+
+	bool Init();
+	void PostStep();
+	void Render();
+	bool ReloadScene();
+	void KeyDown( char key );
+	void DrawLine(REAL x1, REAL y1, REAL x2, REAL y2);
+	void SetLineColor(unsigned char r, unsigned char g, unsigned char b);
+
+protected:
+
+	void PrintConsole();
+
+private:
+
+	bool FindBodies();
+	bool AddControllers();
+	void DeleteControllers();
+
+	bool drawDebug;
+	char lineColor[3];
+	REAL frictionCoefficient;
+
+	std::string grip1Name;
+	std::string grip2Name;
+	std::string grip3Name;
+	std::string grip4Name;
+	std::string partName;
+	std::string triName;
+	std::string groundName;
+	std::string holeName;
+
+	DynamicalBody * grip1;
+	DynamicalBody * grip2;
+	DynamicalBody * grip3;
+	DynamicalBody * grip4;
+	DynamicalBody * part;
+	Obstacle * ground;
+	
+	GripControl * grip1Controller;
+	GripControl * grip2Controller;
+	GripControl * grip3Controller;
+	GripControl * grip4Controller;
+	GravityControl * partController;
+};
+
+
+class GravityControl : public ForceController {
+public: 
+
+	GravityControl(REAL mass)
+	{
+		this->mass = mass;
+	}
+
+	void GetForce(REAL t, DVC::Vector<REAL> & outForce, const DVC::Vector<REAL> & pos, const DVC::Vector<REAL> & nu) const
+	{
+		outForce[0] = 0;
+		outForce[1] = mass*-9.81;
+		outForce[2] = 0;
+	}
+
+private:
+	REAL mass;
+};
+
+

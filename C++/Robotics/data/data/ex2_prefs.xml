@@ -1,0 +1,20 @@
+
+<!-- the root pref must always be '/' -->
+<pref name='/'>
+
+	<!-- the pref types are: [bool, int, double, string, generic] -->
+	<pref name='my_bool' type='bool' value='1'/>
+	<pref name='my_int' type='int' value='5'/>
+	<pref name='my_double' type='double' value='1.23'/>
+	<pref name='small_number' type='double' value='5e-10'/>
+	<pref name='my_string' type='string' value='foo'/>
+	<pref name='my_pointer' type='generic' value='0'/>
+
+	<!-- here is how you make a collection of prefs -->
+	<pref name='colors'>
+		<pref name='color1' type='string' value='red'/>
+		<pref name='color2' type='string' value='green'/>
+		<pref name='color3' type='string' value='blue'/>
+	</pref>
+
+</pref>

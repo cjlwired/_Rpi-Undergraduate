@@ -1,0 +1,305 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svnroot/dvc/!svn/ver/320/trunk/data/Geometry
+END
+boundry.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/boundry.vdat
+END
+box.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/box.pdat
+END
+lGripper.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/lGripper.vdat
+END
+circle_verts.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/circle_verts.vdat
+END
+feeder.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/feeder.pdat
+END
+test_verts3.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/test_verts3.vdat
+END
+box.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/box.vdat
+END
+ramp.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/ramp.pdat
+END
+rGripper.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/rGripper.vdat
+END
+feeder.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/feeder.vdat
+END
+shaker_plate.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/dvc/!svn/ver/51/trunk/data/Geometry/shaker_plate.pdat
+END
+tip.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/tip.vdat
+END
+largeRectBase.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/largeRectBase.pdat
+END
+circlePeg.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/circlePeg.vdat
+END
+smallpeg.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/smallpeg.pdat
+END
+test_verts.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/test_verts.vdat
+END
+newtri.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/newtri.pdat
+END
+smallpeg.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/smallpeg.vdat
+END
+large_feeder.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/large_feeder.vdat
+END
+convexbox.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/convexbox.pdat
+END
+checker_box.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/checker_box.pdat
+END
+newtri.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/newtri.vdat
+END
+smallcup.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/smallcup.pdat
+END
+pegInHole.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/pegInHole.vdat
+END
+peg.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/peg.vdat
+END
+checker_box.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/checker_box.vdat
+END
+wamarm.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/wamarm.pdat
+END
+robot.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/robot.pdat
+END
+largeBase.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/largeBase.pdat
+END
+smallcup.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/smallcup.vdat
+END
+ledge.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/ledge.vdat
+END
+test_verts2.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/test_verts2.vdat
+END
+wamarm.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/wamarm.vdat
+END
+largeBase.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/largeBase.vdat
+END
+robot.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/robot.vdat
+END
+closeVertsBug.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/closeVertsBug.vdat
+END
+cup.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/cup.vdat
+END
+smalltri.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/smalltri.vdat
+END
+lock.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/lock.vdat
+END
+longarm.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/320/trunk/data/Geometry/longarm.pdat
+END
+shaker_part.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/shaker_part.pdat
+END
+triangle.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/triangle.pdat
+END
+ledge2.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/ledge2.vdat
+END
+biggerbox.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/biggerbox.pdat
+END
+insert.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/insert.vdat
+END
+rectangle.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/rectangle.vdat
+END
+triangle.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/triangle.vdat
+END
+nonconvex.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/nonconvex.pdat
+END
+simpletri.vdat
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/simpletri.vdat
+END
+boundry.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/dvc/!svn/ver/1/trunk/data/Geometry/boundry.pdat
+END

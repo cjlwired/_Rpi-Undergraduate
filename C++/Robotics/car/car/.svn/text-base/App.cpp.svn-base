@@ -1,0 +1,485 @@
+
+#include "App.h"
+#include "GripControl.h"
+#include "SDL_opengl.h"
+#include <iostream>
+#include <sstream>
+#include <math.h>
+
+//-------------------------------------------------------------------------
+
+// The constructor.
+App::App(int argc, char **argv) : DVC_AppGL(argc, argv)
+{
+	grip1 = NULL;
+	grip2 = NULL;
+	grip3 = NULL;
+	grip4 = NULL;
+	part = NULL;
+	ground = NULL;
+
+	grip1Name = "grip1";
+	grip2Name = "grip2";
+	grip3Name = "grip3";
+	grip4Name = "grip4";
+	partName = "part";
+	groundName = "ground";
+
+	grip1Controller = NULL;
+	grip2Controller = NULL;
+	grip3Controller = NULL;
+	grip4Controller = NULL;
+	partController = NULL;
+
+	drawDebug = false;
+	lineColor[0] = lineColor[1] = lineColor[2] = 0;
+}
+
+//-------------------------------------------------------------------------
+
+// The destructor.
+App::~App()
+{
+	DeleteControllers();
+}
+
+//-------------------------------------------------------------------------
+
+// This method demonstrates how to draw
+// debugging information to the screen.
+void App::Render()
+{
+	//First call the super class's render method.
+	DVC_AppGL::Render();
+
+	if (!drawDebug) return;
+
+	const DVC::Vector<REAL>& grip1Q = grip1->GetQ();
+	const DVC::Vector<REAL>& grip2Q = grip2->GetQ();
+	const DVC::Vector<REAL>& grip3Q = grip3->GetQ();
+	const DVC::Vector<REAL>& grip4Q = grip4->GetQ();
+
+	// Set the line color to white.
+	// The arguments are red, green, and blue values,
+	// where each value is 0 < value < 255.
+	SetLineColor(255,255,255);
+
+	// The arguments to DrawLine are: x1, y1, x2, y2.
+	// These calls will draw lines between each grip.
+	// You should remove these lines and draw your own.
+	DrawLine(grip1Q[0], grip1Q[1], grip2Q[0], grip2Q[1]);
+	DrawLine(grip2Q[0], grip2Q[1], grip3Q[0], grip3Q[1]);
+	DrawLine(grip3Q[0], grip3Q[1], grip4Q[0], grip4Q[1]);
+	DrawLine(grip4Q[0], grip4Q[1], grip1Q[0], grip1Q[1]);
+}
+
+//-------------------------------------------------------------------------
+
+// This method is called after each timestep, but before rendering.
+// This is probably the best place to write your code.
+// If you want, you can add a PreStep method and it will be called
+// before each timestep.
+void App::PostStep()
+{
+	bool grip1InContact = false;
+	bool grip2InContact = false;
+	bool grip3InContact = false;
+	bool grip4InContact = false;
+
+	DvcCollisionResult grip1Contact;
+	DvcCollisionResult grip2Contact;
+	DvcCollisionResult grip3Contact;
+	DvcCollisionResult grip4Contact;
+
+	// The following code finds all the contact
+	// points in the simulation.
+
+	// The members of DvcCollisionResult are:
+	//
+	// Body *b1, *b2;
+	// REAL normalB1toB2[2];
+	// REAL contactLoc[2], b1ContactLoc[2], b2ContactLoc[2];
+	// REAL distance;
+	//
+	// b1 and b2 are the bodies in contact
+	// normalB1toB2 is the contact normal
+	// distance is the distance between B1 and B2 at the contact
+	// If distance is > 0, then it is a potential contact.
+	// Potential contact mean the bodies are close, but not touching.
+	// Negative distance implies penetration.
+	// When testing for a distance of zero, dont use == 0, use > 1e-6.
+	// contactLoc is the point of contact
+	// b1ContactLoc and b2ContactLoc are the contact locations on the body.
+	// For potential contacts, b1ContactLoc and b2ContactLoc might not be equal
+	// For real contacts, contactLoc = b1ContactLoc = b2ContactLoc.
+
+	// Get all the contacts from the previous step (including potential contacts)
+	std::vector < DvcCollisionResultPtr > contacts;
+	sim.GetContactLocations( contacts );
+
+	for (unsigned int i = 0; i < contacts.size(); ++i)
+	{
+		if (contacts[i]->distance > 1e-6)  continue; // Only look at real contacts, not potential
+
+		std::string b1 = contacts[i]->b1->GetName(); // get the name of body 1
+		std::string b2 = contacts[i]->b2->GetName(); // get the name of body 2
+
+		// Check for contact between the grippers and the part
+		if (b1 == grip1Name && b2 == partName || b2==partName && b1==grip1Name)
+		{
+			grip1InContact = true;
+			grip1Contact = *contacts[i];
+		}
+		if (b1 == grip2Name && b2 == partName || b2==partName && b1==grip2Name)
+		{
+			grip2InContact = true;
+			grip2Contact = *contacts[i];
+		}
+		if (b1 == grip3Name && b2 == partName || b2==partName && b1==grip3Name)
+		{
+			grip3InContact = true;
+			grip3Contact = *contacts[i];
+		}
+		if (b1 == grip4Name && b2 == partName || b2==partName && b1==grip4Name)
+		{
+			grip4InContact = true;
+			grip4Contact = *contacts[i];
+		}
+	}
+
+	if (grip1InContact)
+	{
+		// Now you have the contact: grip1Contact
+		// Note, the grip might have more than one contact point with the part.
+		// The above code will only save the last contact...
+
+		// grip1Contact.contactLoc[0] // X location of contact point in world frame
+		// grip1Contact.contactLoc[1] // Y location of contact point in world frame
+		// grip1Contact.normalB1toB2[0] // X component of contact normal in world frame
+		// grip1Contact.normalB1toB2[1] // Y component of contact normal in world frame
+	}
+
+	// The following code is commented out, but demonstrates
+	// how to get the vertices of the part body.
+	// The verts are in the part's frame.
+	// To get the verts in the world frame, you must
+	// get the part location ( part->GetQ() ) and transform
+	// the verts using translation and rotation.
+	//
+	// const PolygonRepresentation * rep = static_cast<const PolygonRepresentation*>(part->GetModel()->GetGeomRepresentation());
+	// const std::vector< DVC::Vector<REAL> > & verts = rep->GetPolyVerts();
+	// for (unsigned int i = 0; i < verts.size(); ++i)
+	// {
+	//	 REAL vertX = verts[i][0];
+	//	 REAL vertY = verts[i][1];
+	// }
+
+}
+
+//-------------------------------------------------------------------------
+
+// This method shows you how you can print
+// information to the screen.
+// It requires the SDL_ttf library.
+void App::PrintConsole()
+{
+	// Call super class's method first.
+	// You can remove this if you want...
+	DVC_AppGL::PrintConsole();
+
+	// Return early if draw debug is not enabled
+	if (!drawDebug) return;
+
+	// This method uses OpenGL screen coordinates
+	// where [0,0] is the bottom left corner.
+	int lineY = screenHeight_ - 150; //start 150 pixels from top edge
+	int lineX = 5; //start 5 pixels from left edge
+	int lineBreak = -15; //line height with padding is 15 pixels
+
+
+	// PrintText2D takes three arguments:
+	// int - x position to start printing text
+	// int - y position tp start printing text
+	// std::string - text to print
+	gfxObj_.PrintText2D(lineX, lineY, "Robotics II"); lineY += lineBreak;
+	gfxObj_.PrintText2D(lineX, lineY, "Gripper App"); lineY += lineBreak;
+
+	// Here is how to print text with variables:
+	// double x = 1.23;
+	// std::stringstream text;
+	// text << "Here is my variable: " << x;
+	// gfxObj_.PrintText2D(lineX, lineY, text.str() ); lineY += lineBreak;
+
+	// Get the contacts
+	std::vector < DvcCollisionResultPtr > contacts;
+	sim.GetContactLocations( contacts );
+
+	// For each contact, print the location and normal.
+	// Delete this code if you want, it is here as a tutorial.
+	for (unsigned int i = 0; i < contacts.size(); ++i)
+	{
+		DvcCollisionResult collision = *contacts[i]; // Get the contact
+		std::string b1 = collision.b1->GetName(); // Get the name of body 1
+		std::string b2 = collision.b2->GetName(); // Get the name of body 2
+
+		// Only look at real contacts (distance is nearly zero)
+		if (collision.distance <= 1e-6)
+		{
+			std::stringstream result;
+			result.precision(3);
+			result << b1 << " + " << b2 << " norm [" << collision.normalB1toB2[0] << ", " <<  collision.normalB1toB2[1] << "], ";
+			result << "location [" << collision.contactLoc[0] << ", " << collision.contactLoc[1] << "]";
+			gfxObj_.PrintText2D(lineX, lineY, result.str()); lineY += lineBreak;
+		}
+	}
+}
+
+//-------------------------------------------------------------------------
+
+// The method handles key presses from the keyboard.
+void App::KeyDown( char key )
+{
+
+	// Keys:
+	//
+	// f - toggle friction on or off
+	// v - toggle draw debug lines and points
+	// z - select grip 1
+	// x - select grip 2
+	// y - select grip 3
+	// z - select grip 4
+	// q - set PD targets to the part's center of gravity,
+	//     then enable or disable all PD controllers
+	//
+	// Note when a grip is selected you can move it around using the arrow keys.
+	// 
+
+	if (key == 'f') {
+			double f = prefs.get_double("/scenes/hw2/dynamics_settings/friction_coefficient");
+			if (f <= 1e-6) 
+				prefs.set_double("/scenes/hw2/dynamics_settings/friction_coefficient", frictionCoefficient);
+			else
+				prefs.set_double("/scenes/hw2/dynamics_settings/friction_coefficient", 0);
+			FlushSimSettings();
+	}
+	else if (key == 'v') {
+		drawDebug = !drawDebug;
+		prefs.set_bool("/scenes/hw2/screen_settings/draw_debug", drawDebug);
+		FlushScreenSettings();
+	}
+	else if (key == 'z') {
+		mouseControl_.selectedBody_ = grip1Name;
+	}
+	else if (key == 'x') {
+		mouseControl_.selectedBody_ = grip2Name;
+	}
+	else if (key == 'c') {
+		mouseControl_.selectedBody_ = grip3Name;
+	}
+	else if (key == 'v') {
+		mouseControl_.selectedBody_ = grip3Name;
+	}
+	else if (key == 'q') {
+
+		// Set all PD controllers' targets to the part's center of gravity
+		DVC::Vector<REAL> partQ = part->GetQ();
+		grip1Controller->SetPDTarget(partQ[0], partQ[1]);
+		grip2Controller->SetPDTarget(partQ[0], partQ[1]);
+		grip3Controller->SetPDTarget(partQ[0], partQ[1]);
+		grip4Controller->SetPDTarget(partQ[0], partQ[1]);
+			
+		//Enable all or disable all PD controllers
+		if (grip1Controller->IsPDEnabled()) grip1Controller->DisablePD();
+		else grip1Controller->EnablePD();
+
+		if (grip2Controller->IsPDEnabled()) grip2Controller->DisablePD();
+		else grip2Controller->EnablePD();
+
+		if (grip3Controller->IsPDEnabled()) grip3Controller->DisablePD();
+		else grip3Controller->EnablePD();
+
+		if (grip4Controller->IsPDEnabled()) grip4Controller->DisablePD();
+		else grip4Controller->EnablePD();
+	}
+	else {
+		 //If we have not used the key press, pass the key to the super class
+		DVC_AppGL::KeyDown(key);
+	}
+}
+
+//-------------------------------------------------------------------------
+
+// This method creates and attaches the force controllers
+// to the grippers.  You probably won't need to modify this
+// method unless you change the arguments to the force
+// controller's constructor.  Consider using get/set methods instead.
+bool App::AddControllers()
+{
+	//create and set a force controller for grip1
+	grip1Controller = new GripControl();
+	if ( !sim.SetBodyControllerByName( grip1Name, *grip1Controller) )
+	{
+		std::cout << "Error adding force controller to body: " << grip1Name << std::endl;
+		delete grip1Controller;
+		return false;
+	}
+	//create and set a force controller for grip2
+	grip2Controller = new GripControl();
+	if ( !sim.SetBodyControllerByName( grip2Name, *grip2Controller) )
+	{
+		std::cout << "Error adding force controller to body: " << grip2Name << std::endl;
+		delete grip2Controller;
+		return false;
+	}
+	//create and set a force controller for grip3
+	grip3Controller = new GripControl();
+	if ( !sim.SetBodyControllerByName( grip3Name, *grip3Controller) )
+	{
+		std::cout << "Error adding force controller to body: " << grip3Name << std::endl;
+		delete grip3Controller;
+		return false;
+	}
+	//create and set a force controller for grip4
+	grip4Controller = new GripControl();
+	if ( !sim.SetBodyControllerByName( grip4Name, *grip4Controller) )
+	{
+		std::cout << "Error adding force controller to body: " << grip4Name << std::endl;
+		delete grip4Controller;
+		return false;
+	}
+
+	//create and set a force controller for grip4
+	partController = new GravityControl(part->GetMass());
+	if ( !sim.SetBodyControllerByName( partName, *partController) )
+	{
+		std::cout << "Error adding force controller to body: " << partName << std::endl;
+		delete partController;
+		return false;
+	}
+
+	return true;	
+}
+
+
+//-------------------------------------------------------------------------
+
+// The init method.
+bool App::Init()
+{
+	//Call the super class's Init method.
+	//Be aware that the super class's Init method will
+	//call ReloadScene
+	if ( !DVC_AppGL::Init() )
+	{
+		std::cout << "Error, DVC_AppGL failed to initialize." << std::endl;
+		return false;
+	}
+
+	//sanity check, make sure we are using the right xml file
+	if ( prefs.get_string("/active_scene") != "hw2")
+	{ 
+		std::cout << "Error, pref active_scene != 'hw2'" << std::endl;
+		return false;
+	}
+
+	// get initial value of drawDebug
+	drawDebug = prefs.get_bool("/scenes/hw2/screen_settings/draw_debug");
+
+	// get initial value of frictionCoefficient
+	frictionCoefficient = prefs.get_double("/scenes/hw2/dynamics_settings/friction_coefficient");
+	return true;
+}
+
+//-------------------------------------------------------------------------
+
+// This method is called whenever
+// the scene is reloaded.  You can reload the
+// scene by pressing 'L'.  Note, all the pointers
+// to the bodies and controllers are changed
+// when the scene reloads, so be careful!
+bool App::ReloadScene()
+{
+	if ( !DVC_AppGL::ReloadScene() ) return false;
+	DeleteControllers();
+	if ( !FindBodies() ) return false;
+	if ( !AddControllers() ) return false;
+	return true;
+}
+
+//-------------------------------------------------------------------------
+
+// Deletes the controllers
+void App::DeleteControllers()
+{
+	delete grip1Controller;
+	delete grip2Controller;
+	delete grip3Controller;
+	delete grip4Controller;
+	delete partController;
+}
+
+//-------------------------------------------------------------------------
+
+// Gets the bodies from the simulator and sets pointers.
+bool App::FindBodies()
+{
+	if ( !sim.GetBodyByNameMutable(grip1Name, grip1) )
+	{
+		std::cout << "Error finding body in simulation: " << grip1Name << std::endl;
+		return false;
+	}
+	if ( !sim.GetBodyByNameMutable(grip2Name, grip2) )
+	{
+		std::cout << "Error finding body in simulation: " << grip2Name << std::endl;
+		return false;
+	}
+	if ( !sim.GetBodyByNameMutable(grip3Name, grip3) )
+	{
+		std::cout << "Error finding body in simulation: " << grip3Name << std::endl;
+		return false;
+	}
+	if ( !sim.GetBodyByNameMutable(grip4Name, grip4) )
+	{
+		std::cout << "Error finding body in simulation: " << grip4Name << std::endl;
+		return false;
+	}
+	if ( !sim.GetBodyByNameMutable(partName, part) )
+	{
+		std::cout << "Error finding body in simulation: " << partName << std::endl;
+		return false;
+	}
+	if ( !sim.GetBodyByNameMutable(groundName, ground) )
+	{
+		std::cout << "Error finding body in simulation: " << groundName << std::endl;
+		return false;
+	}
+
+	return true;
+}
+
+//-------------------------------------------------------------------------
+
+// Draws a debug line.
+// This method should only be called from the Render method.
+void App::DrawLine(REAL x1, REAL y1, REAL x2, REAL y2)
+{
+    glColor3ub(lineColor[0], lineColor[1], lineColor[2]);
+    REAL z = 0; //scene is 2D, so clamp Z to zero.
+    glBegin( GL_LINE_STRIP );
+	glVertex3f( x1, y1, z );
+	glVertex3f( x2, y2, z );
+	glEnd();
+}
+
+//-------------------------------------------------------------------------
+
+// Sets the color of debug lines.
+// This method may be called any time.
+void App::SetLineColor(unsigned char r, unsigned char g, unsigned char b)
+{
+	lineColor[0] = r;
+	lineColor[1] = g;
+	lineColor[2] = b;
+}
+
+

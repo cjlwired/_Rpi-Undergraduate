@@ -1,0 +1,275 @@
+<pref name='/'>
+	<pref name='active_scene' type='string' value='Robots'/>
+	<pref name='assets_root' type='string' value='C:/Documents and Settings/Carlos/Desktop/dvc/trunk/data/'/>
+	<pref name='plugins_dir' type='string' value='C:/Documents and Settings/Carlos/Desktop/dvc/dvc-build/lib/dvc/'/>
+	<pref name='start_paused' type='bool' value='1'/>
+	<pref name='screenshot_directory' type='string' value='./'/>
+	<pref name='screenshot_label' type='string' value='frame'/>
+	<pref name='screenshot_type' type='int' value='1'/>
+	<pref name='plugins'>
+		<pref name="collision">
+			<pref name='polypoly'>
+				<pref name='filename' type='string' value='polypoly'/>
+			</pref>
+		</pref>
+		<pref name="cpsolver">
+			<pref name='pathsolver'>
+				<pref name='filename' type='string' value='pathsolver'/>
+				<pref name='license_filepath' type='string' value='PathLicense.txt'/>
+			</pref>
+			<pref name='siconoscpsolver'>
+				<pref name='filename' type='string' value='siconoscpsolver'/>
+				<pref name='tolerance' type='double' value='1e-06'/>
+			</pref>
+		</pref>
+		<pref name="timestepper">
+			<pref name='ST25D'>
+				<pref name='filename' type='string' value='stewarttrinkle_25d'/>
+				<pref name='restitutionCoefficent' type='double' value='0'/>
+				<pref name='settings_25D' type='generic' value='0'/>
+				<pref name='surfaceFrictionCoefficent' type='double' value='0.2'/>
+				<pref name='numSurfaceFrictionDirections' type='int' value='16'/>
+				<pref name='positionControlledFrictionCoefficent' type='double' value='0.1'/>
+                <pref name='useSparseMatrix' type='bool' value='1'/>
+			</pref>
+		</pref>
+	</pref>
+	<pref name='scenes'>
+		<pref name='Robots'>
+			<pref name='timestepper' type='string' value='ST25D'/>
+			<pref name='collision' type='string' value='polypoly'/>
+			<pref name='cpsolver' type='string' value='pathsolver'/>
+			<pref name='dynamics_settings'>
+				<pref name='friction_coefficient' type='double' value='0.2'/>
+				<pref name='integration_method' type='int' value='0'/>
+				<pref name='time_step' type='double' value='0.0125'/>
+				<pref name='gravity' type='double' value='9.8'/>
+				<pref name='collision_epsilon' type='double' value='0.1'/>
+			</pref>
+			<pref name='screen_settings'>
+				<pref name='view_distance' type='double' value='40'/>
+				<pref name='x_trans' type='double' value='0'/>
+				<pref name='y_trans' type='double' value='0'/>
+				<pref name='point_size' type='double' value='0.1'/>
+				<pref name='point_radius' type='double' value='0.1'/>
+				<pref name='cg_radius' type='double' value='0.1'/>
+				<pref name='draw_debug' type='bool' value='0'/>
+				<pref name='draw_grid' type='bool' value='1'/>
+				<pref name='grid_width' type='double' value='12'/>
+				<pref name='grid_height' type='double' value='10'/>
+				<pref name='grid_tick' type='double' value='1'/>
+				<pref name='extrude_height' type='double' value='2'/>
+			</pref>
+			<pref name='geometry'>
+				<pref name='BoundryBase'>
+					<pref name='vert_data_file' type='string' value='Geometry/boundry.pdat'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='0'/>
+						<pref name='g' type='double' value='1'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='3.14159'/>
+					</pref>
+				</pref>
+				<pref name='BoundryTop'>
+					<pref name='vert_data_file' type='string' value='Geometry/boundry.pdat'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='0'/>
+						<pref name='g' type='double' value='1'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot0'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='-5'/>
+						<pref name='y' type='double' value='-5'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot1'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='5'/>
+						<pref name='y' type='double' value='-5'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot2'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot3'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='6'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot4'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='-5'/>
+						<pref name='y' type='double' value='7'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='robot5'>
+					<pref name='vert_data_file' type='string' value='Geometry/newtri.pdat'/>
+					<pref name='mass' type='double' value='1'/>
+					<pref name='momentOfInertia' type='double' value='0.06'/>
+					<pref name='support_point_radial_distance' type='double' value='0.5'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='5'/>
+						<pref name='y' type='double' value='7'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+			</pref>
+		</pref>
+	</pref>
+	<pref name='screen_settings'>
+		<pref name='width' type='int' value='1024'/>
+		<pref name='height' type='int' value='768'/>
+		<pref name='title' type='string' value='DVC'/>
+		<pref name='subtitle' type='string' value='DaVinci Code Simulator'/>
+		<pref name='framerate' type='int' value='80'/>
+		<pref name='color_bits' type='int' value='32'/>
+		<pref name='r' type='double' value='0.2'/>
+		<pref name='g' type='double' value='0.2'/>
+		<pref name='b' type='double' value='0.2'/>
+		<pref name='a' type='double' value='1'/>
+	</pref>
+	<pref name='Gui'>
+		<pref name='treepath' type='string' value='0:1'/>
+		<pref name='fontfile' type='string' value='font.ttf'/>
+	</pref>
+	<pref name='dynamic_settings_ptr' type='generic' value='0'/>
+	<pref name='cp_solver_ptr' type='generic' value='0'/>
+</pref>

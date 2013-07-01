@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/dvc/!svn/ver/283/experimental/apps/robotics2/hw2/scene2/partA
+END
+App.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/dvc/!svn/ver/283/experimental/apps/robotics2/hw2/scene2/partA/App.cpp
+END
+GripControl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/GripControl.cpp
+END
+hw2_scene2A.xml.in
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/dvc/!svn/ver/283/experimental/apps/robotics2/hw2/scene2/partA/hw2_scene2A.xml.in
+END
+Main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/dvc/!svn/ver/182/experimental/apps/robotics2/hw2/scene2/partA/Main.cpp
+END
+hw2_ground.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_ground.pdat
+END
+App.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/dvc/!svn/ver/283/experimental/apps/robotics2/hw2/scene2/partA/App.h
+END
+GripControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/GripControl.h
+END
+hw2_grip10.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_grip10.pdat
+END
+hw2_grip20.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_grip20.pdat
+END
+hw2_grip3.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_grip3.pdat
+END
+hw2_grip30.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_grip30.pdat
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/dvc/!svn/ver/184/experimental/apps/robotics2/hw2/scene2/partA/CMakeLists.txt
+END
+hw2_grip5.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_grip5.pdat
+END
+hw2_part.pdat
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/dvc/!svn/ver/179/experimental/apps/robotics2/hw2/scene2/partA/hw2_part.pdat
+END

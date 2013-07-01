@@ -1,0 +1,125 @@
+<pref name='/'>
+	<pref name='active_scene' type='string' value='Shaker'/>
+	<pref name='assets_root' type='string' value='C:/Documents and Settings/Carlos/Desktop/dvc/trunk/data/'/>
+	<pref name='plugins_dir' type='string' value='C:/Documents and Settings/Carlos/Desktop/dvc/dvc-build/lib/dvc/'/>
+	<pref name='start_paused' type='bool' value='0'/>
+	<pref name='screenshot_directory' type='string' value='./'/>
+	<pref name='screenshot_label' type='string' value='frame'/>
+	<pref name='screenshot_type' type='int' value='1'/>
+	<pref name='plugins'>
+		<pref name="timestepper">
+			<pref name='AP97'>
+				<pref name='filename' type='string' value='anitescupotra'/>
+			</pref>
+			<pref name='ST_MCP'>
+				<pref name='filename' type='string' value='stewarttrinkle_mcp'/>
+				<pref name='restitutionCoefficent' type='double' value='0'/>
+                <pref name='useSparseMatrix' type='bool' value='1'/>
+				<pref name='auto_load' type='bool' value='1'/>
+			</pref>
+		</pref>
+		<pref name="collision">
+			<pref name='polypoly'>
+				<pref name='filename' type='string' value='polypoly'/>
+			</pref>
+		</pref>
+		<pref name="cpsolver">
+			<pref name='pathsolver'>
+				<pref name='filename' type='string' value='pathsolver'/>
+				<pref name='license_filepath' type='string' value='PathLicense.txt'/>
+			</pref>
+			<pref name='siconoscpsolver'>
+				<pref name='filename' type='string' value='siconoscpsolver'/>
+				<pref name='tolerance' type='double' value='1e-06'/>
+			</pref>
+		</pref>
+	</pref>
+	<pref name='scenes'>
+		<pref name='Shaker'>
+			<pref name='timestepper' type='string' value='ST_MCP'/>
+			<pref name='collision' type='string' value='polypoly'/>
+			<pref name='cpsolver' type='string' value='pathsolver'/>
+			<pref name='dynamics_settings'>
+				<pref name='friction_coefficient' type='double' value='0.2'/>
+				<pref name='integration_method' type='int' value='0'/>
+				<pref name='time_step' type='double' value='0.001'/>
+				<pref name='gravity' type='double' value='9.81'/>
+				<pref name='collision_epsilon' type='double' value='0.001'/>
+			</pref>
+			<pref name='screen_settings'>
+				<pref name='view_distance' type='double' value='0.2'/>
+				<pref name='x_trans' type='double' value='0'/>
+				<pref name='y_trans' type='double' value='0.01'/>
+				<pref name='point_radius' type='double' value='0.001'/>
+				<pref name='cg_radius' type='double' value='0.001'/>
+				<pref name='draw_debug' type='bool' value='1'/>
+				<pref name='draw_grid' type='bool' value='1'/>
+				<pref name='grid_width' type='double' value='1'/>
+				<pref name='grid_height' type='double' value='1'/>
+				<pref name='grid_tick' type='double' value='0.01'/>
+				<pref name='extrude_height' type='double' value='0.01'/>
+			</pref>
+			<pref name='geometry'>
+				<pref name='part'>
+					<pref name='vert_data_file' type='string' value='Geometry/shaker_part.pdat'/>
+					<pref name='mass' type='double' value='0.05'/>
+					<pref name='momentOfInertia' type='double' value='8.33e-07'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='1'/>
+						<pref name='g' type='double' value='0'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialVelocity'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0.09'/>
+						<pref name='y' type='double' value='0.0025'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+					<pref name='geomToBodyTransform'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+				<pref name='plate'>
+				    <pref name='is_kinematical' type='bool' value='1'/>
+					<pref name='vert_data_file' type='string' value='Geometry/shaker_plate.pdat'/>
+					<pref name='color'>
+						<pref name='r' type='double' value='0'/>
+						<pref name='g' type='double' value='1'/>
+						<pref name='b' type='double' value='0'/>
+						<pref name='a' type='double' value='1'/>
+					</pref>
+					<pref name='initialPosition'>
+						<pref name='x' type='double' value='0'/>
+						<pref name='y' type='double' value='0'/>
+						<pref name='t' type='double' value='0'/>
+					</pref>
+				</pref>
+			</pref>
+		</pref>
+	</pref>
+	<pref name='screen_settings'>
+		<pref name='width' type='int' value='1024'/>
+		<pref name='height' type='int' value='768'/>
+		<pref name='title' type='string' value='DVC'/>
+		<pref name='subtitle' type='string' value='DaVinci Code Simulator'/>
+		<pref name='framerate' type='int' value='30'/>
+		<pref name='color_bits' type='int' value='32'/>
+		<pref name='r' type='double' value='0.2'/>
+		<pref name='g' type='double' value='0.2'/>
+		<pref name='b' type='double' value='0.2'/>
+		<pref name='a' type='double' value='1'/>
+	</pref>
+	<pref name='Gui'>
+		<pref name='treepath' type='string' value='0:1:0:2:0'/>
+		<pref name='fontfile' type='string' value='font.ttf'/>
+	</pref>
+	<pref name='dynamic_settings_ptr' type='generic' value='0'/>
+	<pref name='cp_solver_ptr' type='generic' value='0'/>
+</pref>
